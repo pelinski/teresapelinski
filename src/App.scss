@@ -23,8 +23,11 @@ main {
 }
 
 .title-name {
+    user-select: none;
     font-family: monospace;
     overflow: hidden;
+
+    // todo: fix rotated phones
     @media (min-width: $ipad) {
         font-size: 1.5vw;
     }
