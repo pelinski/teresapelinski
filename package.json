@@ -11,9 +11,13 @@
   },
   "private": true,
   "dependencies": {
+    "@types/react": "^17.0.38",
+    "@types/react-dom": "^17.0.11",
+    "cfonts": "^2.10.0",
     "parcel": "^2.0.1",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "typescript": "^4.5.4"
   },
   "scripts": {
     "build": "parcel build index.html",
