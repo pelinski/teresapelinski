@@ -1,3 +1,16 @@
+// font
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;900&display=swap");
+
+// vars
+$ipad: 812px;
+
+// styles
+* {
+    background: black;
+    color: greenyellow;
+    font-family: "Inconsolata", monospace;
+    overflow: hidden;
+}
 main {
     height: 100vh;
     width: 100vw;
@@ -6,4 +19,20 @@ main {
     justify-content: center;
     flex-direction: column;
     text-align: center;
+}
+
+#name {
+    font-family: monospace;
+    overflow: hidden;
+    font-size: 1.5vw;
+    .color1 {
+        color: greenyellow;
+    }
+    .color2 {
+        color: green;
+    }
+}
+
+#infos {
+    margin-top: 1.5vh;
 }
