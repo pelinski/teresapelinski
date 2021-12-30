@@ -5,12 +5,20 @@
   "repository": "git@github.com:pelinski/tpr_net.git",
   "author": "Teresa Pelinski <teresapelinski@gmail.com>",
   "license": "MIT",
+  "private": true,
   "staticFiles": {
     "staticPath": "public/"
   },
   "engines": {
     "node": "17.x",
     "yarn": "1.x"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ]
   },
   "dependencies": {
     "@types/react": "^17.0.38",
