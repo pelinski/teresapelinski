@@ -1,6 +1,10 @@
 // font
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;900&display=swap");
 
+// vars
+$ipad: 812px;
+
+// styles
 * {
     background: black;
     color: greenyellow;
@@ -19,12 +23,8 @@ main {
 
 #name {
     font-family: monospace;
-    white-space: pre;
-    text-align: left;
-    max-width: 100%;
-    overflow: scroll;
-    background: transparent;
-    line-height: 110%;
+    overflow: hidden;
+    font-size: 1.5vw;
     .color1 {
         color: greenyellow;
     }
