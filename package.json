@@ -9,7 +9,10 @@
   "staticFiles": {
     "staticPath": "public/"
   },
-  "private": true,
+  "engines": {
+    "node": "17.x",
+    "yarn": "1.x"
+  },
   "dependencies": {
     "@types/react": "^17.0.38",
     "@types/react-dom": "^17.0.11",
