@@ -19,12 +19,12 @@
     "parcel": "^2.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "serve": "^13.0.2",
     "typescript": "^4.5.4"
   },
   "scripts": {
-    "build": "serve",
-    "dev": "parcel index.html"
+    "build": "parcel build index.html",
+    "dev": "parcel index.html",
+    "start": "serve"
   },
   "devDependencies": {
     "@parcel/packager-raw-url": "^2.0.1",
