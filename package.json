@@ -34,7 +34,7 @@
 	"scripts": {
 		"build": "parcel build index.html --public-url .",
 		"predeploy": "yarn run build",
-		"deploy": "gh-pages -d dist",
+		"deploy": "gh-pages -d src",
 		"dev": "parcel index.html",
 		"start": "serve"
 	},
