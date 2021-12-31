@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import './App.scss'
 
 import { HomePage } from './pages/Home.page'
-import { CertPage } from './pages/Cert.page'
 
 export const App: React.FC = (): JSX.Element => (
 	<Router>
