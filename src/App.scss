@@ -1,55 +1,55 @@
 // font
-@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;900&display=swap');
 
 // vars
 $ipad: 812px;
 
 // styles
 * {
-    background: black;
-    color: greenyellow;
-    font-family: "Inconsolata", monospace;
-    overflow: hidden;
+	background: black;
+	color: greenyellow;
+	font-family: 'Inconsolata', monospace;
+	overflow: hidden;
 }
 main {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
 }
 
 .title-name {
-    user-select: none;
-    font-family: monospace;
-    overflow: hidden;
+	user-select: none;
+	font-family: monospace;
+	overflow: hidden;
 
-    // todo: fix rotated phones
-    @media (min-width: $ipad) {
-        font-size: 1.5vw;
-    }
-    @media (max-width: $ipad) {
-        font-size: 3vw;
-    }
+	// todo: fix rotated phones
+	@media (min-width: $ipad) {
+		font-size: 1.5vw;
+	}
+	@media (max-width: $ipad) {
+		font-size: 3vw;
+	}
 
-    .color1 {
-        color: greenyellow;
-    }
-    .color2 {
-        color: green;
-    }
+	.color1 {
+		color: greenyellow;
+	}
+	.color2 {
+		color: green;
+	}
 }
 
 .infos {
-    margin-top: 1.5vh;
-    @media (min-width: $ipad) {
-        font-size: 1.5vw;
-    }
-    @media (max-width: $ipad) {
-        font-size: 3.8vw;
-        padding: 0 3vw;
-    }
+	margin-top: 1.5vh;
+	@media (min-width: $ipad) {
+		font-size: 1.5vw;
+	}
+	@media (max-width: $ipad) {
+		font-size: 3.8vw;
+		padding: 0 3vw;
+	}
 }

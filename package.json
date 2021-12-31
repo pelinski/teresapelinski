@@ -1,44 +1,45 @@
 {
-  "name": "teresapelinski",
-  "version": "0.0.0",
-  "description": "teresapelinski's personal website",
-  "repository": "git@github.com:pelinski/tpr_net.git",
-  "author": "Teresa Pelinski <teresapelinski@gmail.com>",
-  "license": "MIT",
-  "private": true,
-  "staticFiles": {
-    "staticPath": "public/"
-  },
-  "engines": {
-    "node": "17.x",
-    "yarn": "1.x"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ]
-  },
-  "dependencies": {
-    "@types/react": "^17.0.38",
-    "@types/react-dom": "^17.0.11",
-    "cfonts": "^2.10.0",
-    "parcel": "^2.0.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "serve": "^13.0.2",
-    "typescript": "^4.5.4"
-  },
-  "scripts": {
-    "build": "parcel build index.html",
-    "dev": "parcel index.html",
-    "start": "serve"
-  },
-  "devDependencies": {
-    "@parcel/packager-raw-url": "^2.0.1",
-    "@parcel/transformer-sass": "^2.0.1",
-    "@parcel/transformer-webmanifest": "^2.0.1",
-    "parcel-reporter-static-files-copy": "^1.3.4"
-  }
+	"name": "teresapelinski",
+	"version": "0.0.0",
+	"description": "teresapelinski's personal website",
+	"repository": "git@github.com:pelinski/tpr_net.git",
+	"author": "Teresa Pelinski <teresapelinski@gmail.com>",
+	"license": "MIT",
+	"private": true,
+	"staticFiles": {
+		"staticPath": "public/"
+	},
+	"engines": {
+		"node": "17.x",
+		"yarn": "1.x"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		]
+	},
+	"dependencies": {
+		"@types/react": "^17.0.38",
+		"@types/react-dom": "^17.0.11",
+		"cfonts": "^2.10.0",
+		"parcel": "^2.0.1",
+		"prettier": "^2.5.1",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2",
+		"serve": "^13.0.2",
+		"typescript": "^4.5.4"
+	},
+	"scripts": {
+		"build": "parcel build index.html",
+		"dev": "parcel index.html",
+		"start": "serve"
+	},
+	"devDependencies": {
+		"@parcel/packager-raw-url": "^2.0.1",
+		"@parcel/transformer-sass": "^2.0.1",
+		"@parcel/transformer-webmanifest": "^2.0.1",
+		"parcel-reporter-static-files-copy": "^1.3.4"
+	}
 }
