@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './App.scss'
 
-export const App: React.FC = () => {
+export const App: React.FC = ():JSX.Element => {
 	const [isDesktop, setIsDesktop] = useState<boolean | null>(null)
 
 	useEffect(() => {
@@ -10,8 +10,8 @@ export const App: React.FC = () => {
 		return () => window.removeEventListener('resize', updateDimensions)
 	}, [])
 
-	const updateDimensions = () => {
-		const width = window.innerWidth
+	const updateDimensions = ():void => {
+		const width: number = window.innerWidth
 		setIsDesktop(width >= 812)
 	}
 
@@ -23,9 +23,8 @@ export const App: React.FC = () => {
 	)
 }
 
-const TitleDesktop: React.FC = () => (
+const TitleDesktop: React.FC = ():JSX.Element => (
 	<div className='title-name'>
-		{' '}
 		{/*yarn cfonts "teresapelinski" -f slick -c "#4af626",white -e browser*/}
 		<span className='color1'>╱</span>
 		<span className='color2'>╭━━━━╮</span>
@@ -242,7 +241,7 @@ const TitleDesktop: React.FC = () => (
 	</div>
 )
 
-const TitleMobile: React.FC = () => (
+const TitleMobile: React.FC = ():JSX.Element => (
 	<div className='title-name'>
 		<span className='color1'>╱</span>
 		<span className='color2'>╭━━━━╮</span>
@@ -472,7 +471,7 @@ const TitleMobile: React.FC = () => (
 	</div>
 )
 
-const InfosDesktop: React.FC = () => (
+const InfosDesktop: React.FC = ():JSX.Element => (
 	<div className='infos'>
 		-- phd researcher in artificial intelligence and music (aim cdt) | augmented instruments lab
 		-- <br />
@@ -480,7 +479,7 @@ const InfosDesktop: React.FC = () => (
 	</div>
 )
 
-const InfosMobile: React.FC = () => (
+const InfosMobile: React.FC = ():JSX.Element => (
 	<div className='infos'>
 		phd researcher in ai and music (aim cdt) <br />
 		augmented instruments lab <br />
