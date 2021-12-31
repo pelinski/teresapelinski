@@ -1,19 +1,51 @@
 {
 	"compilerOptions": {
-		// No module system, concatenated file
-		"module": "none",
-		// Set React as the JSX factory
-		"jsx": "react",
-		// Resolve modules using Node-resolution algorithm
+		// type checking
+		"allowUnreachableCode": false,
+		"allowUnusedLabels": false,
+		"alwaysStrict": true,
+		"exactOptionalPropertyTypes": true,
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitAny": true,
+		"noImplicitReturns": true,
+		"noImplicitThis": true,
+		"noPropertyAccessFromIndexSignature": false,
+		"noUncheckedIndexedAccess": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"strict": true,
+		"strictBindCallApply": true,
+		"strictFunctionTypes": true,
+		"strictNullChecks": true,
+		"strictPropertyInitialization": true,
+		"useUnknownInCatchVariables": true,
+		// modules
+		"module": "esnext",
 		"moduleResolution": "node",
-		// Target ES6 for more modern browsers
+		"resolveJsonModule": true,
+		// emit
+		"noEmit": true,
+		// javascript support
+		"allowJs": false,
+		// interop constraints
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"isolatedModules": true,
+		// backwards compatibility
+		"keyofStringsOnly": true,
+		// language and environment
+		"jsx": "react-jsx",
+		"lib": [
+			"dom",
+			"dom.iterable",
+			"esnext"
+		],
 		"target": "es6",
-		// Include typings from built-in lib declarations
-		"lib": ["es2015", "dom", "dom.iterable"],
-		// Include module source maps for debugging
-		"sourceMap": true,
-		// Output to single concatenated file
-		"outFile": "dist/bundle.js"
+		// completeness
+		"skipLibCheck": true
 	},
-	"include": ["src"]
+	"include": [
+		"src"
+	]
 }
