@@ -17,28 +17,12 @@ export const HomePage: React.FC = (): JSX.Element => {
 	return (
 		<main>
 			<Title />
-			{isDesktop ? <InfosDesktop /> : <InfosMobile />}
+			<div className='infos'>
+				<span>{'<'}</span>WebsiteUnderDevelopment<span>{'/>'}</span>
+			</div>
 		</main>
 	)
 }
-
-const InfosDesktop: React.FC = (): JSX.Element => (
-	<div className='infos'>
-		-- phd researcher in artificial intelligence and music (aim cdt) | augmented instruments lab
-		-- <br />
-		-- centre for digital music (c4dm) | queen mary university of london --
-	</div>
-)
-
-const InfosMobile: React.FC = (): JSX.Element => (
-	<div className='infos'>
-		phd researcher in ai and music (aim cdt) <br />
-		augmented instruments lab <br />
-		centre for digital music (c4dm) <br />
-		queen mary university of london
-	</div>
-)
-
 const Title: React.FC = (): JSX.Element => (
 	<div className='title-name'>
 		<div>
