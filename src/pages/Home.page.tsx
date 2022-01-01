@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 
 export const HomePage: React.FC = (): JSX.Element => {
 	/*const [isDesktop, setIsDesktop] = useState<boolean | null>(null)
