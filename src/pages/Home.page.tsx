@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
 export const HomePage: React.FC = (): JSX.Element => {
-	const [isDesktop, setIsDesktop] = useState<boolean | null>(null)
+	/*const [isDesktop, setIsDesktop] = useState<boolean | null>(null)
 
 	useEffect(() => {
 		updateDimensions()
@@ -12,7 +12,7 @@ export const HomePage: React.FC = (): JSX.Element => {
 	const updateDimensions = (): void => {
 		const width: number = window.innerWidth
 		setIsDesktop(width >= 812)
-	}
+	}*/
 
 	return (
 		<main>
