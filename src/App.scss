@@ -50,6 +50,10 @@ main {
 
 .infos {
 	margin-top: 1.5vh;
+	color: green;
+	span {
+		color: greenyellow;
+	}
 	@media (min-width: $ipad) {
 		font-size: 1.5vw;
 	}
