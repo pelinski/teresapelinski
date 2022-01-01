@@ -7,7 +7,8 @@ import { HomePage } from './pages/Home.page'
 export const App: React.FC = (): JSX.Element => (
 	<Router>
 		<Routes>
-			<Route path='/' exact element={<HomePage />} />
+			<Route path='/' element={<HomePage />} />
+			<Route path="*" element={<Navigate to="/" replace />} />
 		</Routes>
 	</Router>
 )

@@ -7,9 +7,12 @@ $ipad: 812px;
 // styles
 * {
 	background: black;
-	color: greenyellow;
+	color: #adff2f;
 	font-family: 'Inconsolata', monospace;
 	overflow: hidden;
+	body {
+		margin: 0;
+	}
 }
 main {
 	margin: 0;
@@ -26,13 +29,15 @@ main {
 	user-select: none;
 	font-family: monospace;
 	overflow: hidden;
+	display: flex;
 
 	// todo: fix rotated phones
 	@media (min-width: $ipad) {
 		font-size: 1.5vw;
 	}
 	@media (max-width: $ipad) {
-		font-size: 3vw;
+		font-size: min(10pt, 3vw);
+		flex-direction: column;
 	}
 
 	.color1 {
@@ -49,7 +54,7 @@ main {
 		font-size: 1.5vw;
 	}
 	@media (max-width: $ipad) {
-		font-size: 3.8vw;
+		font-size: min(10pt, 3.8vw);
 		padding: 0 3vw;
 	}
 }

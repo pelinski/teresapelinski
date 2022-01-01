@@ -2,7 +2,7 @@
 	"name": "teresapelinski",
 	"version": "0.0.0",
 	"description": "teresapelinski's personal website",
-	"repository": "git@github.com:pelinski/tpr_net.git",
+	"repository": "git@github.com:pelinski/teresapelinski.git",
 	"author": "Teresa Pelinski <teresapelinski@gmail.com>",
 	"license": "MIT",
 	"private": true,
@@ -32,8 +32,6 @@
 	},
 	"scripts": {
 		"build": "parcel build index.html --public-url .",
-	//	"predeploy": "yarn run build",
-	//	"deploy": "gh-pages -d dist",
 		"dev": "parcel index.html",
 		"start": "serve"
 	},
