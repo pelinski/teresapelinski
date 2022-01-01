@@ -10,6 +10,9 @@ $ipad: 812px;
 	color: #adff2f;
 	font-family: 'Inconsolata', monospace;
 	overflow: hidden;
+	body {
+		margin: 0;
+	}
 }
 main {
 	margin: 0;
@@ -33,7 +36,7 @@ main {
 		font-size: 1.5vw;
 	}
 	@media (max-width: $ipad) {
-		font-size: 3vw;
+		font-size: min(10pt, 3vw);
 		flex-direction: column;
 	}
 
@@ -51,7 +54,7 @@ main {
 		font-size: 1.5vw;
 	}
 	@media (max-width: $ipad) {
-		font-size: 3.8vw;
+		font-size: min(10pt, 3.8vw);
 		padding: 0 3vw;
 	}
 }
