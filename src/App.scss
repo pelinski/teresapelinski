@@ -26,6 +26,7 @@ main {
 	user-select: none;
 	font-family: monospace;
 	overflow: hidden;
+	display: flex;
 
 	// todo: fix rotated phones
 	@media (min-width: $ipad) {
@@ -33,6 +34,7 @@ main {
 	}
 	@media (max-width: $ipad) {
 		font-size: 3vw;
+		flex-direction: column;
 	}
 
 	.color1 {
