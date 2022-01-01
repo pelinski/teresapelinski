@@ -1,6 +1,6 @@
 // font
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;900&display=swap');
-
+//@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
 // vars
 $ipad: 812px;
 
@@ -8,7 +8,7 @@ $ipad: 812px;
 * {
 	background: black;
 	color: #adff2f;
-	font-family: 'Inconsolata', monospace;
+	font-family: 'Courier Prime', monospace;
 	overflow: hidden;
 	body {
 		margin: 0;
@@ -50,11 +50,16 @@ main {
 
 .infos {
 	margin-top: 1.5vh;
+	color: green;
+	user-select: none;
+	span {
+		color: greenyellow;
+	}
 	@media (min-width: $ipad) {
 		font-size: 1.5vw;
 	}
 	@media (max-width: $ipad) {
-		font-size: min(10pt, 3.8vw);
+		font-size: min(12pt, 3.8vw);
 		padding: 0 3vw;
 	}
 }
