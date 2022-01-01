@@ -17,9 +17,6 @@ export const HomePage: React.FC = (): JSX.Element => {
 	return (
 		<main>
 			<Title />
-			<div className='infos'>
-				<span>{'<'}</span>WebsiteUnderDevelopment<span>{'/>'}</span>
-			</div>
 		</main>
 	)
 }
