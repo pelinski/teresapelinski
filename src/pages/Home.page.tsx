@@ -1,254 +1,54 @@
 import React from 'react'
 
 export const HomePage: React.FC = (): JSX.Element => {
-	/*const [isDesktop, setIsDesktop] = useState<boolean | null>(null)
-
-	useEffect(() => {
-		updateDimensions()
-		window.addEventListener('resize', updateDimensions)
-		return () => window.removeEventListener('resize', updateDimensions)
-	}, [])
-
-	const updateDimensions = (): void => {
-		const width: number = window.innerWidth
-		setIsDesktop(width >= 812)
-	}*/
-
 	return (
-		<main>
-			<Title />
-		</main>
+		<>
+			<nav>
+				<a onClick={scrollHandler('title')}>-++home-+</a>
+				<a onClick={scrollHandler('about-me')}>-about me+-</a>
+				<a>-projects-</a>
+				<a onClick={scrollHandler('no-shell')}>+no-shell</a>
+				<a onClick={scrollHandler('infilling')}>--infilling-+</a>
+			</nav>
+			<main>
+				<div className='screen' id='title'>
+					<span>hi i'm teresa pelinski and this is my website</span>
+					<span>hi i'm teresa pelinski and this is my website</span>
+					<span>hi i'm teresa pelinski and this is my website</span>
+					<span>hi i'm teresa pelinski and this is my website</span>
+					<span>hi i'm teresa pelinski and this is my website</span>
+					<span>hi i'm teresa pelinski and this is my website</span>
+					<span>hi i'm teresa pelinski and this is my website</span>
+					<span>hi i'm teresa pelinski and this is my website</span>
+					<span>hi i'm teresa pelinski and this is my website</span>
+					<span>hi i'm teresa pelinski and this is my website</span>
+					<span>hi i'm teresa pelinski and this is my website</span>
+					<span>hi i'm teresa pelinski and this is my website</span>
+					<span>
+						hi i'm <span>teresa pelinski</span> and this is my website
+					</span>
+					<span>
+						hi i'm teresa pelinski and this is my <span>website</span>
+					</span>
+					<span>hi i'm teresa pelinski and this is my website</span>
+					<span>hi i'm teresa pelinski and this is my website</span>
+					<span>hi i'm teresa pelinski and this is my website</span>
+					<span>hi i'm teresa pelinski and this is my website</span>
+					<span>hi i'm teresa pelinski and this is my website</span>
+					<span>hi i'm teresa pelinski and this is my website</span>
+					<span>hi i'm teresa pelinski and this is my website</span>
+					<span>hi i'm teresa pelinski and this is my website</span>
+				</div>
+				<div className='screen' id='about-me'>
+					hi this is the about me
+				</div>
+				<div className='screen' id='no-shell'>
+					no-shell
+				</div>
+			</main>
+		</>
 	)
 }
-const Title: React.FC = (): JSX.Element => (
-	<div className='title-name'>
-		<div>
-			<span className='color1'>╱</span>
-			<span className='color2'>╭━━━━╮</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>╭━━━╮</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>╭━━━╮</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>╭━━━╮</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>╭━━━╮</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>╭━━━╮</span>
-			<span className='color1'>╱</span>
-			<br />
-			<span className='color1'>╱</span>
-			<span className='color2'>┃╭╮╭╮┃</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>┃╭━━╯</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>┃╭━╮┃</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>┃╭━━╯</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>┃╭━╮┃</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>┃╭━╮┃</span>
-			<span className='color1'>╱</span>
-			<br />
-			<span className='color1'>╱</span>
-			<span className='color2'>╰╯┃┃╰╯</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>┃╰━━╮</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>┃╰━╯┃</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>┃╰━━╮</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>┃╰━━╮</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>┃┃</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>┃┃</span>
-			<span className='color1'>╱</span>
-			<br />
-			<span className='color1'>╱</span>
-			<span className='color1'>╱╱</span>
-			<span className='color2'>┃┃</span>
-			<span className='color1'>╱╱</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>┃╭━━╯</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>┃╭╮╭╯</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>┃╭━━╯</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>╰━━╮┃</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>┃╰━╯┃</span>
-			<span className='color1'>╱</span>
-			<br />
-			<span className='color1'>╱</span>
-			<span className='color1'>╱╱</span>
-			<span className='color2'>┃┃</span>
-			<span className='color1'>╱╱</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>┃╰━━╮</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>┃┃┃╰╮</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>┃╰━━╮</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>┃╰━╯┃</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>┃╭━╮┃</span>
-			<span className='color1'>╱</span>
-			<br />
-			<span className='color1'>╱</span>
-			<span className='color1'>╱╱</span>
-			<span className='color2'>╰╯</span>
-			<span className='color1'>╱╱</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>╰━━━╯</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>╰╯╰━╯</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>╰━━━╯</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>╰━━━╯</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>╰╯</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>╰╯</span>
-			<span className='color1'>╱</span>
-			<br />
-		</div>
-		<div>
-			<span className='color1'>╱</span>
-			<span className='color2'>╭━━━╮</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>╭━━━╮</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>╭╮</span>
-			<span className='color1'>╱╱╱</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>╭━━╮</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>╭━╮</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>╭╮</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>╭━━━╮</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>╭╮╭━╮</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>╭━━╮</span>
-			<span className='color1'>╱</span>
-			<br />
-			<span className='color1'>╱</span>
-			<span className='color2'>┃╭━╮┃</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>┃╭━━╯</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>┃┃</span>
-			<span className='color1'>╱╱╱</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>╰┫┣╯</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>┃┃╰╮┃┃</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>┃╭━╮┃</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>┃┃┃╭╯</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>╰┫┣╯</span>
-			<span className='color1'>╱</span>
-			<br />
-			<span className='color1'>╱</span>
-			<span className='color2'>┃╰━╯┃</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>┃╰━━╮</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>┃┃</span>
-			<span className='color1'>╱╱╱</span>
-			<span className='color1'>╱</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>┃┃</span>
-			<span className='color1'>╱</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>┃╭╮╰╯┃</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>┃╰━━╮</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>┃╰╯╯</span>
-			<span className='color1'>╱</span>
-			<span className='color1'>╱</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>┃┃</span>
-			<span className='color1'>╱</span>
-			<span className='color1'>╱</span>
-			<br />
-			<span className='color1'>╱</span>
-			<span className='color2'>┃╭━━╯</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>┃╭━━╯</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>┃┃</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>╭╮</span>
-			<span className='color1'>╱</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>┃┃</span>
-			<span className='color1'>╱</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>┃┃╰╮┃┃</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>╰━━╮┃</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>┃╭╮┃</span>
-			<span className='color1'>╱</span>
-			<span className='color1'>╱</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>┃┃</span>
-			<span className='color1'>╱</span>
-			<span className='color1'>╱</span>
-			<br />
-			<span className='color1'>╱</span>
-			<span className='color2'>┃┃</span>
-			<span className='color1'>╱╱╱</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>┃╰━━╮</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>┃╰━╯┃</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>╭┫┣╮</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>┃┃</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>┃┃┃</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>┃╰━╯┃</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>┃┃┃╰╮</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>╭┫┣╮</span>
-			<span className='color1'>╱</span>
-			<br />
-			<span className='color1'>╱</span>
-			<span className='color2'>╰╯</span>
-			<span className='color1'>╱╱╱</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>╰━━━╯</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>╰━━━╯</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>╰━━╯</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>╰╯</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>╰━╯</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>╰━━━╯</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>╰╯╰━╯</span>
-			<span className='color1'>╱</span>
-			<span className='color2'>╰━━╯</span>
-			<span className='color1'>╱</span>
-		</div>
-	</div>
-)
+
+const scrollHandler = (scrollTo: string) => (): void =>
+	document.getElementById(scrollTo)?.scrollIntoView({ behavior: 'smooth' })
