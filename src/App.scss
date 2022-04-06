@@ -6,6 +6,7 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
 
 $ipad: 812px;
+$tgreen: rgb(0, 255, 0);
 
 // styles
 * {
@@ -26,23 +27,40 @@ $ipad: 812px;
 	}
 }
 nav {
-	position: absolute;
+	position: fixed;
+	padding-top: 5vh;
+	padding-left: 5vw;
+	display: flex;
+	flex-direction: column;
 	left: 0;
 	cursor: pointer;
+	span {
+		background: black;
+	}
 	a {
-		background: blue;
+		height: fit-content;
+		width: fit-content;
+		background: $tgreen;
+		color: black;
+	}
+	.nav-projects {
+		display: flex;
+		span {
+			align-self: flex-end;
+		}
 	}
 	::-moz-selection {
 		color: black;
-		background: rgb(0, 255, 0);
+		background: red;
 	}
 	::selection {
 		color: black;
-		background: rgb(0, 255, 0);
+		background: red;
 	}
 }
 main {
 	display: flex;
+	flex-wrap: wrap;
 	width: 300vw;
 	.screen {
 		margin: 0;
@@ -60,6 +78,17 @@ main {
 		span {
 			span {
 				background-color: red;
+			}
+		}
+		@media (max-width: $ipad) {
+			span {
+				width: 110vw;
+			}
+			br {
+				display: none;
+				-webkit-hyphens: auto;
+				-ms-hyphens: auto;
+				hyphens: auto;
 			}
 		}
 	}
