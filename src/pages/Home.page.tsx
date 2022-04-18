@@ -5,7 +5,14 @@ export const HomePage: React.FC = (): JSX.Element => {
 		<>
 			{' '}
 			<nav>
-				<NavTree id={'teresa pelinski'} classN='title'>
+				<NavTree
+					id={
+						<a className='title' onClick={scrollHandler('title')}>
+							teresa-pelinski
+						</a>
+					}
+					classN='title'
+				>
 					<NavTree id={''} prompt={'|'} />
 					<NavTree id={<a onClick={scrollHandler('about-me')}>about-me</a>} prompt={'o'} />
 					<NavTree id={''} prompt={'|'} />
@@ -88,15 +95,9 @@ export const HomePage: React.FC = (): JSX.Element => {
 
 const scrollHandler = (scrollTo: string) => (): void => document.getElementById(scrollTo)?.scrollIntoView({ behavior: 'smooth' })
 
-const NavTree: React.FC<{ id: string | JSX.Element; children?: JSX.Element[] | JSX.Element; prompt?: string | JSX.Element; classN?: string }> = ({
-	id,
-	children,
-	prompt,
-	classN = '',
-}): JSX.Element => (
+const NavTree: React.FC<{ id: string | JSX.Element; children?: JSX.Element[] | JSX.Element; prompt?: string | JSX.Element }> = ({ id, children, prompt }): JSX.Element => (
 	<>
-		{console.log(children)}
-		<span className={classN} onClick={(classN === 'title' && scrollHandler('title')) || (() => null)}>
+		<span>
 			{prompt}
 			{prompt && <>&nbsp;</>}
 			{id}
