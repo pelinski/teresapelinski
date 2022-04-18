@@ -8,6 +8,20 @@
 $ipad: 812px;
 $tgreen: rgb(0, 255, 0);
 
+@keyframes floating {
+	0% {
+		transform: translate(0, 0px);
+	}
+	25% {
+		transform: translate(2px, 2px);
+	}
+	50% {
+		transform: translate(-0, 2px);
+	}
+	100% {
+		transform: translate(0, -0px);
+	}
+}
 // styles
 * {
 	background: black;
@@ -26,36 +40,24 @@ $tgreen: rgb(0, 255, 0);
 		background: red;
 	}
 }
+
 nav {
-	position: fixed;
-	padding-top: 5vh;
-	padding-left: 5vw;
-	display: flex;
-	flex-direction: column;
-	left: 0;
-	cursor: pointer;
-	span {
-		background: black;
-	}
-	a {
-		height: fit-content;
-		width: fit-content;
-		background: $tgreen;
+	position: absolute;
+	z-index: 100;
+	left: 1vw;
+	top: 5vh;
+	// animation: floating 0.5s ease-in-out infinite;
+
+	.title {
+		background-color: $tgreen;
 		color: black;
 	}
-	.nav-projects {
+	.leave {
 		display: flex;
-		span {
-			align-self: flex-end;
+		flex-direction: column;
+		.leave {
+			flex-direction: row;
 		}
-	}
-	::-moz-selection {
-		color: black;
-		background: red;
-	}
-	::selection {
-		color: black;
-		background: red;
 	}
 }
 main {
