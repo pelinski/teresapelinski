@@ -47,7 +47,9 @@ nav {
 	left: 1vw;
 	top: 5vh;
 	// animation: floating 0.5s ease-in-out infinite;
-
+	a {
+		cursor: pointer;
+	}
 	.title {
 		background-color: $tgreen;
 		color: black;
