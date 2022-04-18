@@ -6,19 +6,24 @@ export const HomePage: React.FC = (): JSX.Element => {
 			{' '}
 			<nav>
 				<NavTree id={'teresa pelinski'} classN='title'>
+					<NavTree id={''} prompt={'|'} />
 					<NavTree id={<a onClick={scrollHandler('about-me')}>about-me</a>} prompt={'o'} />
+					<NavTree id={''} prompt={'|'} />
 					<NavTree id={'phd in ai and music _21-..25'} prompt={'+'}>
 						<NavTree id={'embedded ai workshop'} prompt={<>|&nbsp;&nbsp;{'|-->'}</>} />
 						<NavTree id={'not much to show here yet...'} prompt={<>|&nbsp;&nbsp;{'|-->'}</>} />
 					</NavTree>
+					<NavTree id={''} prompt={'|'} />
 					<NavTree id={'sound and music computing master _20-21_'} prompt={'+'}>
 						<NavTree id={'master thesis'} prompt={<>|&nbsp;&nbsp;{'|-->'}</>} />
 						<NavTree id={'miniprojects'} prompt={<>|&nbsp;&nbsp;{'|-->'}</>} />
 					</NavTree>
-					<NavTree id={'sound art _??-..??_'} prompt={'+'}>
+					<NavTree id={''} prompt={'|'} />
+					<NavTree id={'sound art _??-..??'} prompt={'+'}>
 						<NavTree id={'noshell'} prompt={<>|&nbsp;&nbsp;{'|-->'}</>} />
 					</NavTree>
-					<NavTree id={'<----––––end-––––--->'} />
+					<NavTree id={''} prompt={'|'} />
+					<NavTree id={''} prompt={'v'} />
 				</NavTree>
 			</nav>
 			<main>
