@@ -24,7 +24,6 @@ $tgreen: rgb(0, 255, 0);
 }
 // styles
 * {
-	background: black;
 	color: white;
 	font-family: 'IBM Plex Mono', monospace;
 	overflow: hidden;
@@ -41,7 +40,12 @@ $tgreen: rgb(0, 255, 0);
 	}
 }
 
+body {
+	background: black;
+}
+
 nav {
+	background: black;
 	position: absolute;
 	z-index: 100;
 	left: 1vw;
@@ -61,6 +65,9 @@ nav {
 			flex-direction: row;
 		}
 	}
+	.hide {
+		display: none;
+	}
 }
 main {
 	display: flex;
@@ -69,7 +76,6 @@ main {
 	.screen {
 		margin: 0;
 		padding: 0;
-
 		display: flex;
 		align-items: center;
 		justify-content: center;
