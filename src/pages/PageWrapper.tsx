@@ -1,16 +1,30 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import { useNavigate, useLocation } from 'react-router-dom'
 import { NoshellPage } from './Noshell.page'
+import { Title } from '../components/Title'
 
-export const HomePage: React.FC = (): JSX.Element => {
-	const [showNav, setShowNav] = useState(true)
-	console.log(`leave ${showNav ? '' : ' hide'}`)
+export const PageWrapper: React.FC<{ screen: string }> = ({ screen }): JSX.Element => {
+	const [showNav, setShowNav] = useState(true) // currently unused
+	const navigate = useNavigate()
+	const location = useLocation()
+	console.log(location)
+
+	const scrollHandler = (scrollTo: string) => (): void => {
+		navigate(`/${scrollTo === 'title' ? '' : scrollTo}`, { replace: true })
+		return document.getElementById(scrollTo)?.scrollIntoView({ behavior: 'smooth', block: 'end' })
+	}
+	// smooth scroll to screen when loading component
+	useEffect(() => {
+		document.getElementById(screen)?.scrollIntoView({ behavior: 'smooth', block: 'end' })
+	}, [])
+
 	return (
 		<>
 			<nav>
 				<NavTree
 					className={`${showNav ? '' : ' hide'}`}
 					id={
-						<a className={'title'} onClick={() => setShowNav(!showNav)}>
+						<a className={'title'} onClick={scrollHandler('title')}>
 							teresa-pelinski
 						</a>
 					}
@@ -37,66 +51,28 @@ export const HomePage: React.FC = (): JSX.Element => {
 					<NavTree id={''} prompt={'|'} />
 					<NavTree id={''} prompt={'v'} />
 				</NavTree>
+				<span className='bottom'>
+					<a>my website</a>
+					<a>github</a>
+					<a>twitter</a>
+				</span>
 			</nav>
 			<main>
 				<div className='screen' id='title'>
-					<span>
-						hi i'm teresa pelinski and this is my website
-						<br />
-						hi i'm teresa pelinski and this is my website
-						<br />
-						hi i'm teresa pelinski and this is my website
-						<br />
-						hi i'm teresa pelinski and this is my website
-						<br />
-						hi i'm teresa pelinski and this is my website
-						<br />
-						hi i'm teresa pelinski and this is my website
-						<br />
-						hi i'm teresa pelinski and this is my website
-						<br />
-						hi i'm teresa pelinski and this is my website
-						<br />
-						hi i'm teresa pelinski and this is my website
-						<br />
-						hi i'm teresa pelinski and this is my website
-						<br />
-						hi i'm teresa pelinski and this is my website
-						<br />
-						hi i'm teresa pelinski and this is my website
-						<br />
-						hi i'm <span>teresa pelinski</span> and this is my website
-						<br />
-						hi i'm teresa pelinski and this is my <span>website</span>
-						<br />
-						hi i'm teresa pelinski and this is my website
-						<br />
-						hi i'm teresa pelinski and this is my website
-						<br />
-						hi i'm teresa pelinski and this is my website
-						<br />
-						hi i'm teresa pelinski and this is my website
-						<br />
-						hi i'm teresa pelinski and this is my website
-						<br />
-						hi i'm teresa pelinski and this is my website
-						<br />
-						hi i'm teresa pelinski and this is my website
-						<br />
-						hi i'm teresa pelinski and this is my website
-						<br />
-					</span>
+					<div className='content'>
+						<Title />
+					</div>
 				</div>
 				<div className='screen' id='about-me'>
-					hi this is about me
+					<div className='content'>hi this is about me</div>
 				</div>
-				<NoshellPage />
+				<div className='screen' id='no-shell'>
+					<div className='content'>in 2021 i did a residency at phonos foundation, where i developed my project 'no-shell just a voice'.</div>
+				</div>
 			</main>
 		</>
 	)
 }
-
-const scrollHandler = (scrollTo: string) => (): void => document.getElementById(scrollTo)?.scrollIntoView({ behavior: 'smooth' })
 
 const NavTree: React.FC<{ id: string | JSX.Element; children?: JSX.Element[] | JSX.Element; prompt?: string | JSX.Element; className?: string }> = ({
 	id,

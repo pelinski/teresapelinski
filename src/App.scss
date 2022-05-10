@@ -28,6 +28,8 @@ $tgreen: rgb(0, 255, 0);
 	font-family: 'IBM Plex Mono', monospace;
 	overflow: hidden;
 	body {
+		animation: floating 5s ease-in-out infinite;
+		background: black;
 		margin: 0;
 	}
 
@@ -40,33 +42,47 @@ $tgreen: rgb(0, 255, 0);
 	}
 }
 
-body {
-	background: black;
-}
-
 nav {
-	background: black;
 	position: absolute;
+	display: inline-block;
 	z-index: 100;
-	left: 1vw;
-	top: 5vh;
-	// animation: floating 0.5s ease-in-out infinite;
+	height: 100vh;
+	width: 25vw;
+	// center text in column
+	// display: flex;
+	// flex-direction: column;
+	// justify-content: center;
+	// center div
+	// top: 50%;
+	// transform: translateY(-50%);
+	padding: 1vw;
+	border-right: 1px solid white;
+
+	background: black;
+	animation: floating 5s ease-in-out infinite;
 	a {
 		cursor: pointer;
 	}
+
 	.title {
 		background-color: $tgreen;
 		color: black;
 	}
+
+	.leave.hide {
+		display: none;
+	}
 	.leave {
+		// display: none;
 		display: flex;
 		flex-direction: column;
 		.leave {
 			flex-direction: row;
 		}
 	}
-	.hide {
-		display: none;
+	.bottom {
+		position: absolute;
+		bottom: 5vh;
 	}
 }
 main {
@@ -76,6 +92,7 @@ main {
 	.screen {
 		margin: 0;
 		padding: 0;
+
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -84,6 +101,10 @@ main {
 
 		height: 100vh;
 		width: 100vw;
+
+		.content {
+			padding-left: 25vw;
+		}
 
 		span {
 			span {
