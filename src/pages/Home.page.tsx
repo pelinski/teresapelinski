@@ -1,20 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { NoshellPage } from './Noshell.page'
 
 export const HomePage: React.FC = (): JSX.Element => {
+	const [showNav, setShowNav] = useState(true)
+	console.log(`leave ${showNav ? '' : ' hide'}`)
 	return (
 		<>
-			{' '}
 			<nav>
 				<NavTree
+					className={`${showNav ? '' : ' hide'}`}
 					id={
-						<a className='title' onClick={scrollHandler('title')}>
+						<a className={'title'} onClick={() => setShowNav(!showNav)}>
 							teresa-pelinski
 						</a>
 					}
-					classN='title'
 				>
+					{/* <NavTree id={''} prompt={'|'} />
+				<NavTree id={<a onClick={scrollHandler('title')}>home </a>} prompt={'o'} /> */}
+
 					<NavTree id={''} prompt={'|'} />
-					<NavTree id={<a onClick={scrollHandler('about-me')}>about-me</a>} prompt={'o'} />
+					<NavTree id={<a onClick={scrollHandler('about-me')}>about-me _97–...</a>} prompt={'o'} />
 					<NavTree id={''} prompt={'|'} />
 					<NavTree id={'phd in ai and music _21-..25'} prompt={'+'}>
 						<NavTree id={'embedded ai workshop'} prompt={<>|&nbsp;&nbsp;{'|-->'}</>} />
@@ -27,7 +32,7 @@ export const HomePage: React.FC = (): JSX.Element => {
 					</NavTree>
 					<NavTree id={''} prompt={'|'} />
 					<NavTree id={'sound art _??-..??'} prompt={'+'}>
-						<NavTree id={'noshell'} prompt={<>|&nbsp;&nbsp;{'|-->'}</>} />
+						<NavTree id={<a onClick={scrollHandler('no-shell')}>no-shell</a>} prompt={<>|&nbsp;&nbsp;{'|-->'}</>} />
 					</NavTree>
 					<NavTree id={''} prompt={'|'} />
 					<NavTree id={''} prompt={'v'} />
@@ -83,11 +88,9 @@ export const HomePage: React.FC = (): JSX.Element => {
 					</span>
 				</div>
 				<div className='screen' id='about-me'>
-					hi this is the about me
+					hi this is about me
 				</div>
-				<div className='screen' id='no-shell'>
-					no-shell
-				</div>
+				<NoshellPage />
 			</main>
 		</>
 	)
@@ -95,7 +98,12 @@ export const HomePage: React.FC = (): JSX.Element => {
 
 const scrollHandler = (scrollTo: string) => (): void => document.getElementById(scrollTo)?.scrollIntoView({ behavior: 'smooth' })
 
-const NavTree: React.FC<{ id: string | JSX.Element; children?: JSX.Element[] | JSX.Element; prompt?: string | JSX.Element }> = ({ id, children, prompt }): JSX.Element => (
+const NavTree: React.FC<{ id: string | JSX.Element; children?: JSX.Element[] | JSX.Element; prompt?: string | JSX.Element; className?: string }> = ({
+	id,
+	children,
+	prompt,
+	className,
+}): JSX.Element => (
 	<>
 		<span>
 			{prompt}
@@ -110,7 +118,7 @@ const NavTree: React.FC<{ id: string | JSX.Element; children?: JSX.Element[] | J
 					index // works for both one children and an array of children
 				) => (
 					<>
-						<div className='leave' key={index}>
+						<div className={`leave ${className}`} key={index}>
 							{leave}
 						</div>
 					</>
@@ -118,10 +126,3 @@ const NavTree: React.FC<{ id: string | JSX.Element; children?: JSX.Element[] | J
 			)}
 	</>
 )
-
-// const NavLeave: React.FC<{ children: JSX.Element; prompt: string }> = ({ children, prompt }) => (
-// 	<div className='leave'>
-// 		{prompt}&nbsp;
-// 		{children}
-// 	</div>
-// )
