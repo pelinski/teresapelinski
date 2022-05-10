@@ -17,7 +17,7 @@ export const Nav: React.FC<{ className: string }> = ({ className }) => {
 				className={`${showNav ? '' : ' hide'}`}
 				id={
 					<a className={'title'} onClick={scrollHandler('title')}>
-						teresa-pelinski
+						{!isMobile ? 'teresa-pelinski' : 'index'}
 					</a>
 				}
 			>
