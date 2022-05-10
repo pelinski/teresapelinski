@@ -6,6 +6,8 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
 
 $ipad: 812px;
+$phone: 430px;
+$rot: 480px;
 $tgreen: rgb(0, 255, 0);
 
 @keyframes floating {
@@ -22,6 +24,7 @@ $tgreen: rgb(0, 255, 0);
 		transform: translate(0, -0px);
 	}
 }
+
 // styles
 * {
 	color: white;
@@ -42,12 +45,34 @@ $tgreen: rgb(0, 255, 0);
 	}
 }
 
+@media (max-width: $ipad) {
+	.nav-desktop {
+		display: none;
+	}
+}
+@media (min-width: $ipad) {
+	// in mobile nav is part of screen title
+	.nav-mobile {
+		display: none;
+	}
+}
+
 nav {
-	position: absolute;
-	display: inline-block;
-	z-index: 100;
+	background: black;
 	height: 100vh;
-	width: 25vw;
+	@media (max-width: $ipad) {
+		width: 100vw;
+		height: 100vh;
+
+		left: 0;
+		// background: black;
+	}
+	@media (min-width: $ipad) {
+		position: absolute;
+		display: inline-block;
+		z-index: 100;
+		width: 25vw;
+	}
 	// center text in column
 	// display: flex;
 	// flex-direction: column;
@@ -58,7 +83,7 @@ nav {
 	padding: 1vw;
 	border-right: 1px solid white;
 
-	background: black;
+	// background: black;
 	animation: floating 5s ease-in-out infinite;
 	a {
 		cursor: pointer;
@@ -66,14 +91,13 @@ nav {
 
 	.title {
 		background-color: $tgreen;
+		text-align: center;
 		color: black;
 	}
 
-	.leave.hide {
-		display: none;
-	}
 	.leave {
 		// display: none;
+		background: black;
 		display: flex;
 		flex-direction: column;
 		.leave {
@@ -81,8 +105,19 @@ nav {
 		}
 	}
 	.bottom {
+		background: black;
 		position: absolute;
 		bottom: 5vh;
+	}
+	@media (max-width: $ipad) {
+		.leave.hide,
+		.bottom.hide {
+			display: none;
+		}
+		.bottom {
+			display: block;
+			width: 100vw;
+		}
 	}
 }
 main {
@@ -101,25 +136,28 @@ main {
 
 		height: 100vh;
 		width: 100vw;
-
-		.content {
-			padding-left: 25vw;
+		@media (max-width: $ipad) {
+			// font-size: 0.7rem;
 		}
-
+		@media (min-width: $ipad) {
+			.content {
+				padding-left: 25vw;
+			}
+		}
+	}
+	#title {
 		span {
 			span {
 				background-color: red;
 			}
 		}
 		@media (max-width: $ipad) {
-			span {
-				width: 110vw;
-			}
-			br {
-				display: none;
-				-webkit-hyphens: auto;
-				-ms-hyphens: auto;
-				hyphens: auto;
+			.content {
+				padding-top: 30vh;
+				span {
+					width: 100vw;
+					color: white;
+				}
 			}
 		}
 	}
