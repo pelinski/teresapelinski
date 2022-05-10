@@ -9,6 +9,7 @@ $ipad: 812px;
 $phone: 430px;
 $rot: 480px;
 $tgreen: rgb(0, 255, 0);
+$screen-num: 5;
 
 @keyframes floating {
 	0% {
@@ -70,8 +71,6 @@ nav {
 		height: 100vh;
 
 		left: 0;
-		.bottom {
-		}
 
 		// background: black;
 	}
@@ -119,7 +118,7 @@ nav {
 main {
 	display: flex;
 	flex-wrap: wrap;
-	width: 300vw;
+	width: $screen-num * 100vw;
 	@media (max-width: $ipad) {
 		.go-home {
 			text-align: center;
@@ -149,7 +148,8 @@ main {
 
 		@media (min-width: $ipad) {
 			.content {
-				padding-left: 25vw;
+				padding-left: 30vw;
+				padding-right: 5vw;
 			}
 		}
 	}

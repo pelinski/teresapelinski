@@ -27,12 +27,12 @@ export const Nav: React.FC<{ className: string }> = ({ className }) => {
 				<NavTree id={''} prompt={'|'} />
 				<NavTree id={<a onClick={scrollHandler('about-me')}>about-me _97–...</a>} prompt={'o'} />
 				<NavTree id={''} prompt={'|'} />
-				<NavTree id={'phd in ai and music _21-..25'} prompt={'+'}>
+				<NavTree id={<a onClick={scrollHandler('phd')}>phd in ai and music _21-..25</a>} prompt={'+'}>
 					<NavTree id={'embedded ai workshop'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
 					<NavTree id={'not much to show here yet...'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
 				</NavTree>
 				<NavTree id={''} prompt={'|'} />
-				<NavTree id={'sound and music computing master _20-21_'} prompt={'+'}>
+				<NavTree id={<a onClick={scrollHandler('smc')}>sound and music computing master _20-21_</a>} prompt={'+'}>
 					<NavTree id={'master thesis'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
 					<NavTree id={'miniprojects'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
 				</NavTree>
