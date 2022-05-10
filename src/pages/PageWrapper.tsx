@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
-import { NoshellPage } from './Noshell.page'
 import { Title } from '../components/Title'
 import { Nav } from '../components/Nav'
 
 export const PageWrapper: React.FC<{ screen: string }> = ({ screen }): JSX.Element => {
+	const navigate = useNavigate()
+	const scrollHandler = (scrollTo: string) => (): void => {
+		navigate(`/${scrollTo === 'title' ? '' : scrollTo}`, { replace: true })
+		return document.getElementById(scrollTo)?.scrollIntoView({ behavior: 'smooth', block: 'end' })
+	}
 	// smooth scroll to screen when loading component
 	useEffect(() => {
 		document.getElementById(screen)?.scrollIntoView({ behavior: 'smooth', block: 'end' })
@@ -20,6 +24,9 @@ export const PageWrapper: React.FC<{ screen: string }> = ({ screen }): JSX.Eleme
 						<Title />
 					</div>
 				</div>
+				<a className='nav-mobile go-home' onClick={scrollHandler('title')}>
+					teresa-pelinski
+				</a>
 				<div className='screen' id='about-me'>
 					<div className='content'>hi this is about me</div>
 				</div>
