@@ -50,7 +50,24 @@ export const PageWrapper: React.FC<{ screen: string }> = ({ screen }): JSX.Eleme
 							i wrote my master thesis under the supervision of sergi jordà and behzad haki on the topic of music generation with deep learning, in particular, on infilling audio drum
 							loops with transformer neural networks. i obtained a 100% grade. here is the <a>manuscript</a> the <a>code</a> and a <a>video</a>
 						</div>
-						{/*embedd youtube videos */}
+						<iframe
+							width={560}
+							height={315}
+							src='https://www.youtube-nocookie.com/embed/c0vCFT8gLi8'
+							title='YouTube video player'
+							frameBorder={0}
+							allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+							allowFullScreen
+						/>
+						<iframe
+							width={560}
+							height={315}
+							src='https://www.youtube-nocookie.com/embed/M6bAb42s-lo'
+							title='YouTube video player'
+							frameBorder={0}
+							allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+							allowFullScreen
+						/>
 					</div>
 				</Screen>
 				<Screen id='no-shell'>in 2021 i did a residency at phonos foundation, where i developed my project 'no-shell just a voice'.</Screen>

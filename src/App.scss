@@ -64,15 +64,16 @@ $screen-num: 5;
 }
 
 nav {
-	background: black;
 	height: 100vh;
+	padding: 1vw;
+
+	border-right: 1px solid white;
+	background: black;
+
 	@media (max-width: $ipad) {
 		width: 100vw;
 		height: 100vh;
-
 		left: 0;
-
-		// background: black;
 	}
 	@media (min-width: $ipad) {
 		position: absolute;
@@ -85,18 +86,7 @@ nav {
 			bottom: 5vh;
 		}
 	}
-	// center text in column
-	// display: flex;
-	// flex-direction: column;
-	// justify-content: center;
-	// center div
-	// top: 50%;
-	// transform: translateY(-50%);
-	padding: 1vw;
-	border-right: 1px solid white;
 
-	// background: black;
-	animation: floating 5s ease-in-out infinite;
 	a {
 		cursor: pointer;
 	}
@@ -112,6 +102,12 @@ nav {
 		flex-direction: column;
 		.leave {
 			flex-direction: row;
+		}
+	}
+	.bottom {
+		a {
+			padding-right: 20px;
+			text-decoration: under;
 		}
 	}
 }

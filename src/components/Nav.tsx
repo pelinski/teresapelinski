@@ -6,6 +6,12 @@ export const Nav: React.FC<{ className: string }> = ({ className }) => {
 	const navigate = useNavigate()
 	const isMobile = className === 'nav-mobile'
 
+	const selfScroll = (): void => {
+		document.getElementById('no-shell')?.scrollIntoView({ behavior: 'smooth', block: 'end' })
+		setTimeout(() => document.getElementById('title')?.scrollIntoView({ behavior: 'smooth', block: 'end' }), 1000)
+		navigate(`/`, { replace: true })
+	}
+
 	const scrollHandler = (scrollTo: string) => (): void => {
 		setShowNav(!showNav)
 		navigate(`/${scrollTo === 'title' ? '' : scrollTo}`, { replace: true })
@@ -44,9 +50,9 @@ export const Nav: React.FC<{ className: string }> = ({ className }) => {
 				<NavTree id={''} prompt={'v'} />
 			</NavTree>
 			<span className={`bottom ${showNav ? '' : ' hide'}`}>
-				<a>my website</a>
-				<a>github</a>
-				<a>twitter</a>
+				<a onClick={() => selfScroll()}>my website</a>
+				<a href='https://github.com/pelinski'>github</a>
+				<a href='https://twitter.com/t_pelinski'>twitter</a>
 			</span>
 		</nav>
 	)
