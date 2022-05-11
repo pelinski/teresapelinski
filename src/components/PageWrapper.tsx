@@ -4,7 +4,7 @@ import { Title } from './Title'
 import { Nav } from './Nav'
 
 import { Screen } from './Screen'
-import { PhdScreen } from './screens/phd'
+import { PhdScreen } from './screens/Phd'
 import { SmcScreen } from './screens/Smc'
 import { AboutmeScreen } from './screens/Aboutme'
 import { ArtScreen } from './screens/Art'
