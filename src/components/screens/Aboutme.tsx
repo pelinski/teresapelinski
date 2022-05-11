@@ -1,8 +1,7 @@
 import React from 'react'
-import { Screen } from './Screen'
 
-export const AboutmeScreen: React.FC<{ scrollHandler: (scrollTo: string) => () => void }> = ({ scrollHandler }): JSX.Element => (
-	<Screen id='about-me'>
+export const Aboutme: React.FC<{ scrollHandler: (scrollTo: string) => () => void }> = ({ scrollHandler }): JSX.Element => (
+	<>
 		<span className='screen-title'>about-me</span>
 		<div>
 			hi i'm <span className='h-red'>teresa pelinski ramos</span> and this is my website. both pelinski and ramos are my last names, in spain it is common to have both your dad's and your mum's
@@ -26,5 +25,5 @@ export const AboutmeScreen: React.FC<{ scrollHandler: (scrollTo: string) => () =
 			</a>{' '}
 			at the phonos foundation where i thought a lot about the body in artificially generated voices and generated a voice from an archive of interviews.
 		</div>
-	</Screen>
+	</>
 )
