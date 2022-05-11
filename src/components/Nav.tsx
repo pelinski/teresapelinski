@@ -6,51 +6,52 @@ export const Nav: React.FC<{ className: string }> = ({ className }) => {
 	const navigate = useNavigate()
 	const isMobile = className === 'nav-mobile'
 
-	const selfScroll = (): void => {
-		document.getElementById('no-shell')?.scrollIntoView({ behavior: 'smooth', block: 'end' })
-		setTimeout(() => document.getElementById('title')?.scrollIntoView({ behavior: 'smooth', block: 'end' }), 1000)
-		navigate(`/`, { replace: true })
-	}
-
-	const scrollHandler = (scrollTo: string) => (): void => {
+	const scrollHandler = (scrollTo: string): void => {
 		setShowNav(!showNav)
 		navigate(`/${scrollTo === 'title' ? '' : scrollTo}`, { replace: true })
-		return document.getElementById(scrollTo)?.scrollIntoView({ behavior: 'smooth', block: 'end' })
+		document.getElementById(scrollTo)?.scrollIntoView({ behavior: 'smooth', block: 'end' })
 	}
 	return (
 		<nav className={className}>
 			<NavTree
 				className={`${showNav ? '' : ' hide'}`}
 				id={
-					<a className={'title'} onClick={scrollHandler('title')}>
+					<a className={'title'} onClick={() => scrollHandler('title')}>
 						{!isMobile ? 'teresa-pelinski' : 'index'}
 					</a>
 				}
 			>
 				{/* <NavTree id={''} prompt={'|'} />
-<NavTree id={<a onClick={scrollHandler('title')}>home </a>} prompt={'o'} /> */}
+<NavTree id={<a onClick={()=>scrollHandler('title')}>home </a>} prompt={'o'} /> */}
 
 				<NavTree id={''} prompt={'|'} />
-				<NavTree id={<a onClick={scrollHandler('about-me')}>about-me _97–...</a>} prompt={'o'} />
+				<NavTree id={<a onClick={() => scrollHandler('about-me')}>about-me _97–...</a>} prompt={'o'} />
 				<NavTree id={''} prompt={'|'} />
-				<NavTree id={<a onClick={scrollHandler('phd')}>phd in ai and music _21-..25</a>} prompt={'+'}>
+				<NavTree id={<a onClick={() => scrollHandler('phd')}>phd in ai and music _21-..25</a>} prompt={'+'}>
 					<NavTree id={'embedded ai workshop'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
 					<NavTree id={'not much to show here yet...'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
 				</NavTree>
 				<NavTree id={''} prompt={'|'} />
-				<NavTree id={<a onClick={scrollHandler('smc')}>sound and music computing master _20-21_</a>} prompt={'+'}>
+				<NavTree id={<a onClick={() => scrollHandler('smc')}>sound and music computing master _20-21_</a>} prompt={'+'}>
 					<NavTree id={'master thesis'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
 					<NavTree id={'miniprojects'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
 				</NavTree>
 				<NavTree id={''} prompt={'|'} />
 				<NavTree id={'sound art _??-..??'} prompt={'+'}>
-					<NavTree id={<a onClick={scrollHandler('no-shell')}>no-shell</a>} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
+					<NavTree id={<a onClick={() => scrollHandler('no-shell')}>no-shell</a>} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
 				</NavTree>
 				<NavTree id={''} prompt={'|'} />
 				<NavTree id={''} prompt={'v'} />
 			</NavTree>
 			<span className={`bottom ${showNav ? '' : ' hide'}`}>
-				<a onClick={() => selfScroll()}>my website</a>
+				<a
+					onClick={() => {
+						scrollHandler('no-shell')
+						setTimeout(() => scrollHandler('title'), 1000)
+					}}
+				>
+					my website
+				</a>
 				<a href='https://github.com/pelinski'>github</a>
 				<a href='https://twitter.com/t_pelinski'>twitter</a>
 			</span>
