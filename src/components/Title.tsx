@@ -1,5 +1,5 @@
 export const Title: React.FC = (): JSX.Element => (
-	<span>
+	<span className='home-title'>
 		hi i'm teresa pelinski and this is my website
 		<br />
 		hi i'm teresa pelinski and this is my website

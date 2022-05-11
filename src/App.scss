@@ -86,7 +86,6 @@ nav {
 
 	@media (max-width: $ipad) {
 		width: 100vw;
-		height: 100vh;
 		left: 0;
 		text-align: center;
 	}
@@ -121,7 +120,7 @@ nav {
 	}
 	.bottom {
 		a {
-			padding-right: 20px;
+			padding: 0 10px;
 			text-decoration: under;
 		}
 	}
@@ -133,11 +132,17 @@ main {
 	@media (max-width: $ipad) {
 		.go-home {
 			text-align: center;
-			position: fixed;
-			top: 2vh;
+			position: relative;
+			top: 8vh;
 			width: 100vw;
 			@include green-title();
+			z-index: 1000;
+			display: inline-block;
+			height: 3vh;
+			margin-bottom: 3vh;
+			z-index: 10000;
 		}
+		margin-top: 10vh;
 	}
 	@media (min-width: $ipad) {
 		.go-home {
@@ -171,6 +176,7 @@ main {
 
 		@media (min-width: $ipad) {
 			.content {
+				margin-top: 8vh;
 				padding-left: 30vw;
 				padding-right: 5vw;
 			}
@@ -201,8 +207,12 @@ main {
 		flex-direction: column;
 
 		@media (max-width: $ipad) {
+			.home-title {
+				display: none;
+			}
 			.content {
-				padding-top: 30vh;
+				height: 80vh;
+				margin-top: 15vh;
 				span {
 					width: 100vw;
 					color: white;

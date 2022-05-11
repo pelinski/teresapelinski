@@ -4,10 +4,10 @@ import { Title } from './Title'
 import { Nav } from './Nav'
 
 import { Screen } from './screens/Screen'
-import { PhdScreen } from './screens/Phd'
-import { SmcScreen } from './screens/Smc'
-import { AboutmeScreen } from './screens/Aboutme'
-import { ArtScreen } from './screens/Art'
+import { Phd } from './screens/Phd'
+import { Smc } from './screens/Smc'
+import { Aboutme } from './screens/Aboutme'
+import { Art } from './screens/Art'
 
 export const PageWrapper: React.FC<{ screen: string }> = ({ screen }): JSX.Element => {
 	const navigate = useNavigate()
@@ -24,22 +24,22 @@ export const PageWrapper: React.FC<{ screen: string }> = ({ screen }): JSX.Eleme
 		<>
 			<Nav className='nav-desktop' />
 			<main>
-				<Screen id='title'>
+				<Screen id='title' scrollHandler={scrollHandler}>
 					<Nav className='nav-mobile' />
 					<Title />
 				</Screen>
-
-				<a className={'nav-mobile go-home'} onClick={scrollHandler('title')}>
-					teresa-pelinski
-				</a>
-
-				<AboutmeScreen scrollHandler={scrollHandler} />
-
-				<PhdScreen />
-
-				<SmcScreen />
-
-				<ArtScreen />
+				<Screen id={'about-me'} scrollHandler={scrollHandler}>
+					<Aboutme scrollHandler={scrollHandler} />
+				</Screen>
+				<Screen id={'phd'} scrollHandler={scrollHandler}>
+					<Phd />
+				</Screen>
+				<Screen id={'smc'} scrollHandler={scrollHandler}>
+					<Smc />
+				</Screen>
+				<Screen id={'art'} scrollHandler={scrollHandler}>
+					<Art />
+				</Screen>
 			</main>
 		</>
 	)

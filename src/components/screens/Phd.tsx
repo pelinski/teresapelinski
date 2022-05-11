@@ -1,9 +1,7 @@
 import React from 'react'
-import { Screen } from './Screen'
 
-export const PhdScreen: React.FC = () => (
-	<Screen id='phd'>
-	<span className='screen-title'>my phd</span>
+export const Phd: React.FC = () => (
+<>	<span className='screen-title'>my phd</span>
 		<div>
 			in september 2021 i started my phd in artificial intelligence and music (<a href='https://www.aim.qmul.ac.uk/'>aim</a> cdt) at the centre for digital music (
 			<a href='http://c4dm.eecs.qmul.ac.uk/'>c4dm</a>) at queen mary university of london (<a href='https://www.qmul.ac.uk/'>qmul</a>), where i am also part of the
@@ -30,5 +28,4 @@ export const PhdScreen: React.FC = () => (
 			-- being the <a href="https://haid2022.qmul.ac.uk/">haid 2022</a> concert chair
 
 		</div>
-		</Screen>
-)
+		</>)

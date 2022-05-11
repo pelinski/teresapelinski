@@ -1,8 +1,7 @@
 import React from 'react'
-import { Screen } from './Screen'
 
-export const ArtScreen: React.FC = () => (
-	<Screen id='art'>
+export const Art: React.FC = () => (
+	<>
 		<span className='screen-title'>sound-art</span>
 		<div>
 			in 2021 i did a residency at phonos foundation, where i worked on my project <a href='https://noshell.teresapelinski.com/'>'no shell, just a voice'</a>. the sound pieces were released in
@@ -49,5 +48,5 @@ export const ArtScreen: React.FC = () => (
 		<>
 			-- teslafm radio: <a href='https://teslafm.net/los-archivos-phonos-15/'>mixcloud</a>.
 		</>
-	</Screen>
+	</>
 )
