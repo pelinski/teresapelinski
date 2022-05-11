@@ -1,8 +1,7 @@
 import React from 'react'
-import { Screen } from './Screen'
 
-export const SmcScreen: React.FC = () => (
-    <Screen id='smc'>
+export const Smc: React.FC = () => (
+    <>
     <span className='screen-title'>my master</span>
         <div>
             in 2020-2021 i did the <a href='https://www.upf.edu/web/masters/master-en-tecnologies-del-so-i-de-la-musica'>master in sound and music computing</a> at the universitat pompeu fabra in barcelona. i took courses on audio signal processing for musical applications, advanced topics in sound and music computing, music perception and cognition, computational creativity, audio and music processing lab, music information retrieval and advanced interface design. i obtained an average grade of 97%.<br/>
@@ -45,5 +44,5 @@ export const SmcScreen: React.FC = () => (
                 />
                 </div>
         </div>
-        </Screen>
+        </>
 )
