@@ -2,9 +2,12 @@ import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Title } from './Title'
 import { Nav } from './Nav'
+
 import { Screen } from './Screen'
-import { Phd } from './screens/phd'
-import { Smc } from './screens/Smc'
+import { PhdScreen } from './screens/phd'
+import { SmcScreen } from './screens/Smc'
+import { AboutmeScreen } from './screens/Aboutme'
+import { ArtScreen } from './screens/Art'
 
 export const PageWrapper: React.FC<{ screen: string }> = ({ screen }): JSX.Element => {
 	const navigate = useNavigate()
@@ -25,17 +28,18 @@ export const PageWrapper: React.FC<{ screen: string }> = ({ screen }): JSX.Eleme
 					<Nav className='nav-mobile' />
 					<Title />
 				</Screen>
+
 				<a className={'nav-mobile go-home'} onClick={scrollHandler('title')}>
 					teresa-pelinski
 				</a>
-				<Screen id='about-me'>hi this is about me</Screen>
-				<Screen id='phd'>
-					<Phd />
-				</Screen>
-				<Screen id='smc'>
-					<Smc />
-				</Screen>
-				<Screen id='art'>in 2021 i did a residency at phonos foundation, where i developed my project 'no-shell just a voice'.</Screen>
+
+				<AboutmeScreen scrollHandler={scrollHandler} />
+
+				<PhdScreen />
+
+				<SmcScreen />
+
+				<ArtScreen />
 			</main>
 		</>
 	)
