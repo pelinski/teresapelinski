@@ -63,10 +63,24 @@ $screen-num: 5;
 	}
 }
 
+.h-red {
+	background: red;
+	color: black;
+}
+.h-yellow {
+	// background: yellow;
+	// color: black;
+	text-decoration: underline;
+}
+.h-blue {
+	background: blue;
+	text-decoration: underline;
+}
+
 nav {
 	height: 100vh;
-	padding: 2vh 1vw;
-	margin-top: 2vh;
+	padding: 3vh 1vw;
+	padding-bottom: 0;
 	border-right: 1px solid white;
 	background: black;
 
@@ -160,8 +174,14 @@ main {
 				padding-right: 5vw;
 			}
 		}
+
 		.screen-title {
 			background-color: blue;
+			text-decoration: underline;
+		}
+
+		a {
+			cursor: pointer;
 		}
 	}
 	#title {
@@ -169,11 +189,7 @@ main {
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
-		span {
-			span {
-				background-color: red;
-			}
-		}
+
 		@media (max-width: $ipad) {
 			.content {
 				padding-top: 30vh;
@@ -184,12 +200,10 @@ main {
 			}
 		}
 	}
+	#about-me,
 	#phd,
 	#smc,
 	#art {
-		span {
-			text-decoration: underline;
-		}
 		div {
 			margin: 2vh 0;
 		}
