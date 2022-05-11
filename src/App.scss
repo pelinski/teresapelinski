@@ -1,52 +1,250 @@
 // font
 //@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
 // vars
-$ipad: 812px;
 
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+
+$ipad: 812px;
+$phone: 430px;
+$rot: 480px;
+$tgreen: rgb(0, 255, 0);
+$screen-num: 5;
+
+@keyframes floating {
+	0% {
+		transform: translate(0, 0px);
+	}
+	25% {
+		transform: translate(2px, 2px);
+	}
+	50% {
+		transform: translate(-0, 2px);
+	}
+	100% {
+		transform: translate(0, -0px);
+	}
+}
+
+@mixin green-title {
+	background-color: $tgreen;
+	text-align: center;
+	color: black;
+}
 // styles
 * {
-	background: black;
-	color: #adff2f;
-	font-family: 'Courier Prime', monospace;
+	color: white;
+	font-family: 'IBM Plex Mono', monospace;
 	overflow: hidden;
 	body {
+		animation: floating 5s ease-in-out infinite;
+		background: black;
 		margin: 0;
+	}
+
+	// selection color
+	::-moz-selection {
+		background: red;
+	}
+	::selection {
+		background: red;
+	}
+}
+
+@media (max-width: $ipad) {
+	.nav-desktop {
+		display: none;
+	}
+}
+@media (min-width: $ipad) {
+	// in mobile nav is part of screen title
+	.nav-mobile {
+		display: none;
+	}
+}
+
+.h-red {
+	background: red;
+	color: black;
+}
+.h-yellow {
+	// background: yellow;
+	// color: black;
+	text-decoration: underline;
+}
+.h-blue {
+	background: blue;
+	text-decoration: underline;
+}
+
+nav {
+	height: 100vh;
+	padding: 3vh 1vw;
+	padding-bottom: 0;
+	border-right: 1px solid white;
+	background: black;
+
+	@media (max-width: $ipad) {
+		width: 100vw;
+		height: 100vh;
+		left: 0;
+		text-align: center;
+	}
+	@media (min-width: $ipad) {
+		position: absolute;
+		display: inline-block;
+		z-index: 100;
+		width: 25vw;
+		.bottom {
+			background: black;
+			position: absolute;
+			bottom: 5vh;
+		}
+	}
+
+	a {
+		cursor: pointer;
+	}
+
+	.title {
+		@include green-title();
+	}
+
+	.leave {
+		// display: none;
+		background: black;
+		display: flex;
+		flex-direction: column;
+		.leave {
+			flex-direction: row;
+		}
+	}
+	.bottom {
+		a {
+			padding-right: 20px;
+			text-decoration: under;
+		}
 	}
 }
 main {
-	margin: 0;
-	padding: 0;
-	height: 100vh;
 	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	text-align: center;
-}
-
-.title-name {
-	user-select: none;
-	font-family: monospace;
-	overflow: hidden;
-	display: flex;
-
-	// todo: fix rotated phones
-	@media (min-width: $ipad) {
-		font-size: 1.5vw;
-	}
+	flex-wrap: wrap;
+	width: $screen-num * 100vw;
 	@media (max-width: $ipad) {
-		font-size: min(10pt, 3vw);
-		flex-direction: column;
+		.go-home {
+			text-align: center;
+			position: fixed;
+			top: 2vh;
+			width: 100vw;
+			@include green-title();
+		}
 	}
+	@media (min-width: $ipad) {
+		.go-home {
+			display: none;
+		}
+	}
+	.screen {
+		margin: 0;
+		padding: 0;
+		padding-top: 1vw;
+		height: 100vh;
+		width: 100vw;
+		overflow-x: hidden;
+		// scrollbar
+		overflow-y: visible;
+		/* Chrome, safari */
+		::-webkit-scrollbar {
+			width: 8px;
+		}
+		::-webkit-scrollbar-thumb {
+			background-color: black;
+			border: 1px solid white;
+		}
 
-	.color1 {
-		color: greenyellow;
+		/* Firefox */
+		.selector {
+			scrollbar-color: black !important;
+			background-color: black;
+			border: 1px solid white;
+		}
+
+		@media (min-width: $ipad) {
+			.content {
+				padding-left: 30vw;
+				padding-right: 5vw;
+			}
+		}
+		@media (max-width: $ipad) {
+			.content {
+				padding: 0 4vw;
+				padding-top: 4vh;
+			}
+			.videos {
+				flex-wrap: wrap;
+			}
+		}
+
+		.screen-title {
+			background-color: blue;
+			text-decoration: underline;
+		}
+
+		a {
+			cursor: pointer;
+		}
 	}
-	.color2 {
-		color: green;
+	#title {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+
+		@media (max-width: $ipad) {
+			.content {
+				padding-top: 30vh;
+				span {
+					width: 100vw;
+					color: white;
+				}
+			}
+		}
+	}
+	#about-me,
+	#phd,
+	#smc,
+	#art {
+		div {
+			margin: 2vh 0;
+		}
+		.videos {
+			display: flex;
+		}
 	}
 }
+
+// .title-name {
+// 	user-select: none;
+// 	font-family: monospace;
+// 	overflow: hidden;
+// 	display: flex;
+
+// 	// todo: fix rotated phones
+// 	@media (min-width: $ipad) {
+// 		font-size: 1.5vw;
+// 	}
+// 	@media (max-width: $ipad) {
+// 		font-size: min(10pt, 3vw);
+// 		flex-direction: column;
+// 	}
+
+// 	.color1 {
+// 		color: greenyellow;
+// 	}
+// 	.color2 {
+// 		color: green;
+// 	}
+// }
 
 /*.infos {
 	margin-top: 1.5vh;
