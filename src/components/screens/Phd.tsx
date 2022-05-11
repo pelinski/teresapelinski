@@ -1,5 +1,5 @@
 import React from 'react'
-import { Screen } from '../Screen'
+import { Screen } from './Screen'
 
 export const PhdScreen: React.FC = () => (
 	<Screen id='phd'>

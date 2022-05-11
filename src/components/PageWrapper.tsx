@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { Title } from './Title'
 import { Nav } from './Nav'
 
-import { Screen } from './Screen'
+import { Screen } from './screens/Screen'
 import { PhdScreen } from './screens/Phd'
 import { SmcScreen } from './screens/Smc'
 import { AboutmeScreen } from './screens/Aboutme'
