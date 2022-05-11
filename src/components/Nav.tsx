@@ -27,17 +27,38 @@ export const Nav: React.FC<{ className: string }> = ({ className }) => {
 				<NavTree id={''} prompt={'|'} />
 				<NavTree id={<a onClick={() => scrollHandler('about-me')}>about-me</a>} prompt={'o'} />
 				<NavTree id={''} prompt={'|'} />
-				<NavTree id={<a onClick={() => scrollHandler('phd')}>phd in ai and music</a>} prompt={'+'}>
+				<NavTree
+					id={
+						<a className='h-yellow' onClick={() => scrollHandler('phd')}>
+							phd in ai and music
+						</a>
+					}
+					prompt={'+'}
+				>
 					<NavTree id={'topic'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
 					<NavTree id={"things i'm doing"} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
 				</NavTree>
 				<NavTree id={''} prompt={'|'} />
-				<NavTree id={<a onClick={() => scrollHandler('smc')}>sound and music computing master</a>} prompt={'+'}>
+				<NavTree
+					id={
+						<a className='h-yellow' onClick={() => scrollHandler('smc')}>
+							sound and music computing master
+						</a>
+					}
+					prompt={'+'}
+				>
 					<NavTree id={'master thesis'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
 					<NavTree id={'miniprojects'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
 				</NavTree>
 				<NavTree id={''} prompt={'|'} />
-				<NavTree id={<a onClick={() => scrollHandler('art')}>sound-art</a>} prompt={'+'}>
+				<NavTree
+					id={
+						<a className='h-yellow' onClick={() => scrollHandler('art')}>
+							sound-art
+						</a>
+					}
+					prompt={'+'}
+				>
 					<NavTree id={'no-shell'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
 				</NavTree>
 				<NavTree id={''} prompt={'|'} />
@@ -45,6 +66,7 @@ export const Nav: React.FC<{ className: string }> = ({ className }) => {
 			</NavTree>
 			<span className={`bottom ${showNav ? '' : ' hide'}`}>
 				<a
+					className='h-blue'
 					onClick={() => {
 						scrollHandler('art')
 						setTimeout(() => scrollHandler('title'), 1000)
@@ -52,8 +74,12 @@ export const Nav: React.FC<{ className: string }> = ({ className }) => {
 				>
 					my website
 				</a>
-				<a href='https://github.com/pelinski'>github</a>
-				<a href='https://twitter.com/t_pelinski'>twitter</a>
+				<a className='h-blue' href='https://github.com/pelinski'>
+					github
+				</a>
+				<a className='h-blue' href='https://twitter.com/t_pelinski'>
+					twitter
+				</a>
 			</span>
 		</nav>
 	)
