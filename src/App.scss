@@ -88,6 +88,7 @@ nav {
 		width: 100vw;
 		height: 100vh;
 		left: 0;
+		text-align: center;
 	}
 	@media (min-width: $ipad) {
 		position: absolute;
@@ -172,6 +173,15 @@ main {
 			.content {
 				padding-left: 30vw;
 				padding-right: 5vw;
+			}
+		}
+		@media (max-width: $ipad) {
+			.content {
+				padding: 0 4vw;
+				padding-top: 4vh;
+			}
+			.videos {
+				flex-wrap: wrap;
 			}
 		}
 
