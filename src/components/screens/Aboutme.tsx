@@ -1,5 +1,5 @@
 import React from 'react'
-import { Screen } from '../Screen'
+import { Screen } from './Screen'
 
 export const AboutmeScreen: React.FC<{ scrollHandler: (scrollTo: string) => () => void }> = ({ scrollHandler }): JSX.Element => (
 	<Screen id='about-me'>
