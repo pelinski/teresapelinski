@@ -25,20 +25,20 @@ export const Nav: React.FC<{ className: string }> = ({ className }) => {
 <NavTree id={<a onClick={()=>scrollHandler('title')}>home </a>} prompt={'o'} /> */}
 
 				<NavTree id={''} prompt={'|'} />
-				<NavTree id={<a onClick={() => scrollHandler('about-me')}>about-me _97–...</a>} prompt={'o'} />
+				<NavTree id={<a onClick={() => scrollHandler('about-me')}>about-me</a>} prompt={'o'} />
 				<NavTree id={''} prompt={'|'} />
-				<NavTree id={<a onClick={() => scrollHandler('phd')}>phd in ai and music _21-..25</a>} prompt={'+'}>
-					<NavTree id={'embedded ai workshop'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
-					<NavTree id={'not much to show here yet...'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
+				<NavTree id={<a onClick={() => scrollHandler('phd')}>phd in ai and music</a>} prompt={'+'}>
+					<NavTree id={'topic'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
+					<NavTree id={"things i'm doing"} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
 				</NavTree>
 				<NavTree id={''} prompt={'|'} />
-				<NavTree id={<a onClick={() => scrollHandler('smc')}>sound and music computing master _20-21_</a>} prompt={'+'}>
+				<NavTree id={<a onClick={() => scrollHandler('smc')}>sound and music computing master</a>} prompt={'+'}>
 					<NavTree id={'master thesis'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
 					<NavTree id={'miniprojects'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
 				</NavTree>
 				<NavTree id={''} prompt={'|'} />
-				<NavTree id={'sound art _??-..??'} prompt={'+'}>
-					<NavTree id={<a onClick={() => scrollHandler('no-shell')}>no-shell</a>} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
+				<NavTree id={<a onClick={() => scrollHandler('art')}>sound-art</a>} prompt={'+'}>
+					<NavTree id={'no-shell'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
 				</NavTree>
 				<NavTree id={''} prompt={'|'} />
 				<NavTree id={''} prompt={'v'} />
@@ -46,7 +46,7 @@ export const Nav: React.FC<{ className: string }> = ({ className }) => {
 			<span className={`bottom ${showNav ? '' : ' hide'}`}>
 				<a
 					onClick={() => {
-						scrollHandler('no-shell')
+						scrollHandler('art')
 						setTimeout(() => scrollHandler('title'), 1000)
 					}}
 				>
