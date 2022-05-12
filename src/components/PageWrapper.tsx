@@ -17,7 +17,9 @@ export const PageWrapper: React.FC<{ screen: string }> = ({ screen }): JSX.Eleme
 	}
 	// smooth scroll to screen when loading component
 	useEffect(() => {
-		document.getElementById(screen)?.scrollIntoView({ behavior: 'smooth', block: 'end' })
+		if (screen != 'title') {
+			document.getElementById(screen)?.scrollIntoView({ behavior: 'smooth', block: 'end' })
+		}
 	}, [])
 
 	return (
