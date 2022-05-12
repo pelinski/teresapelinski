@@ -83,6 +83,7 @@ nav {
 	padding-bottom: 0;
 	border-right: 1px solid white;
 	background: black;
+	overflow-x: hidden;
 
 	@media (max-width: $ipad) {
 		width: 100vw;
