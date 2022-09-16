@@ -43,11 +43,12 @@
 		"start": "serve"
 	},
 	"devDependencies": {
-		"@parcel/packager-raw-url": "^2.0.1",
-		"@parcel/transformer-sass": "^2.0.1",
-		"@parcel/transformer-webmanifest": "^2.0.1",
+		"@parcel/packager-raw-url": "2.7.0",
+		"@parcel/transformer-sass": "2.7.0",
+		"@parcel/transformer-webmanifest": "2.7.0",
 		"cfonts": "^2.10.0",
 		"parcel-reporter-static-files-copy": "^1.3.4",
-		"prettier": "^2.5.1"
+		"prettier": "^2.5.1",
+		"process": "^0.11.10"
 	}
 }
