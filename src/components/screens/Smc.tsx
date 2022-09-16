@@ -14,12 +14,19 @@ export const Smc: React.FC = () => (
 
 
 		</div>
+        <div>
+        <span className='h-yellow'>publications</span>: <br />
+        -- Haki, B., Nieto, M., Pelinski, T., & Jordà, S. (2022). Real-Time Drum Accompaniment Using Transformer Architecture. 3rd Conference on AI Music Creativity. : < a href='/documents/2022-aimc-real-time-drum-accompaniment.pdf'>paper</a> <br/>
+        -- Pelinski, T. (2021). Completing Audio Drum Loops with Transformer Neural Networks [Universitat Pompeu Fabra]. : < a href='https://zenodo.org/record/5554854'
+>document</a>
+
+        </div>
 		<div>
 			<span className='h-yellow'>some coursework i did</span>: <br />
-			-- wekitunenator, advanced interface design final project on exploring the use of ml as a discovery tool for mappings in digital musical interfaces: <a href='https://github.com/gonski/wekitunenator'>code</a>, <a href='https://www.youtube.com/watch?v=M6bAb42s-lo'>video</a>.<br/>
+			-- wekitunenator, advanced interface design final project on exploring the use of ml as a discovery tool for mappings in digital musical interfaces : <a href='https://github.com/gonski/wekitunenator'>code</a>, <a href='https://www.youtube.com/watch?v=M6bAb42s-lo'>video</a>.<br/>
 			-- computational musicology project on the analysis of intonation in turkish makam music: <a href='https://github.com/marter0/intonation_in_turkish_makam_music'>code</a>.<br/>
-            -- music information retrieval final project on comparing the performance of a single-task and a multi-task crnn for audio drum transcription: <a href='https://github.com/pelinski/crnn_multitask_adt'>code</a>. <br/>
-            -- advanced interface design assignments: <a href='https://github.com/pelinski/aid-challenges'>code</a>.<br/>
+            -- music information retrieval final project on comparing the performance of a single-task and a multi-task crnn for audio drum transcription : <a href='https://github.com/pelinski/crnn_multitask_adt'>code</a>. <br/>
+            -- advanced interface design assignments : <a href='https://github.com/pelinski/aid-challenges'>code</a>.<br/>
 
 		</div>
 
