@@ -14,6 +14,11 @@ export const Smc: React.FC = () => (
 
 
 		</div>
+        <div>
+        <span className='h-yellow'>publications</span>: <br />
+        -- Haki, B., Nieto, M., Pelinski, T., & Jordà, S. (2022). Real-Time Drum Accompaniment Using Transformer Architecture. 3rd Conference on AI Music Creativity. : < a href='/documents/2022-aimc-real-time-drum-accompaniment.pdf'>paper</a>
+
+        </div>
 		<div>
 			<span className='h-yellow'>some coursework i did</span>: <br />
 			-- wekitunenator, advanced interface design final project on exploring the use of ml as a discovery tool for mappings in digital musical interfaces: <a href='https://github.com/gonski/wekitunenator'>code</a>, <a href='https://www.youtube.com/watch?v=M6bAb42s-lo'>video</a>.<br/>

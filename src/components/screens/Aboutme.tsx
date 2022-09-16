@@ -10,9 +10,10 @@ export const Aboutme: React.FC<{ scrollHandler: (scrollTo: string) => () => void
 			<a onClick={scrollHandler('phd')} className='h-yellow'>
 				phd researcher
 			</a>{' '}
-			at the augmented instruments lab at queen mary university of london. my topic is on using ai to capture gesture in digital musical instruments. before, i did my undergrad in physics at the
-			universidad autónoma de madrid. i learned lots of maths and a bit of code, and i became interested in sound. i spent a year at rwth aachen university, where i took some courses on
-			acoustics and wrote my bachelor thesis on acoustic virtual reality at the <a href='https://www.akustik.rwth-aachen.de/cms/~dwma/Technische-Akustik/lidx/1/'>ihta</a>. afterwards i did my{' '}
+			at the augmented instruments lab at queen mary university of london. my topic is on using ai to capture gesture in digital musical instruments. i am also an associate lecturer at the
+			creative computing institute at the university of the arts london. before, i did my undergrad in physics at the universidad autónoma de madrid. i learned lots of maths and a bit of code,
+			and i became interested in sound. i spent a year at rwth aachen university, where i took some courses on acoustics and wrote my bachelor thesis on acoustic virtual reality at the{' '}
+			<a href='https://www.akustik.rwth-aachen.de/cms/~dwma/Technische-Akustik/lidx/1/'>ihta</a>. afterwards i did my{' '}
 			<a onClick={scrollHandler('master')} className='h-yellow'>
 				master
 			</a>{' '}
