@@ -16,7 +16,7 @@ export const Phd: React.FC = () => (
 			-- 28-06-2022 co-organising the <a href="https://embedded-ai-for-nime.github.io/">embedded ai workshop</a> at the <a href="https://nime2022.org/">nime 2022</a> conference<br/>
             -- 30-06-2022 presenting my research at the <a href="https://nime2022.org/">nime 2022</a> doctoral consortium<br />
 			-- 25-08-2022 being the concert chair at the 11th international workshop on haptic & audio interaction design (<a href="https://haid2022.qmul.ac.uk/">haid 2022</a>) <br />
-			-- 27-09-2022 giving a talk on digital musical instruments at the <a href="/documents/2022-ucm-organologia.pdf"> 1st organoloy workshop</a> at the universidad complutense de madrid (spanish)
+			-- 27-09-2022 giving an invited talk on digital musical instruments at the <a href="/documents/2022-ucm-organologia.pdf"> 1st organoloy workshop</a> at the universidad complutense de madrid (spanish)
 
 		</div>
 		</>)
