@@ -11,7 +11,7 @@ export const Aboutme: React.FC<{ scrollHandler: (scrollTo: string) => () => void
 				phd researcher
 			</a>{' '}
 			at the augmented instruments lab at queen mary university of london. my topic is on using ai to capture gesture in digital musical instruments. i am also an associate lecturer at the
-			creative computing institute at the university of the arts london. before, i did my undergrad in physics at the universidad autónoma de madrid. i learned lots of maths and a bit of code,
+			creative computing institute at the university of the arts london. previously, i did my undergrad in physics at the universidad autónoma de madrid. i learned lots of maths and a bit of code,
 			and i became interested in sound. i spent a year at rwth aachen university, where i took some courses on acoustics and wrote my bachelor thesis on acoustic virtual reality at the{' '}
 			<a href='https://www.akustik.rwth-aachen.de/cms/~dwma/Technische-Akustik/lidx/1/'>ihta</a>. afterwards i did my{' '}
 			<a onClick={scrollHandler('master')} className='h-yellow'>
@@ -19,8 +19,8 @@ export const Aboutme: React.FC<{ scrollHandler: (scrollTo: string) => () => void
 			</a>{' '}
 			in sound and music computing at the pompeu fabra university in barcelona, and wrote my master thesis on using deep learning to generate drum loops.
 			<br />
-			besides my main activity, which is sitting on my desk doing my phd, i like books, thinking about technology, speaking german, sound art, tape and film, and coding and designing cool
-			websites like this one. i recently did an{' '}
+			besides my main activity, which is sitting on my desk doing my phd, i like books, thinking about technology, learning german, sound art, tape and film, and coding and designing cool
+			websites like this one. in late 2021 i did an{' '}
 			<a onClick={scrollHandler('art')} className='h-yellow'>
 				artistic residency
 			</a>{' '}
