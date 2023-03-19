@@ -20,7 +20,7 @@ export const Phd: React.FC = () => (
 			-- 27-09-2022 giving an invited talk on digital musical instruments at the <a href="/documents/2022-ucm-organologia.pdf"> 1st organoloy workshop</a> at the universidad complutense de madrid -- <a href="https://youtu.be/kZxsD32a7T0?t=1739">video</a> (spanish)<br />
 			-- 22-11-2022 giving a talk "<a href="https://www.uio.no/ritmo/english/news-and-events/events/workshops/2022/embodied-ai/p/teresa-pelinski.html">anomaly detection as means of sensing subtletly and nuance in musical gesture</a>"  at the <a href="https://www.uio.no/ritmo/english/news-and-events/events/workshops/2022/embodied-ai/index.html">embodied perspectives on musical ai (emai) worskhop</a>, held at the centre for interdisciplinarity in rhythm, time and motion (<a href="https://www.uio.no/ritmo/english/">ritmo</a>) at the university of oslo (norway) -- <a href="https://youtu.be/V8Vy1eWgoLU?t=7148">video</a> <br/>
 			-- 14-02-2024 giving a short talk and poster presentation  on my research at <a href="https://www.ircam.fr/">ircam</a> (paris) <br/>
-			-- 17-03-2024 giving a talk at the audio programmer youtube channel: <a href="https://www.youtube.com/live/eEqZJ41PbpQ?feature=share&t=364">"toward prototyping with neural networks on embedded hardware"</a> <br/>
+			-- 17-03-2024 giving a talk at the audio programmer youtube channel: "toward prototyping with neural networks on embedded hardware" -- <a href="https://www.youtube.com/live/eEqZJ41PbpQ?feature=share&t=364">video</a> <br/>
 		</div>
 
 		<div>
