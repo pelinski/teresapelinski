@@ -16,10 +16,10 @@ export const Smc: React.FC = () => (
 		</div>
         <div>
         <span className='h-yellow'>publications</span>: <br />
-        -- (upcoming) Haki, B., Pelinski, T., Nieto, M., & Jordà, S. (2023). Completing Audio Drum Loops with Symbolic Drum Suggestions in Proceedings of the International Conference on New Interfaces for Musical Expression Mexico City, Mexico. <br/>
+        -- (upcoming) Haki, B., Pelinski, T., Nieto, M., & Jordà, S. (2023). Completing Audio Drum Loops with Symbolic Drum Suggestions in Proceedings of the International Conference on New Interfaces for Musical Expression Mexico City, Mexico. < a href='/documents/2023-nime-cr-infilling.pdf'> paper </a> <br/>
         -- Haki, B., Nieto, M., Pelinski, T., & Jordà, S. (2022). Real-Time Drum Accompaniment Using Transformer Architecture. 3rd Conference on AI Music Creativity. : < a href='/documents/2022-aimc-real-time-drum-accompaniment.pdf'>paper</a> <br/>
         -- Pelinski, T. (2021). Completing Audio Drum Loops with Transformer Neural Networks [Universitat Pompeu Fabra]. : < a href='https://zenodo.org/record/5554854'
->document</a>
+>paper</a>
 
         </div>
 		<div>
