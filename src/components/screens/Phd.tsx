@@ -25,7 +25,7 @@ export const Phd: React.FC = () => (
 
 		<div>
 			<span className='h-yellow'>publications</span>: <br />
-			-- (upcoming) Pelinski, T., Díaz, R., Benito Temprano, A. L. & McPherson, A. (2023). Pipeline for recording datasets and running neural networks on the Bela embedded hardware platform. in Proceedings of the International Conference on New Interfaces for Musical Expression Mexico City, Mexico. <a href="/documents/2023-nime-cr-pipeline-nn-bela-v2.pdf">paper</a>  <a href="https://github.com/pelinski/bela-dl-pipeline">repo link</a> <br/>
+			-- (upcoming) Pelinski, T., Díaz, R., Benito Temprano, A. L. & McPherson, A. (2023). Pipeline for recording datasets and running neural networks on the Bela embedded hardware platform. in Proceedings of the International Conference on New Interfaces for Musical Expression Mexico City, Mexico. <a href="/documents/2023-nime-cr-pipeline-nn-bela3.pdf">paper</a>  <a href="https://github.com/pelinski/bela-dl-pipeline">repo link</a> <br/>
 			-- (upcoming) Pelinski, T., Caspe, F., McPherson, A. & Sandler, M. (2023). Computing ecosystems: Neural networks and embedded hardware platforms. In CHI2023 Workshop [WS2] - Beyond Prototyping Boards: Future Paradigms for Electronics Toolkits. Hamburg, Germany. <a href="https://electrofab.prototyping.id/assets/papers/electrofab23-final82.pdf">paper</a> <br/>
 	
 		</div>
