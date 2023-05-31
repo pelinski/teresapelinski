@@ -27,38 +27,17 @@ export const Nav: React.FC<{ className: string }> = ({ className }) => {
 				<NavTree id={''} prompt={'|'} />
 				<NavTree id={<a onClick={() => scrollHandler('about-me')}>about-me</a>} prompt={'o'} />
 				<NavTree id={''} prompt={'|'} />
-				<NavTree
-					id={
-						<a className='h-yellow' onClick={() => scrollHandler('phd')}>
-							phd in ai and music
-						</a>
-					}
-					prompt={'+'}
-				>
+				<NavTree id={<a onClick={() => scrollHandler('phd')}>phd in ai and music</a>} prompt={'+'}>
 					<NavTree id={'topic'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
 					<NavTree id={"things i'm doing"} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
 				</NavTree>
 				<NavTree id={''} prompt={'|'} />
-				<NavTree
-					id={
-						<a className='h-yellow' onClick={() => scrollHandler('smc')}>
-							sound and music computing master
-						</a>
-					}
-					prompt={'+'}
-				>
+				<NavTree id={<a onClick={() => scrollHandler('smc')}>sound and music computing master</a>} prompt={'+'}>
 					<NavTree id={'master thesis'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
 					<NavTree id={'miniprojects'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
 				</NavTree>
 				<NavTree id={''} prompt={'|'} />
-				<NavTree
-					id={
-						<a className='h-yellow' onClick={() => scrollHandler('art')}>
-							sound-art
-						</a>
-					}
-					prompt={'+'}
-				>
+				<NavTree id={<a onClick={() => scrollHandler('art')}>sound-art</a>} prompt={'+'}>
 					<NavTree id={'no-shell'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
 				</NavTree>
 				<NavTree id={''} prompt={'|'} />
