@@ -9,7 +9,7 @@ export const Phd: React.FC = () => (
 			<a href='http://c4dm.eecs.qmul.ac.uk/'>c4dm</a>) at queen mary university of london (<a href='https://www.qmul.ac.uk/'>qmul</a>), where i am also part of the{' '}
 			<a href='http://instrumentslab.org/index.html'> augmented instruments lab</a>. my research is supervised by <a href='http://andrewmcpherson.org/bio'>prof andrew mcpherson</a> (imperial
 			college london) and <a href='https://researchers.arts.ac.uk/1594-rebecca-fiebrink/'>prof rebecca fiebrink</a> (university of the arts london), and supported by{' '}
-			<a href='https://bela.io/'>bela</a> and <a href='https://www.ukri.org/'>ukri</a>.
+			<a href='https://bela.io/'>bela</a> and <a href='https://www.ukri.org/'>ukri</a>. currently i am doing an internship at <a href='https://bela.io/'>bela</a>.
 		</div>
 		<div>
 			<span className='h-yellow'>topic</span>: <span className='h-red'>tools for experimentation and prototyping with embedded ai in the context of digital musical instrument design</span>
@@ -53,6 +53,12 @@ export const Phd: React.FC = () => (
 			-- 14-02-2023 giving a short talk and poster presentation on my research at <a href='https://www.ircam.fr/'>ircam</a> (paris) <br />
 			-- 17-03-2023 giving a talk at the audio programmer youtube channel: "toward prototyping with neural networks on embedded hardware" --{' '}
 			<a href='https://www.youtube.com/live/eEqZJ41PbpQ?feature=share&t=364'>video</a> <br />
+			-- 23-04-2023 participated in the workshop "beyond prototyping boards: future paradigms for electronics toolkits" in CHI2023 --{' '}
+			<a href='/documents/2023-chi-computing-ecosystems.pdf'>position paper</a> <br />
+			-- 26/28-05-2023 participated in the NIME2023 summer school in mexico city as facilitator -- <a href='https://www.nime2023.org/program/summer-school'>link</a> <br />
+			-- 01-06-2023 presented my paper "Pipeline for recording datasets and running neural networks on the Bela embedded hardware platform." at NIME 2023 (mexico city) --{' '}
+			<a href='/documents/2023-nime-cr-pipeline-nn-bela.pdf'>paper</a>
+			<br />
 		</div>
 		<div>
 			<span className='h-yellow'>grants / internships</span>: <br />
