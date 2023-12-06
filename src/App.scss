@@ -37,6 +37,12 @@ $screen-num: 5;
 	color: white;
 	font-family: 'IBM Plex Mono', monospace;
 	font-size: 1.65vh;
+
+	@media (max-width: $ipad) {
+		font-size: 2.5vh;
+		line-height: 3vh;
+	}
+
 	overflow: hidden;
 	body {
 		animation: floating 100s ease-in-out infinite;
@@ -217,6 +223,11 @@ main {
 			.content {
 				height: 80vh;
 				margin-top: 15vh;
+
+				@media (max-width: $ipad) {
+					margin-top: 7vh;
+				}
+
 				span {
 					width: 100vw;
 					color: white;
