@@ -7,7 +7,7 @@ import { Screen } from './screens/Screen'
 import { Phd } from './screens/Phd'
 import { Smc } from './screens/Smc'
 import { Aboutme } from './screens/Aboutme'
-import { Art } from './screens/Art'
+import { Sound } from './screens/Sound'
 
 export const PageWrapper: React.FC<{ screen: string }> = ({ screen }): JSX.Element => {
 	const navigate = useNavigate()
@@ -39,8 +39,8 @@ export const PageWrapper: React.FC<{ screen: string }> = ({ screen }): JSX.Eleme
 				<Screen id={'smc'} scrollHandler={scrollHandler}>
 					<Smc />
 				</Screen>
-				<Screen id={'art'} scrollHandler={scrollHandler}>
-					<Art />
+				<Screen id={'sound'} scrollHandler={scrollHandler}>
+					<Sound />
 				</Screen>
 			</main>
 		</>

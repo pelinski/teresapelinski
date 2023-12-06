@@ -36,6 +36,7 @@ $screen-num: 5;
 	scroll-behavior: smooth;
 	color: white;
 	font-family: 'IBM Plex Mono', monospace;
+	font-size: 1.65vh;
 	overflow: hidden;
 	body {
 		animation: floating 100s ease-in-out infinite;
@@ -207,6 +208,7 @@ main {
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
+		line-height: 2vh;
 
 		@media (max-width: $ipad) {
 			.home-title {
@@ -225,12 +227,19 @@ main {
 	#about-me,
 	#phd,
 	#smc,
-	#art {
+	#sound {
+		line-height: 2.5vh;
 		div {
 			margin: 2vh 0;
 		}
 		.videos {
 			display: flex;
+		}
+	}
+
+	#smc {
+		a {
+			text-decoration: underline;
 		}
 	}
 }

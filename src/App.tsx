@@ -10,7 +10,7 @@ export const App: React.FC = (): JSX.Element => (
 			<Route path='/about-me' element={<PageWrapper screen={'about-me'} />} />
 			<Route path='/phd' element={<PageWrapper screen={'phd'} />} />
 			<Route path='/smc' element={<PageWrapper screen={'smc'} />} />
-			<Route path='/art' element={<PageWrapper screen={'art'} />} />
+			<Route path='/sound' element={<PageWrapper screen={'sound'} />} />
 			<Route path='*' element={<Navigate to='/' replace />} />
 		</Routes>
 	</Router>

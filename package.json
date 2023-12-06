@@ -10,7 +10,7 @@
 		"staticPath": "public/"
 	},
 	"engines": {
-		"node": "20.x",
+		"node": "21.x",
 		"yarn": "1.x"
 	},
 	"browserslist": {

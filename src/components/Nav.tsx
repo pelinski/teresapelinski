@@ -29,21 +29,20 @@ export const Nav: React.FC<{ className: string }> = ({ className }) => {
 				<NavTree id={''} prompt={'|'} />
 				<NavTree id={<a onClick={() => scrollHandler('phd')}>phd in ai and music</a>} prompt={'+'}>
 					<NavTree id={'topic'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
-					<NavTree id={'publications'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
-					<NavTree id={"things i'm doing"} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
+					<NavTree id={'research outputs'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
 					<NavTree id={'grants'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
 					<NavTree id={'teaching'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
 				</NavTree>
 				<NavTree id={''} prompt={'|'} />
-				<NavTree id={<a onClick={() => scrollHandler('smc')}>sound and music computing master</a>} prompt={'+'}>
+				<NavTree id={<a onClick={() => scrollHandler('smc')}>master's in smc</a>} prompt={'+'}>
 					<NavTree id={'master thesis'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
-					<NavTree id={'miniprojects'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
+					<NavTree id={'coursework'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
 				</NavTree>
 				<NavTree id={''} prompt={'|'} />
-				<NavTree id={<a onClick={() => scrollHandler('art')}>sound-art</a>} prompt={'+'}>
+				<NavTree id={<a onClick={() => scrollHandler('sound')}>sound and music </a>} prompt={'+'}>
 					<NavTree id={'phonos residency'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
-					<NavTree id={'radio'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
-					{/* <NavTree id={'gigs'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} /> */}
+					<NavTree id={'radio residency'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
+					<NavTree id={'gigs'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
 				</NavTree>
 				<NavTree id={''} prompt={'|'} />
 				<NavTree id={''} prompt={'v'} />
@@ -52,7 +51,7 @@ export const Nav: React.FC<{ className: string }> = ({ className }) => {
 				<a
 					className='h-blue'
 					onClick={() => {
-						scrollHandler('art')
+						scrollHandler('sound')
 						setTimeout(() => scrollHandler('title'), 1000)
 					}}
 				>
