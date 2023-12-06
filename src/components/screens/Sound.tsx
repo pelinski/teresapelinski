@@ -62,7 +62,9 @@ export const Sound: React.FC = () => (
 			-- 2023-08-05 with Muerte En El Parque @ Rally Festival London <br />
 			-- 2023-09-10 with Muerte En El Parque @ New River Studios -- <a href='/gigs/2023-09-10_new-river-studios.JPG'>poster</a> <br />
 			-- 2023-10-28 with Muerte En El Parque @ The Waiting Room -- <a href='/gigs/2023-10-28_the-waiting-room.jpeg'>poster</a> <br />
-			-- 2023-11-17 Adam Barkely + Teresa Pelinski @ Augmented Instruments Lab concert, Queen Mary University of London -- <a href='/gigs/2023-11-17_ail.png'>poster</a> <br />
+			-- 2023-11-17 Adam Barkely + Teresa Pelinski @ Augmented Instruments Lab concert, Queen Mary University of London -- <a href='/gigs/2023-11-17_ail.png'>poster</a>{' '}
+			<a href='https://www.dropbox.com/scl/fi/9mr518clduo2gfzahe5zu/seisix6-nov-2023.mp4?rlkey=lxa8hb4jak30y133h4zrrf4b8&dl=0'>video</a>
+			<br />
 		</div>
 	</>
 )
