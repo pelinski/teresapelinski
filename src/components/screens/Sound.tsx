@@ -27,7 +27,7 @@ export const Sound: React.FC = () => (
 			-- 2021-09 Visiones Sonoras 17: Festival Internacional de Música y Nuevas Tecnologías (México): <a href='https://www.youtube.com/watch?v=ikx-Uhnh_d8'>Video</a>. <br />
 			-- 2021-09 TeslaFM Radio: <a href='https://teslafm.net/los-archivos-phonos-15/'>Mixcloud</a>.
 			<br />
-			-- 2021-12-02 Work In Progress, Queen Mary University of London -- <a href='/gigs/2021-12-02_wip.pdf'>poster</a> <br />
+			-- 2021-12-02 Work In Progress, Queen Mary University of London -- <a href='/gigs/2021-12-02_wip.jpeg'>poster</a> <br />
 			<div className='videos'>
 				<iframe
 					width={560}
@@ -55,7 +55,7 @@ export const Sound: React.FC = () => (
 		</div>
 		<div>
 			<span className='h-yellow'>..... gigs / performances </span>: <br />
-			-- 2022-12-01 Teresa Pelinski @ Work In Progress, Queen Mary University of London -- <a href='/gigs/2022-12-01_wip.pdf'>poster</a> <br />
+			-- 2022-12-01 Teresa Pelinski @ Work In Progress, Queen Mary University of London -- <a href='/gigs/2022-12-01_wip.jpeg'>poster</a> <br />
 			-- 2023-04-24 with the Goldsmiths Laptop Ensemble @ Goldsmiths, Univeristy of London <br />
 			-- 2023-05-13 with the Goldsmiths Laptop Ensemble @ Goldsmiths, Univeristy of London -- <a href='https://www.youtube.com/watch?v=1tDEkIoebIQ'>video</a> <br />
 			-- 2023-06-23 with the Goldsmiths Laptop Ensemble @ Goldsmiths, University of London -- <a href='/gigs/2023-06-23_laptop-ensemble.jpeg'>poster</a> <br />
