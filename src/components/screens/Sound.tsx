@@ -11,7 +11,7 @@ export const Sound: React.FC = () => (
 		</div>
 
 		<div>
-			<span className='h-yellow'>2021 --- Phonos Foundation Residency</span>: <span className='h-red'>no shell, just a voice</span> --{'>'}
+			<span className='h-yellow'>2021 --- Phonos Foundation Residency</span>: <span className='h-red'>no shell, just a voice</span> --{'>'}{' '}
 			<a href='https://noshell.teresapelinski.com/'>project website</a> <br />
 			In 2021, I did a residency at Phonos Foundation, where I worked on my project <a href='https://noshell.teresapelinski.com/'>'no shell, just a voice'</a>. The sound pieces were released in
 			the Phonos netlabel (<a href='https://phonosbcn.bandcamp.com/album/no-shell-just-a-voice'>Bandcamp</a>) and on a <a href='https://noshell.teresapelinski.com/'>webzine</a>. 'No Shell, Just
@@ -57,11 +57,11 @@ export const Sound: React.FC = () => (
 		</div>
 
 		<div>
-			<span className='h-yellow'>est. 2019 --- Record label</span>: <span className='h-red'> La Ermita Records</span> --{'>'} <a href='https://noshell.teresapelinski.com/'>bandcamp</a> <br /> In
-			2019, I started a record label and distro where I have co-edited a couple of vinyl releases. It's mainly post hxc and screamo music. The label was born with the idea of selling records at
-			gigs in Madrid, where there was a great scene at the time. Then the pandemic hit and I moved to the UK on a plane, so most of my records are still back in Spain. The label might continue
-			to die, or relive if I finally discover the very well hidden London screamo scene, or might be repurposed for my own musical ventures..... in any case please buy records from me, I really
-			don't need N copies of the same record.
+			<span className='h-yellow'>est. 2019 --- Record label</span>: <span className='h-red'> La Ermita Records</span> --{'>'} <a href='https://laermitarecords.bandcamp.com/'>bandcamp</a> <br />{' '}
+			In 2019, I started a record label and distro where I have co-edited a couple of vinyl releases. It's mainly post hxc and screamo music. The label was born with the idea of selling records
+			at gigs in Madrid, where there was a great scene at the time. Then the pandemic hit and I moved to the UK on a plane, so most of my records are still back in Spain. The label might
+			continue to die, or relive if I finally discover the very well hidden London screamo scene, or might be repurposed for my own musical ventures..... in any case please buy records from me,
+			I really don't need N copies of the same record.
 			<br />
 		</div>
 
