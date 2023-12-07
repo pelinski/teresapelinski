@@ -3,6 +3,13 @@ import React from 'react'
 export const Sound: React.FC = () => (
 	<>
 		<span className='screen-title'>sound and music</span>
+
+		<div>
+			<span className='h-yellow'>2023 --- Noods Radio Residency</span>: <span className='h-red'>Officium</span> --{'>'} <a href='https://noshell.teresapelinski.com/'>link to episodes</a> <br />{' '}
+			"Adam Barkley and Teresa Pelinski's Saturday morning service on <a href='https://www.noodsradio.com/residents/officium'>Noods Radio</a>, Officium, spans an all-encompassing range of sacred
+			and devotional musics to ease those aching souls. Expect twelfth-century chants, transcendental minimalism and a deep dive into contemporary and classical choral goodness."
+		</div>
+
 		<div>
 			<span className='h-yellow'>2021 --- Phonos Foundation Residency</span>: <span className='h-red'>no shell, just a voice</span> --{'>'}
 			<a href='https://noshell.teresapelinski.com/'>project website</a> <br />
@@ -48,11 +55,16 @@ export const Sound: React.FC = () => (
 				/>
 			</div>
 		</div>
+
 		<div>
-			<span className='h-yellow'>2023 --- Noods Radio Residency</span>: <span className='h-red'>Officium</span> --{'>'} <a href='https://noshell.teresapelinski.com/'>link to episodes</a> <br />{' '}
-			"Adam Barkley and Teresa Pelinski's Saturday morning service on <a href='https://www.noodsradio.com/residents/officium'>Noods Radio</a>, Officium, spans an all-encompassing range of sacred
-			and devotional musics to ease those aching souls. Expect twelfth-century chants, transcendental minimalism and a deep dive into contemporary and classical choral goodness."
+			<span className='h-yellow'>est. 2019 --- Record label</span>: <span className='h-red'> La Ermita Records</span> --{'>'} <a href='https://noshell.teresapelinski.com/'>bandcamp</a> <br /> In
+			2019, I started a record label and distro where I have co-edited a couple of vinyl releases. It's mainly post hxc and screamo music. The label was born with the idea of selling records at
+			gigs in Madrid, where there was a great scene at the time. Then the pandemic hit and I moved to the UK on a plane, so most of my records are still back in Spain. The label might continue
+			to die, or relive if I finally discover the very well hidden London screamo scene, or might be repurposed for my own musical ventures..... in any case please buy records from me, I really
+			don't need N copies of the same record.
+			<br />
 		</div>
+
 		<div>
 			<span className='h-yellow'>..... gigs / performances </span>: <br />
 			-- 2022-12-01 Teresa Pelinski @ Work In Progress, Queen Mary University of London -- <a href='/gigs/2022-12-01_wip.jpeg'>poster</a> <br />
