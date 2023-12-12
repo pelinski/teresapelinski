@@ -5,9 +5,10 @@ export const Sound: React.FC = () => (
 		<span className='screen-title'>sound and music</span>
 
 		<div>
-			<span className='h-yellow'>2023 --- Noods Radio Residency</span>: <span className='h-red'>Officium</span> --{'>'} <a href='https://noshell.teresapelinski.com/'>link to episodes</a> <br />{' '}
-			"Adam Barkley and Teresa Pelinski's Saturday morning service on <a href='https://www.noodsradio.com/residents/officium'>Noods Radio</a>, Officium, spans an all-encompassing range of sacred
-			and devotional musics to ease those aching souls. Expect twelfth-century chants, transcendental minimalism and a deep dive into contemporary and classical choral goodness."
+			<span className='h-yellow'>2023 --- Noods Radio Residency</span>: <span className='h-red'>Officium</span> --{'>'}{' '}
+			<a href='https://www.noodsradio.com/residents/officium'>link to episodes</a> <br /> "Adam Barkley and Teresa Pelinski's Saturday morning service on{' '}
+			<a href='https://www.noodsradio.com/residents/officium'>Noods Radio</a>, Officium, spans an all-encompassing range of sacred and devotional musics to ease those aching souls. Expect
+			twelfth-century chants, transcendental minimalism and a deep dive into contemporary and classical choral goodness."
 		</div>
 
 		<div>
