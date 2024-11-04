@@ -23,7 +23,6 @@ export const Nav: React.FC<{ className: string }> = ({ className }) => {
 			>
 				{/* <NavTree id={''} prompt={'|'} />
 <NavTree id={<a onClick={()=>scrollHandler('title')}>home </a>} prompt={'o'} /> */}
-
 				<NavTree id={''} prompt={'|'} />
 				<NavTree id={<a onClick={() => scrollHandler('about-me')}>about-me</a>} prompt={'o'} />
 				<NavTree id={''} prompt={'|'} />
@@ -59,12 +58,19 @@ export const Nav: React.FC<{ className: string }> = ({ className }) => {
 				>
 					my website
 				</a>
+				<a className='h-blue' href='documents/pelinski-cv-2024-2.pdf'>
+					cv
+				</a>
 				<a className='h-blue' href='https://github.com/pelinski'>
 					github
 				</a>
 				<a className='h-blue' href='https://twitter.com/t_pelinski'>
 					twitter
-				</a>
+				</a>{' '}
+				<br />
+				<span>teresapelinski@gmail.com</span>
+				<br />
+				<span>last updated: 2024-11</span>
 			</span>
 		</nav>
 	)

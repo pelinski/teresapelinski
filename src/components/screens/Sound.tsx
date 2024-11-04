@@ -3,6 +3,20 @@ import React from 'react'
 export const Sound: React.FC = () => (
 	<>
 		<span className='screen-title'>sound and music</span>
+		<div>
+			<span className='h-yellow'>..... gigs / performances </span>: <br />
+			-- 2024-06 with the Goldsmiths Non Input Ensemble @ Goldsmiths, University of London. <br /> -- <a href='https://goldsmithsems.bandcamp.com/album/circuits-1'>bandcamp</a> <br />
+			-- 2023-11-17 Adam Barkley + Teresa Pelinski @ Augmented Instruments Lab concert, Queen Mary University of London -- <a href='/gigs/2023-11-17_ail.png'>poster</a>{' '}
+			<a href='https://www.dropbox.com/scl/fi/9mr518clduo2gfzahe5zu/seisix6-nov-2023.mp4?rlkey=lxa8hb4jak30y133h4zrrf4b8&dl=0'>video</a>
+			<br />
+			-- 2023-10-28 with Muerte En El Parque @ The Waiting Room -- <a href='/gigs/2023-10-28_the-waiting-room.jpeg'>poster</a> <br />
+			-- 2023-09-10 with Muerte En El Parque @ New River Studios -- <a href='/gigs/2023-09-10_new-river-studios.JPG'>poster</a> <br />
+			-- 2023-08-05 with Muerte En El Parque @ Rally Festival London <br />
+			-- 2023-06-23 with the Goldsmiths Laptop Ensemble @ Goldsmiths, University of London -- <a href='/gigs/2023-06-23_laptop-ensemble.jpeg'>poster</a> <br />
+			-- 2023-05-13 with the Goldsmiths Laptop Ensemble @ Goldsmiths, Univeristy of London -- <a href='https://www.youtube.com/watch?v=1tDEkIoebIQ'>video</a> <br />
+			-- 2023-04-24 with the Goldsmiths Laptop Ensemble @ Goldsmiths, Univeristy of London <br />
+			-- 2022-12-01 Teresa Pelinski @ Work In Progress, Queen Mary University of London -- <a href='/gigs/2022-12-01_wip.jpeg'>poster</a> <br />
+		</div>
 
 		<div>
 			<span className='h-yellow'>2023 --- Noods Radio Residency</span>: <span className='h-red'>Officium</span> --{'>'}{' '}
@@ -59,24 +73,7 @@ export const Sound: React.FC = () => (
 
 		<div>
 			<span className='h-yellow'>est. 2019 --- Record label</span>: <span className='h-red'> La Ermita Records</span> --{'>'} <a href='https://laermitarecords.bandcamp.com/'>bandcamp</a> <br />{' '}
-			In 2019, I started a record label and distro where I have co-edited a couple of vinyl releases. It's mainly post hxc and screamo music. The label was born with the idea of selling records
-			at gigs in Madrid, where there was a great scene at the time. Then the pandemic hit and I moved to the UK on a plane, so most of my records are still back in Spain. The label might
-			continue to die, or relive if I finally discover the very well hidden London screamo scene, or might be repurposed for my own musical ventures..... in any case please buy records from me,
-			I really don't need N copies of the same record.
-			<br />
-		</div>
-
-		<div>
-			<span className='h-yellow'>..... gigs / performances </span>: <br />
-			-- 2022-12-01 Teresa Pelinski @ Work In Progress, Queen Mary University of London -- <a href='/gigs/2022-12-01_wip.jpeg'>poster</a> <br />
-			-- 2023-04-24 with the Goldsmiths Laptop Ensemble @ Goldsmiths, Univeristy of London <br />
-			-- 2023-05-13 with the Goldsmiths Laptop Ensemble @ Goldsmiths, Univeristy of London -- <a href='https://www.youtube.com/watch?v=1tDEkIoebIQ'>video</a> <br />
-			-- 2023-06-23 with the Goldsmiths Laptop Ensemble @ Goldsmiths, University of London -- <a href='/gigs/2023-06-23_laptop-ensemble.jpeg'>poster</a> <br />
-			-- 2023-08-05 with Muerte En El Parque @ Rally Festival London <br />
-			-- 2023-09-10 with Muerte En El Parque @ New River Studios -- <a href='/gigs/2023-09-10_new-river-studios.JPG'>poster</a> <br />
-			-- 2023-10-28 with Muerte En El Parque @ The Waiting Room -- <a href='/gigs/2023-10-28_the-waiting-room.jpeg'>poster</a> <br />
-			-- 2023-11-17 Adam Barkley + Teresa Pelinski @ Augmented Instruments Lab concert, Queen Mary University of London -- <a href='/gigs/2023-11-17_ail.png'>poster</a>{' '}
-			<a href='https://www.dropbox.com/scl/fi/9mr518clduo2gfzahe5zu/seisix6-nov-2023.mp4?rlkey=lxa8hb4jak30y133h4zrrf4b8&dl=0'>video</a>
+			Record label and distro where I have co-edited a couple of vinyl releases. It's mainly post hxc and screamo music.
 			<br />
 		</div>
 	</>

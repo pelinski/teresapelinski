@@ -11,21 +11,6 @@ $rot: 480px;
 $tgreen: rgb(0, 255, 0);
 $screen-num: 5;
 
-@keyframes floating {
-	0% {
-		transform: translate(0, 0px);
-	}
-	25% {
-		transform: translate(2px, 2px);
-	}
-	50% {
-		transform: translate(-0, 2px);
-	}
-	100% {
-		transform: translate(0, -0px);
-	}
-}
-
 @mixin green-title {
 	background-color: $tgreen;
 	text-align: center;
@@ -36,7 +21,7 @@ $screen-num: 5;
 	scroll-behavior: smooth;
 	color: white;
 	font-family: 'IBM Plex Mono', monospace;
-	font-size: 1.65vh;
+	font-size: 2vh;
 
 	@media (max-width: $ipad) {
 		font-size: 2.5vh;
@@ -45,7 +30,6 @@ $screen-num: 5;
 
 	overflow: hidden;
 	body {
-		animation: floating 100s ease-in-out infinite;
 		background: black;
 		margin: 0;
 	}
@@ -71,6 +55,11 @@ $screen-num: 5;
 	}
 }
 
+#photo {
+	width: 100vw;
+	height: 100vh;
+	font-size: 1vh;
+}
 .h-red {
 	background: red;
 	color: black;
