@@ -70,7 +70,7 @@ export const Nav: React.FC<{ className: string }> = ({ className }) => {
 				<br />
 				<span>teresapelinski@gmail.com</span>
 				<br />
-				<span>last updated: 2024-11</span>
+				<span>last updated: 2025-01</span>
 			</span>
 		</nav>
 	)
