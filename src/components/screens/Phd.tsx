@@ -213,6 +213,12 @@ export const Phd: React.FC = () => (
 				2022-06 Interview at La Casa Encendida's <a href='https://radio.lacasaencendida.es/programas/the-afternet/'>Afternet Podcast</a> (in spanish){' '}
 			</ArbitraryItem>
 		</div>
+		<div>
+			<span className='h-yellow'>Peer Review</span>: <br />
+			<ArbitraryItem> 2024 Reviewer for the IEEE Transactions on Human-Machine Systems Journal</ArbitraryItem>
+			<ArbitraryItem> 2024 Reviewer for the International Conference on New Interfaces for Musical Expression (NIME)</ArbitraryItem> <br />
+			<br />
+		</div>
 		<br />
 		<br />
 		<br />
