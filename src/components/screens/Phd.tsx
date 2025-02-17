@@ -188,6 +188,10 @@ export const Phd: React.FC = () => (
 			<span className='h-yellow'>Other talks and activities</span>: <br />
 			<ArbitraryItem>
 				{' '}
+				2024-2026 Part of the Scientific Committee at the <a href='https://www.upf.edu/web/mtg/catedra-ia-musica'>UPF-BMAT Chair on Artificial Intelligence and Music </a>
+			</ArbitraryItem>
+			<ArbitraryItem>
+				{' '}
 				2023-05 Facilitator at the NIME2023 Summer School in Mexico City (Mexico) -- <a href='https://www.nime2023.org/program/summer-school'>Link</a>{' '}
 			</ArbitraryItem>
 			<ArbitraryItem>
@@ -215,6 +219,7 @@ export const Phd: React.FC = () => (
 		</div>
 		<div>
 			<span className='h-yellow'>Peer Review</span>: <br />
+			<ArbitraryItem> 2025 Reviewer for the International Conference on New Interfaces for Musical Expression (NIME)</ArbitraryItem>
 			<ArbitraryItem> 2024 Reviewer for the IEEE Transactions on Human-Machine Systems Journal</ArbitraryItem>
 			<ArbitraryItem> 2024 Reviewer for the International Conference on New Interfaces for Musical Expression (NIME)</ArbitraryItem> <br />
 			<br />
