@@ -16,6 +16,7 @@ $screen-num: 5;
 	text-align: center;
 	color: black;
 }
+
 // styles
 * {
 	scroll-behavior: smooth;
@@ -28,7 +29,9 @@ $screen-num: 5;
 		line-height: 3vh;
 	}
 
-	overflow: hidden;
+	& {
+		overflow: hidden;
+	}
 	body {
 		background: black;
 		margin: 0;
@@ -82,7 +85,7 @@ nav {
 	height: 100vh;
 	padding: 3vh 1vw;
 	padding-bottom: 0;
-	border-right: 1px solid white;
+	border-right: 2px solid white;
 	background: black;
 	overflow-x: hidden;
 
@@ -202,12 +205,41 @@ main {
 			cursor: pointer;
 		}
 	}
+
 	#title {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-direction: column;
-		line-height: 2vh;
+		.news {
+			position: fixed;
+			cursor: pointer;
+			z-index: 1000;
+			.news-content {
+				width: 60vw;
+				display: flex;
+				flex-direction: column;
+				border: 2px solid white;
+				padding: 1vh;
+				background-color: red;
+
+				span {
+					text-decoration: underline;
+				}
+				.close {
+					width: 100%;
+					display: flex;
+					flex-direction: row;
+					// justify-content: flex-end;
+					cursor: pointer;
+					text-decoration: underline;
+				}
+			}
+		}
+		.home-title {
+			height: 80vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			line-height: 2vh;
+		}
 
 		@media (max-width: $ipad) {
 			.home-title {

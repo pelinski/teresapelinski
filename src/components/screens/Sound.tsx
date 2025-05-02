@@ -5,6 +5,10 @@ export const Sound: React.FC = () => (
 		<span className='screen-title'>sound and music</span>
 		<div>
 			<span className='h-yellow'>..... gigs / performances </span>: <br />
+			-- 2024-12-03 Low Stakes, High Spirits @ St Giles Church Crypt, Camberwell, London -- <a href='/gigs/2024-12-03_lowstakes.png'>poster</a>
+			<br />
+			-- 2024-11-26 Goldsmiths EMS Live @ Goldsmiths, University of London -- <a href='/gigs/2024-11-26_ems.jpg'>picture</a>
+			<br />
 			-- 2024-06 with the Goldsmiths Non Input Ensemble @ Goldsmiths, University of London. <br /> -- <a href='https://goldsmithsems.bandcamp.com/album/circuits-1'>bandcamp</a> <br />
 			-- 2023-11-17 Adam Barkley + Teresa Pelinski @ Augmented Instruments Lab concert, Queen Mary University of London -- <a href='/gigs/2023-11-17_ail.png'>poster</a>{' '}
 			<a href='https://www.dropbox.com/scl/fi/9mr518clduo2gfzahe5zu/seisix6-nov-2023.mp4?rlkey=lxa8hb4jak30y133h4zrrf4b8&dl=0'>video</a>

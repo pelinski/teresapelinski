@@ -13,8 +13,8 @@ export const Aboutme: React.FC<{ scrollHandler: (scrollTo: string) => () => void
 			at the <a href='https://instrumentslab.org/'>Augmented Instruments Lab</a> at the Centre for Digital Music, based at Queen Mary University of London. My PhD is funded under the UKRI AI and
 			Music CDT. In collaboration with <a href='https://bela.io/'>Bela</a> and under the supervision of <a href='https://andrewmcpherson.org/'>Prof. Andrew McPherson</a> (Imperial College
 			London) and <a href='https://researchers.arts.ac.uk/1594-rebecca-fiebrink'>Prof. Rebecca Fiebrink</a>
-			(University of the Arts London), I'm working on tools for prototyping with machine learning models on embedded systems in the context of musical instrument design. I'm also interested in
-			practice research. Due to my supervisor's affiliations I also have a visiting researcher status at Imperial College London and University of the Arts London.
+			(University of the Arts London), I'm working on tools for prototyping with machine learning models on embedded systems in the context of musical instrument design, through the lens of
+			practice research. Due to my supervisors' affiliations I also have a visiting researcher status at Imperial College London and University of the Arts London.
 			<br />
 			<br />
 			Previously, I got my BSc Physics from the Universidad Autónoma de Madrid. I learned lots of maths and a bit of code, and I became interested in sound. I spent a year at RWTH Aachen
@@ -35,8 +35,8 @@ export const Aboutme: React.FC<{ scrollHandler: (scrollTo: string) => () => void
 			<a href='https://www.noodsradio.com/'>Noods</a> radio with <a href='https://www.noodsradio.com/residents/officium'>Officium</a>, a sacred choral music show. In 2023, I was also part of the
 			Goldsmiths Laptop Ensemble, played the Microkorg at <a href='https://www.instagram.com/muerte.mp3/'>Muerte En El Parque</a> and livecoded at{' '}
 			<a href='https://www.dropbox.com/scl/fi/9mr518clduo2gfzahe5zu/seisix6-nov-2023.mp4?rlkey=lxa8hb4jak30y133h4zrrf4b8&dl=0'>seisix6</a>. In 2024, I was part of the Goldsmiths Non Input
-			Ensemble, and we released some tracks <a href='https://goldsmithsems.bandcamp.com/album/circuits-1'>here</a>. Besides, I like spending time on my computer, books, videogames, modular
-			synths, thinking about technology, tape & film, learning german, and coding and designing websites like this one.
+			Ensemble, and we released some tracks <a href='https://goldsmithsems.bandcamp.com/album/circuits-1'>here</a>. Besides, I like spending time on my computer, reading books, making candles,
+			playing football, videogames, modular synths, thinking about technology, tape & film, self-hosting things, and coding and designing websites like this one.
 			<br />
 			<br />
 			<br />

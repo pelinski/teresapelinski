@@ -14,7 +14,7 @@ export const Phd: React.FC = () => (
 			<a href='https://www.turing.ac.uk/work-turing/studentships/enrichment'>Alan Turing Institute</a>.
 		</div>
 		<div>
-			<span className='h-yellow'>Topic</span>: <span className='h-red'>Tools for Experimentation and Prototyping with Embedded AI in the Context of Digital Musical Instrument Design</span>
+			<span className='h-yellow'>Topic</span>: <span className='h-red'>Embedding neural networks in digital musical instruments as technical practice research</span>
 			{/* Abstract {'>>'}{'>'} Despite steady advances in computational modeling of acoustic instrument sounds, digital instruments still lag far behind their traditional counterparts in the nuance of
       interaction. In typical implementations, even the most sophisticated digital instrumental models are restricted to a small number of audio inputs and outputs, or they might be controlled
       by the industry-standard MIDI protocol from 1983. It is thus possible to create realistic purely digital simulations of familiar instruments, but a performer's ability to play them lags
@@ -26,6 +26,16 @@ export const Phd: React.FC = () => (
 		</div>
 		<div>
 			<span className='h-yellow'>Selected publications and conference talks</span>: <br />
+			<OutputItem
+				authors='Pelinski, T., Moro, G. & McPherson, A.'
+				date={2025}
+				title='pybela: a Python library to interface scientific and physical computing'
+				venue='in
+			Proceedings of the International Conference on New Interfaces for Musical Expression. Canberra, Australia.'
+				publication_type='Conference paper'
+				links={[{ url: '/documents/2025-nime-pybela.pdf', link_name: 'Paper' }]}
+				isNew={true}
+			/>
 			<OutputItem
 				authors='Pelinski, T., McPherson, A., & Fiebrink, R.'
 				date={2025}
@@ -147,8 +157,8 @@ export const Phd: React.FC = () => (
 			<span className='h-yellow'>Teaching</span>: <br />
 			<ArbitraryItem>
 				{' '}
-				2024-10:2025-06 Associate Lecturer at the Creative Computing Institute, University of the Arts London. Teaching three modules at the MSc Applied Machine Learning for Creatives: STEM
-				for Creatives, Artificial Intelligence for Media, and Personalisation and Machine Learning.{' '}
+				2024-10:2025-04 Associate Lecturer at the Creative Computing Institute, University of the Arts London. Teaching three modules at the MSc Applied Machine Learning for Creatives: STEM
+				for Creatives and Artificial Intelligence for Media.{' '}
 			</ArbitraryItem>
 			<ArbitraryItem>
 				{' '}
@@ -219,9 +229,10 @@ export const Phd: React.FC = () => (
 		</div>
 		<div>
 			<span className='h-yellow'>Peer Review</span>: <br />
-			<ArbitraryItem> 2025 Reviewer for the International Conference on New Interfaces for Musical Expression (NIME)</ArbitraryItem>
+			<ArbitraryItem> 2025 Reviewer for the ACM Creativity & Cognition Conference (Arts Track)</ArbitraryItem>
+			<ArbitraryItem> 2025 Reviewer for the International Conference on New Interfaces for Musical Expression (Paper track, workshops track)</ArbitraryItem>
 			<ArbitraryItem> 2024 Reviewer for the IEEE Transactions on Human-Machine Systems Journal</ArbitraryItem>
-			<ArbitraryItem> 2024 Reviewer for the International Conference on New Interfaces for Musical Expression (NIME)</ArbitraryItem> <br />
+			<ArbitraryItem> 2024 Reviewer for the International Conference on New Interfaces for Musical Expression (Paper track)</ArbitraryItem> <br />
 			<br />
 		</div>
 		<br />
