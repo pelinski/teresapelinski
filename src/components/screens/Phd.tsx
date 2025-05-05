@@ -239,11 +239,11 @@ export const Phd: React.FC = () => (
 		<br />
 		<br />
 		my{' '}
-		<a className='h-red' href='/documents/pelinski-cv-2024-2.pdf'>
+		<a className='h-red' href='/documents/pelinski-cv-202505.pdf'>
 			cv
 		</a>{' '}
 		is <br />
-		<a className='h-red' href='/documents/pelinski-cv-2024-2.pdf'>
+		<a className='h-red' href='/documents/pelinski-cv-202505.pdf'>
 			here
 		</a>
 	</>

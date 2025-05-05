@@ -58,7 +58,7 @@ export const Nav: React.FC<{ className: string }> = ({ className }) => {
 				>
 					my website
 				</a>
-				<a className='h-blue' href='documents/pelinski-cv-2024-2.pdf'>
+				<a className='h-blue' href='documents/pelinski-cv-202505.pdf'>
 					cv
 				</a>
 				<a className='h-blue' href='https://github.com/pelinski'>
