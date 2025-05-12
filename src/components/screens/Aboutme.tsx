@@ -41,11 +41,11 @@ export const Aboutme: React.FC<{ scrollHandler: (scrollTo: string) => () => void
 			<br />
 			<br />
 			my{' '}
-			<a className='h-red' href='/documents/pelinski-cv-202505.pdf'>
+			<a className='h-red' href='/documents/pelinski-cv-202505v2.pdf'>
 				cv
 			</a>{' '}
 			is <br />
-			<a className='h-red' href='/documents/pelinski-cv-202505.pdf'>
+			<a className='h-red' href='/documents/pelinski-cv-202505v2.pdf'>
 				here
 			</a>
 		</div>
