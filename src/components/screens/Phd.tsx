@@ -185,7 +185,7 @@ export const Phd: React.FC = () => (
 			</ArbitraryItem>
 			<ArbitraryItem>
 				{' '}
-				2023-04:2023-10 Internship at <a href='https://bela.io/'>Bela</a>
+				2023-04:2023-10 Software Development Internship at <a href='https://bela.io/'>Bela</a>
 			</ArbitraryItem>
 			<ArbitraryItem>
 				{' '}
