@@ -34,7 +34,7 @@ export const Aboutme: React.FC<{ scrollHandler: (scrollTo: string) => () => void
 			making. In 2021, I did an artistic residency at the <a href='https://www.upf.edu/web/phonos'>Phonos Foundation</a> (Barcelona). During 2023, I did a radio residency at{' '}
 			<a href='https://www.noodsradio.com/'>Noods</a> radio with <a href='https://www.noodsradio.com/residents/officium'>Officium</a>, a sacred choral music show. In 2023, I was also part of the
 			Goldsmiths Laptop Ensemble, played the Microkorg at <a href='https://www.instagram.com/muerte.mp3/'>Muerte En El Parque</a> and livecoded at{' '}
-			<a href='https://www.dropbox.com/scl/fi/9mr518clduo2gfzahe5zu/seisix6-nov-2023.mp4?rlkey=lxa8hb4jak30y133h4zrrf4b8&dl=0'>seisix6</a>. In 2024, I was part of the Goldsmiths Non Input
+			<a href='https://www.dropbox.com/scl/fi/9mr518clduo2gfzahe5zu/seisix6-nov-2023.mp4?rlkey=lxa8hb4jak30y133h4zrrf4b8&dl=0'>seisix6</a>. In 2024, I was part of the Goldsmiths No Input
 			Ensemble, and we released some tracks <a href='https://goldsmithsems.bandcamp.com/album/circuits-1'>here</a>. Besides, I like spending time on my computer, reading books, making candles,
 			playing football, videogames, modular synths, thinking about technology, tape & film, self-hosting things, and coding and designing websites like this one.
 			<br />

@@ -24,7 +24,7 @@ export const News: React.FC = (): JSX.Element => {
 						++ New journal paper for the Journal of New Music Research: <span>Ways of knowing, ways of writing: technical practice research in new musical instrument design</span> --{'>'}{' '}
 						check it out <a href='/phd'>here</a>
 						<br />
-						++ I will be participating in the <a href='https://sonar.es/en/programme/sonar-d/open-call-hacklab'>Sonar+D 2025 AI Performance Playground</a>
+						++ I will be participating at the <a href='https://sonar.es/en/programme/sonar-d/open-call-hacklab'>Sonar+D 2025 AI Performance Playground</a>
 					</div>
 				</span>
 			)}
