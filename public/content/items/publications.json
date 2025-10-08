@@ -1,0 +1,85 @@
+[
+	{
+		"id": "2025-nime-pybela",
+		"authors": "Pelinski, T., Moro, G. & McPherson, A.",
+		"date": "2025",
+		"title": "pybela: a Python library to interface scientific and physical computing",
+		"venue": "Proceedings of the International Conference on New Interfaces for Musical Expression. Canberra, Australia.",
+		"type": "conference-paper",
+		"url": "/documents/2025-nime-pybela.pdf",
+		"isNew": true
+	},
+	{
+		"id": "2024-jnmr",
+		"authors": "Pelinski, T., McPherson, A., & Fiebrink, R.",
+		"date": "2024",
+		"title": "Ways of knowing, ways of writing: technical practice research in new musical instrument design",
+		"venue": "Journal of New Music Research,  53(1–2), 79–92",
+		"type": "journal-paper",
+		"url": "https://doi.org/10.1080/09298215.2024.2442348",
+		"isNew": true
+	},
+	{
+		"id": "2023-nime",
+		"authors": "Pelinski, T., Diaz, R., Benito Temprano, A. L., McPherson, A.",
+		"date": "2023",
+		"title": "Pipeline for Recording Datasets and Running Neural Networks on the Bela Embedded Hardware Platform",
+		"venue": "Proceedings of the International Conference on New Interfaces for Musical Expression. Mexico City, Mexico.",
+		"type": "conference-paper",
+		"url": "http://nime.org/proceedings/2023/nime2023_22.pdf"
+	},
+	{
+		"id": "2023-nime-cr-infilling",
+		"authors": "Haki, B., Pelinski, T., Nieto, M., & Jordà, S.",
+		"date": "2023",
+		"title": "Completing Audio Drum Loops with Symbolic Drum Suggestions",
+		"venue": "Proceedings of the International Conference on New Interfaces for Musical Expression. Mexico City, Mexico.",
+		"type": "conference-paper",
+		"url": "/documents/2023-nime-cr-infilling.pdf"
+	},
+	{
+		"id": "2023-chi",
+		"authors": "Pelinski, T., Caspe, F., McPherson, A. & Sandler, M.",
+		"date": "2023",
+		"title": "Computing Ecosystems: Neural Networks and Embedded Hardware Platforms",
+		"venue": "In CHI2023 Workshop [WS2] - Beyond Prototyping Boards: Future Paradigms for Electronics Toolkits. Hamburg, Germany.",
+		"type": "workshop-paper",
+		"url": "/documents/2023-chi-computing-ecosystems.pdf"
+	},
+	{
+		"id": "2023-ircam",
+		"authors": "Bindi, G., Demerlé, N., Diaz, R., Genova, D., Golvet, A., Hayes, B., Huang, J., Liu, L., Martos, V., Nabi, S., Pelinski, T., Renault, L., Sarkar, S., Sarmento, P., Vahidi, C., Wolstanholme, L., Zhang, Y., Roebel, A., Bryan-Kinns, N., … Barthet, M.",
+		"date": "2023",
+		"title": "AI (r)evolution where are we heading? Thoughts about the future of music and sound technologies in the era of deep learning",
+		"venue": "arXiv",
+		"type": "preprint",
+		"url": "https://doi.org/10.48550/arXiv.2310.18320"
+	},
+	{
+		"id": "2022-nime",
+		"authors": "Pelinski, T.",
+		"date": "2022",
+		"title": "Sensor mesh as performance interface",
+		"venue": "Proceedings of the International Conference on New Interfaces for Musical Expression. The University of Auckland, New Zealand (Doctoral consortium)",
+		"type": "conference-paper",
+		"url": "https://nime.pubpub.org/pub/sensor-mesh/release/1"
+	},
+	{
+		"id": "2022-aimc-real-time-drum",
+		"authors": "Haki, B., Nieto, M., Pelinski, T., & Jordà, S.",
+		"date": "2022",
+		"title": "Real-Time Drum Accompaniment Using Transformer Architecture",
+		"venue": "Proceedings of the 3rd Conference on AI Music Creativity. Online, Anywhere",
+		"type": "conference-paper",
+		"url": "/documents/2022-aimc-real-time-drum-accompaniment.pdf"
+	},
+	{
+		"id": "2021-msc-thesis",
+		"authors": "Pelinski, T.",
+		"date": "2021",
+		"title": "Completing Audio Drum Loops with Transformer Neural Networks",
+		"venue": "Universitat Pompeu Fabra (Master thesis)",
+		"type": "master-thesis",
+		"url": "https://zenodo.org/record/5554854"
+	}
+]

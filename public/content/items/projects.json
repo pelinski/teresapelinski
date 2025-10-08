@@ -1,0 +1,50 @@
+[
+	{ "title": "pybela" },
+	{
+		"title": "Completing Audio Drum Loops Using Transformer Neural Networks",
+		"description": "Master Thesis",
+		"date": "2021",
+		"type": "smc",
+		"links": [
+			{ "url": "https://zenodo.org/record/5554854", "linkName": "Thesis" },
+			{ "url": "https://www.youtube-nocookie.com/embed/c0vCFT8gLi8", "linkName": "Presentation" }
+		]
+	},
+	{
+		"title": "Wekitunenator",
+		"date": "2021",
+		"description": "Advanced Interface Design final project on exploring the use of ML as a discovery tool for mappings in digital musical interfaces",
+		"type": "smc",
+		"links": [
+			{
+				"url": "https://github.com/gonski/wekitunenator",
+				"linkName": "Code"
+			},
+			{ "url": "https://www.youtube.com/watch?v=M6bAb42s-lo", "linkName": "Video" }
+		]
+	},
+	{
+		"title": "Turkish Makam Intonation",
+		"date": "2021",
+		"description": "Computational Musicology project on the analysis of intonation in Turkish Makam music",
+		"type": "smc",
+		"links": [
+			{
+				"url": "https://github.com/marter0/intonation_in_turkish_makam_music",
+				"linkName": "Code"
+			}
+		]
+	},
+	{
+		"title": "Audio Drum Transcription",
+		"date": "2021",
+		"description": "Music Information Retrieval final project on comparing the performance of a single-task and a multi-task CRNN for audio drum transcription",
+		"type": "smc",
+		"links": [
+			{
+				"url": "https://github.com/pelinski/crnn_multitask_adt",
+				"linkName": "Code"
+			}
+		]
+	}
+]

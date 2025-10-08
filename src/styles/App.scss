@@ -1,0 +1,143 @@
+@use 'sass:meta';
+@use 'variables.scss';
+
+// font
+@import url('https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&family=Inconsolata:wght@200..900&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+
+// styles
+* {
+	color: variables.$c0;
+	scroll-behavior: smooth;
+	font-family: 'Fragment Mono', monospace;
+	// font-family: 'IBM Plex Mono', monospace;
+	font-size: 1.8vh;
+	line-height: 2.7vh;
+
+	a {
+		text-decoration: underline;
+		cursor: pointer;
+	}
+
+	@media (max-width: variables.$ipad) {
+		font-size: 2.5vh;
+		line-height: 3vh;
+	}
+
+	& {
+		overflow: hidden;
+	}
+	body {
+		background: variables.$black;
+		margin: 0;
+	}
+
+	// selection color
+	::-moz-selection,
+	::selection {
+		background: variables.$c3;
+	}
+
+	//scrollbar
+	/* width */
+	::-webkit-scrollbar {
+		width: 1vw;
+		position: fixed;
+	}
+
+	::-webkit-scrollbar-thumb {
+		position: fixed;
+		border: 1px solid variables.$c0;
+	}
+
+	a,
+	.clickable {
+		cursor: pointer;
+	}
+
+	.videos {
+		display: flex;
+	}
+}
+
+.h-red {
+	background: variables.$c3;
+	color: variables.$black;
+}
+.h-green {
+	background: variables.$c1;
+	color: variables.$black;
+}
+.h-yellow {
+	background: variables.$c4;
+	color: variables.$black;
+	text-decoration: underline;
+}
+.h-blue {
+	background: variables.$c2;
+	text-decoration: underline;
+}
+
+main {
+	display: flex;
+	flex-wrap: wrap;
+	width: variables.$screen-num * 100vw;
+}
+
+.screen {
+	margin: 0;
+	padding: 0;
+	padding-top: 1vw;
+	height: 100vh;
+	width: 100vw;
+	overflow-x: hidden;
+	// scrollbar
+	overflow-y: visible;
+	/* Chrome, safari */
+	::-webkit-scrollbar {
+		width: 8px;
+	}
+	::-webkit-scrollbar-thumb {
+		background-color: variables.$black;
+		border: 1px solid white;
+	}
+
+	/* Firefox */
+	.selector {
+		scrollbar-color: black !important;
+		background-color: variables.$black;
+		border: 1px solid white;
+	}
+
+	@media (min-width: variables.$ipad) {
+		.content {
+			margin: variables.$margin-top 0;
+			padding-left: 40vw;
+			padding-right: 10vw;
+			// height: 90vh;
+		}
+	}
+	@media (max-width: variables.$ipad) {
+		.content {
+			padding: 0 4vw;
+			padding-top: 4vh;
+		}
+		.videos {
+			flex-wrap: wrap;
+		}
+	}
+
+	.screen-title {
+		font-size: variables.$screen-title-font-size;
+		background-color: variables.$c2;
+		padding: 0.2vw 1vw;
+		margin-bottom: 70px;
+		// text-decoration: underline;
+	}
+}
+@include meta.load-css('components/Nav.scss');
+@include meta.load-css('components/Title.scss');
+@include meta.load-css('components/Now.scss');
+@include meta.load-css('components/Blog.scss');
+@include meta.load-css('components/Research.scss');

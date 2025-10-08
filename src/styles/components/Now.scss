@@ -1,0 +1,56 @@
+@use "../variables";
+
+#now {
+	h1 {
+		text-decoration: underline;
+	}
+	.news-post {
+		margin: 2vh 0;
+		padding: 0 1;
+		ul {
+			list-style-type: none;
+			padding: 0 1vw;
+		}
+		li {
+			position: relative;
+			padding-left: 1.5em;
+		}
+		li::before {
+			content: '– ';
+			position: absolute;
+			left: 0;
+		}
+		h1 {
+			text-align: center;
+		}
+	}
+	.news-date {
+		border: variables.$border;
+		text-decoration: underline;
+		text-align: right;
+		background-color: variables.$c3;
+		padding: 0 2vw;
+		margin: 0;
+	}
+	.news-content {
+		border-bottom: variables.$border;
+		border-right: variables.$border;
+		border-left: variables.$border;
+		padding: 0 0.5vw;
+	}
+
+	.footer {
+		font-size: 1.2vh;
+		position: fixed;
+		padding-left: variables.$nav-width;
+		margin-bottom: calc(variables.$margin-top/2);
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 100;
+		text-align: center;
+	}
+	a {
+		font-size: 1.2vh;
+	}
+}

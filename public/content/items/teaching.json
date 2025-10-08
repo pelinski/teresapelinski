@@ -1,0 +1,58 @@
+[
+	{
+		"id": "2025-c4dm",
+		"date": "Sept. 2025 - Jan. 2026",
+		"role": "Associate Lecturer",
+		"module": "Coding for Digital Media",
+		"program": "MSc Applied Machine Learning for Creatives",
+		"institution": "Creative Computing Institute, University of the Arts London"
+	},
+	{
+		"id": "2025-ai4m",
+		"date": "Jan. 2025 - Apr. 2025",
+		"role": "Associate Lecturer",
+		"module": "Artificial Intelligence for Media",
+		"program": "MSc Data Science and AI for the Creative Industries",
+		"institution": "Creative Computing Institute, University of the Arts London"
+	},
+	{
+		"id": "2024-stem",
+		"date": "Sept. 2024 - Jan. 2025",
+		"role": "Associate Lecturer",
+		"module": "STEM for Creatives",
+		"program": "MSc Data Science and AI for the Creative Industries",
+		"institution": "Creative Computing Institute, University of the Arts London"
+	},
+	{
+		"id": "2024-gizmo",
+		"date": "Nov. 2024 - Dec. 2024",
+		"role": "Teaching Assistant",
+		"module": "Gizmo: Physical Computing",
+		"program": "MEng Design Engineering",
+		"institution": "Dyson School of Design Engineering, Imperial College London"
+	},
+	{
+		"id": "2022-nlp",
+		"date": "Oct. 2022 - Dec. 2022",
+		"role": "Associate Lecturer",
+		"module": "Natural Language Processing for Creatives",
+		"program": "MSc Data Science and AI for the Creative Industries",
+		"institution": "Creative Computing Institute, University of the Arts London"
+	},
+	{
+		"id": "2022-imdp",
+		"date": "June 2022 - July 2022",
+		"role": "Teaching Associate",
+		"module": "Interactive Media Design and Production",
+		"program": "MSc BSc(Eng) Telecommunications Engineering with management",
+		"institution": "Queen Mary University of London"
+	},
+	{
+		"id": "2022-id",
+		"date": "Jan. 2022 - May 2022",
+		"role": "Teaching Assistant",
+		"module": "Interaction Design",
+		"program": "BSc Computer Science & BSc Software Engineering for Business",
+		"institution": "Queen Mary University of London"
+	}
+]

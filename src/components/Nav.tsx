@@ -1,10 +1,12 @@
-import React, { useState } from 'react'
+import * as React from 'react'
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-export const Nav: React.FC<{ className: string }> = ({ className }) => {
+export const Nav: React.FC<{ className: string; frozenState: { isFrozen: boolean; setIsFrozen: (frozen: boolean) => void } }> = ({ className, frozenState }) => {
 	const [showNav, setShowNav] = useState(true) // only used in mobile
 	const navigate = useNavigate()
 	const isMobile = className === 'nav-mobile'
+	const { isFrozen, setIsFrozen } = frozenState
 
 	const scrollHandler = (scrollTo: string): void => {
 		setShowNav(!showNav)
@@ -23,32 +25,39 @@ export const Nav: React.FC<{ className: string }> = ({ className }) => {
 			>
 				{/* <NavTree id={''} prompt={'|'} />
 <NavTree id={<a onClick={()=>scrollHandler('title')}>home </a>} prompt={'o'} /> */}
+				<NavTree id={''} prompt={'|'} />
+				<NavTree id={<a onClick={() => scrollHandler('about')}>🙋🏻‍♀️about</a>} prompt={'o'} />
+				<NavTree id={''} prompt={'|'} />
+				<NavTree id={<a onClick={() => scrollHandler('now')}>🗞️now/news</a>} prompt={'*'} />
+				<NavTree id={''} prompt={'|'} />
+				<NavTree id={<a onClick={() => scrollHandler('research')}>📚research</a>} prompt={'+'}>
+					{/* <NavTree id={'topic'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
+					<NavTree id={'research outputs'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
+					<NavTree id={'grants'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
+					<NavTree id={'teaching'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} /> */}
+				</NavTree>
+				<NavTree id={''} prompt={'|'} />
+				<NavTree id={<a onClick={() => scrollHandler('projects')}>👩🏻‍💻projects</a>} prompt={'+'} />
+				<NavTree id={''} prompt={'|'} />
+
+				<NavTree id={<a onClick={() => scrollHandler('blog')}>📝blog</a>} prompt={'*'} />
 
 				<NavTree id={''} prompt={'|'} />
-				<NavTree id={<a onClick={() => scrollHandler('about-me')}>about-me</a>} prompt={'o'} />
-				<NavTree id={''} prompt={'|'} />
-				<NavTree id={<a onClick={() => scrollHandler('phd')}>phd in ai and music</a>} prompt={'+'}>
-					<NavTree id={'topic'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
-					<NavTree id={'publications'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
-					<NavTree id={"things i'm doing"} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
-					<NavTree id={'grants'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
-					<NavTree id={'teaching'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
-				</NavTree>
-				<NavTree id={''} prompt={'|'} />
-				<NavTree id={<a onClick={() => scrollHandler('smc')}>sound and music computing master</a>} prompt={'+'}>
-					<NavTree id={'master thesis'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
-					<NavTree id={'miniprojects'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
-				</NavTree>
-				<NavTree id={''} prompt={'|'} />
-				<NavTree id={<a onClick={() => scrollHandler('art')}>sound-art</a>} prompt={'+'}>
+				<NavTree id={<a onClick={() => scrollHandler('sound')}>🔊music stuff </a>} prompt={'+'}>
+					{/* <NavTree id={'radio residency'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
 					<NavTree id={'phonos residency'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
-					<NavTree id={'radio'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
-					{/* <NavTree id={'gigs'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} /> */}
+					<NavTree id={'record label'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
+
+					<NavTree id={'gigs'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} /> */}
 				</NavTree>
 				<NavTree id={''} prompt={'|'} />
 				<NavTree id={''} prompt={'v'} />
 			</NavTree>
 			<span className={`bottom ${showNav ? '' : ' hide'}`}>
+				<a className='clickable' onClick={() => setIsFrozen(!isFrozen)}>
+					{isFrozen ? 'unfreeze🔥' : 'freeze❄️🥶'}
+				</a>
+				<br />
 				<a
 					className='h-blue'
 					onClick={() => {
@@ -61,9 +70,18 @@ export const Nav: React.FC<{ className: string }> = ({ className }) => {
 				<a className='h-blue' href='https://github.com/pelinski'>
 					github
 				</a>
-				<a className='h-blue' href='https://twitter.com/t_pelinski'>
-					twitter
-				</a>
+				<a className='h-blue' href='https://bsky.app/profile/tpelinski.bsky.social'>
+					bluesky
+				</a>{' '}
+				<br />
+				<span>teresapelinski@gmail.com</span>
+				<br />
+				<span>last updated: 2025-10</span>
+				<br />
+				<span>
+					handcoded by me {'<3'}
+					<a href='https://github.com/pelinski/teresapelinski'>source</a>
+				</span>
 			</span>
 		</nav>
 	)

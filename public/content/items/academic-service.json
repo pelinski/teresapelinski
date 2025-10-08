@@ -1,0 +1,84 @@
+[
+	{
+		"id": "2025-nime-chair",
+		"date": "2026",
+		"description": "Workshop Chair at the International Conference on New Interfaces for Musical Expression",
+		"type": "conference-chair",
+		"venue": "NIME 2026",
+		"place": "London, UK",
+		"venueUrl": "https://nime2026.org/"
+	},
+	{
+		"id": "2026-tei",
+		"date": "2026",
+		"description": "Reviewer for the ACM Tangible, Embedded and Embodied Interaction Conference",
+		"track": "Pictorials track",
+		"venue": "TEI 2026",
+		"place": "Chicago, Illinois, USA",
+		"venueUrl": "https://tei.acm.org/2026/",
+		"type": "conference-peer-review"
+	},
+	{
+		"id": "2025-cmmr",
+		"date": "2025",
+		"description": "Reviewer for the Computer Music Multidisciplinary Research Conference",
+		"track": "Music performance track",
+		"venue": "CMMR 2025",
+		"place": "London, UK",
+		"venueUrl": "https://cmmr2025.prism.cnrs.fr/",
+		"type": "conference-peer-review"
+	},
+	{
+		"id": "2025-cc-reviewer",
+		"date": "2025",
+		"description": "Reviewer for the ACM Creativity & Cognition Conference",
+		"track": "Arts Track",
+		"venue": "C&C 2025",
+		"place": "London, UK",
+		"venueUrl": "https://cc.acm.org/2025/",
+		"type": "conference-peer-review"
+	},
+	{
+		"id": "2025-nime-reviewer",
+		"date": "2025",
+		"description": "Reviewer for the International Conference on New Interfaces for Musical Expression",
+		"venue": "NIME 2025",
+		"place": "Canberra, Australia",
+		"track": "Paper track, workshops track",
+		"venueUrl": "http://nime2025.org/",
+		"type": "conference-peer-review"
+	},
+	{
+		"id": "2024-ieee-reviewer",
+		"date": "2024",
+		"description": "Reviewer for the IEEE Transactions on Human-Machine Systems Journal",
+		"type": "journal-peer-review"
+	},
+	{
+		"id": "2024-nime-reviewer",
+		"date": "2024",
+		"description": "Reviewer for the International Conference on New Interfaces for Musical Expression (Paper track)",
+		"venue": "NIME 2024",
+		"place": "Utrecht, Netherlands",
+		"venueUrl": "https://nime2024.org/",
+		"type": "conference-peer-review"
+	},
+	{
+		"id": "2024-upf-committee",
+		"date": "2024-2026",
+		"description": "Member of the Scientific Committee",
+		"type": "committee",
+		"venue": "UPF-BMAT Chair on Artificial Intelligence and Music",
+		"place": "Universitat Pompeu Fabra, Barcelona, Spain",
+		"venueUrl": "https://www.upf.edu/web/mtg/catedra-ia-musica"
+	},
+	{
+		"id": "2022-haid-chair",
+		"date": "2022-08",
+		"description": "Concert Chair at the 11th International Workshop on Haptic & Audio Interaction Design",
+		"type": "conference-chair",
+		"venue": "HAID 2022",
+		"place": "London, UK",
+		"venueUrl": "https://haid2022.qmul.ac.uk/"
+	}
+]

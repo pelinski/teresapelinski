@@ -1,13 +1,14 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Title } from './Title'
 import { Nav } from './Nav'
-
-import { Screen } from './screens/Screen'
-import { Phd } from './screens/Phd'
-import { Smc } from './screens/Smc'
-import { Aboutme } from './screens/Aboutme'
-import { Art } from './screens/Art'
+import { Screen } from './Screen'
+import { Research } from './screens/Research'
+import { Projects } from './screens/Projects'
+import { About } from './screens/About'
+import { Sound } from './screens/Sound'
+import { Now } from './screens/Now'
+import { Blog } from './screens/Blog'
 
 export const PageWrapper: React.FC<{ screen: string }> = ({ screen }): JSX.Element => {
 	const navigate = useNavigate()
@@ -22,25 +23,35 @@ export const PageWrapper: React.FC<{ screen: string }> = ({ screen }): JSX.Eleme
 		}
 	}, [])
 
+	// freeze dynamic components
+	const [isFrozen, setIsFrozen] = useState(false)
+	const frozenState = { isFrozen, setIsFrozen }
+
 	return (
 		<>
-			<Nav className='nav-desktop' />
+			<Nav className='nav-desktop' frozenState={frozenState} />
 			<main>
 				<Screen id='title' scrollHandler={scrollHandler}>
-					<Nav className='nav-mobile' />
+					<Nav className='nav-mobile' frozenState={frozenState} />
 					<Title />
 				</Screen>
-				<Screen id={'about-me'} scrollHandler={scrollHandler}>
-					<Aboutme scrollHandler={scrollHandler} />
+				<Screen id={'about'} scrollHandler={scrollHandler}>
+					<About scrollHandler={scrollHandler} />
 				</Screen>
-				<Screen id={'phd'} scrollHandler={scrollHandler}>
-					<Phd />
+				<Screen id={'now'} scrollHandler={scrollHandler}>
+					<Now scrollHandler={scrollHandler} />
 				</Screen>
-				<Screen id={'smc'} scrollHandler={scrollHandler}>
-					<Smc />
+				<Screen id={'research'} scrollHandler={scrollHandler}>
+					<Research scrollHandler={scrollHandler} frozenState={frozenState} />
 				</Screen>
-				<Screen id={'art'} scrollHandler={scrollHandler}>
-					<Art />
+				<Screen id={'projects'} scrollHandler={scrollHandler}>
+					<Projects scrollHandler={scrollHandler} />
+				</Screen>
+				<Screen id={'blog'} scrollHandler={scrollHandler}>
+					<Blog scrollHandler={scrollHandler} />
+				</Screen>
+				<Screen id={'sound'} scrollHandler={scrollHandler}>
+					<Sound scrollHandler={scrollHandler} />
 				</Screen>
 			</main>
 		</>

@@ -1,0 +1,66 @@
+@use "../variables";
+
+nav {
+	height: 100vh;
+	padding: 5vh variables.$margin-top;
+	padding-bottom: 0;
+	// border-right: 2px solid white;
+	background: variables.$black;
+	overflow-x: hidden;
+
+	@media (max-width: variables.$ipad) {
+		width: 100vw;
+		left: 0;
+		text-align: center;
+	}
+	@media (min-width: variables.$ipad) {
+		position: absolute;
+		display: inline-block;
+		z-index: 100;
+		width: variables.$nav-width;
+		.bottom {
+			position: absolute;
+			bottom: 5vh;
+		}
+	}
+
+	a {
+		cursor: pointer;
+		text-decoration: underline;
+	}
+
+	.title {
+		@include variables.green-title();
+	}
+}
+
+@media (max-width: variables.$ipad) {
+	.nav-desktop {
+		display: none;
+	}
+}
+@media (min-width: variables.$ipad) {
+	// in mobile nav is part of screen title
+	.nav-mobile {
+		display: none;
+	}
+}
+@media (max-width: variables.$ipad) {
+	.go-home {
+		text-align: center;
+		position: relative;
+		top: 8vh;
+		width: 100vw;
+		@include variables.green-title();
+		z-index: 1000;
+		display: inline-block;
+		height: 3vh;
+		margin-bottom: 3vh;
+		z-index: 10000;
+	}
+}
+@media (min-width: variables.$ipad) {
+	.go-home {
+		display: none;
+	}
+}

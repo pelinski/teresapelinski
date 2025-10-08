@@ -1,0 +1,76 @@
+[
+	{
+		"id": "2024-nime-embedded-ai",
+		"authors": "Martin, C. P., Pelinski, T.",
+		"date": "2024",
+		"title": "Building NIMEs with Embedded AI",
+		"venue": "International Conference on New Interfaces for Musical Expression. Utrecht, Netherlands",
+		"outputType": "workshop",
+		"links": [
+			{
+				"url": "https://smcclab.github.io/nime-embedded-ai/",
+				"linkName": "Website"
+			}
+		]
+	},
+	{
+		"id": "2024-nime-1st-2nd-person",
+		"authors": "Jourdan, T., Pelinski, T., Scurto, H.",
+		"date": "2024",
+		"title": "First-person and second-person perspectives for ML in NIME",
+		"venue": "International Conference on New Interfaces for Musical Expression. Utrecht, Netherlands",
+		"outputType": "workshop",
+		"links": [
+			{
+				"url": "https://pelinski.github.io/first-and-second-person-perspectives-ml-nime/",
+				"linkName": "Website"
+			}
+		]
+	},
+	{
+		"id": "2023-aimc",
+		"authors": "Armitage, J., Shepardson, V., Privato, N., Pelinski, T., Benito Temprano, A. L., Wolstanholme, L., Martelloni, A., Caspe, F. S., Reed, C. N., Skach, S., Diaz, F., O'Brien S. P., Shier, J.",
+		"date": "2023",
+		"title": "Agential Instruments Design Workshop",
+		"venue": "AI and Music Creativity Conference. Brighton, UK",
+		"outputType": "workshop",
+		"links": [
+			{
+				"url": "https://aimc2023.pubpub.org/pub/25mg4xnz",
+				"linkName": "Workshop proposal"
+			}
+		]
+	},
+	{
+		"id": "2023-nime-facilitator",
+		"authors": "Lepri, G., McPherson, A. (authors) & Lepri, G., Benito, A., Moro, G., Pelinski, T., Zayas, E. (facilitators)",
+		"date": "2023",
+		"title": "NIME2023 Summer School",
+		"venue": "International Conference on New Interfaces for Musical Expression. Mexico City, Mexico",
+		"type": "summer-school",
+		"links": [
+			{
+				"url": "https://www.nime2023.org/program/summer-school",
+				"linkName": "Link"
+			}
+		]
+	},
+	{
+		"id": "2022-emai",
+		"authors": "Pelinski, T., Shepardson, V., Symons, S., Caspe, F. S., Benito Temprano, A. L., Armitage, J., Kiefer, C., Fiebrink, R., Magnusson, T., & McPherson, A.",
+		"date": "2022",
+		"title": "Embedded AI for NIME: Challenges and Opportunities",
+		"venue": "International Conference on New Interfaces for Musical Expression. Online",
+		"outputType": "workshop",
+		"links": [
+			{
+				"url": "https://nime.pubpub.org/pub/rwr2c3zs/release/1",
+				"linkName": "Workshop proposal"
+			},
+			{
+				"url": "https://embedded-ai-for-nime.github.io/",
+				"linkName": "Website"
+			}
+		]
+	}
+]

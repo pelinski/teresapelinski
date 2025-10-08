@@ -5,3 +5,4 @@ yarn-error.log
 .vscode/
 .DS_Store
 notes.md
+*.mp3

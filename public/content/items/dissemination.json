@@ -1,0 +1,23 @@
+[
+	{
+		"id": "2023-audio-programmer",
+		"date": "2023-03",
+		"description": "Talk at the Audio Programmer YouTube channel: \"Toward Prototyping with Neural Networks on Embedded Hardware\"",
+		"type": "talk",
+		"url": "https://www.youtube.com/live/eEqZJ41PbpQ?feature=share&t=364"
+	},
+	{
+		"id": "2022-bela-interview",
+		"date": "2022-09",
+		"description": "Interview at the Bela Blog: Bela's First PhD Student: Interview with Teresa Pelinski about AI, Embedded Computing and Musical Instruments",
+		"type": "media",
+		"url": "https://blog.bela.io/bela-phd-sponsorship/"
+	},
+	{
+		"id": "2022-afternet-podcast",
+		"date": "2022-06",
+		"description": "Interview at La Casa Encendida's Afternet Podcast (in Spanish)",
+		"type": "media",
+		"url": "https://radio.lacasaencendida.es/programas/the-afternet/"
+	}
+]

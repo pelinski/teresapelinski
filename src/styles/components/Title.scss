@@ -1,0 +1,29 @@
+@use "../variables";
+
+#title {
+	.home-title {
+		height: 80vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		div,
+		span {
+			line-height: 2.2vh;
+		}
+	}
+
+	@media (max-width: variables.$ipad) {
+		.home-title {
+			display: none;
+		}
+		.content {
+			height: 80vh;
+			margin-top: 15vh;
+			span {
+				color: variables.$c0;
+				width: 100vw;
+			}
+		}
+	}
+}

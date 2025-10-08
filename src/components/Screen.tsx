@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { JSX } from 'react'
 
 export const Screen: React.FC<{ id: string; children: string | JSX.Element | JSX.Element[]; scrollHandler: (scrollTo: string) => () => void }> = ({ id, children, scrollHandler }): JSX.Element => (
 	<>

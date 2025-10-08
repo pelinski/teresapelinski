@@ -1,0 +1,38 @@
+[
+	{
+		"id": "2024-cdha",
+		"authors": "Pelinski, T.",
+		"date": "2024",
+		"title": "The dialectics of resistance and accommodation in the practice of debugging",
+		"venue": "Code as Conversation: Transmedia Dialogues Around Critical Code Studies",
+		"type": "conference-presentation",
+		"url": "https://www.cdh.cam.ac.uk/events/37778/#programme"
+	},
+	{
+		"id": "2023-ircam",
+		"authors": "Pelinski, T.",
+		"date": "2023",
+		"title": "Sensor mesh as performance interface",
+		"venue": "QMUL-STMS Doctoral Day at IRCAM Paris, France",
+		"type": "seminar-presentation",
+		"url": ""
+	},
+	{
+		"id": "2022-embodied-ai",
+		"authors": "Pelinski, T.",
+		"date": "2022",
+		"title": "Anomaly detection as means of sensing subtlety and nuance in musical gesture",
+		"venue": "Embedded Perspectives of Musical AI Workshop. University of Oslo, Norway.",
+		"type": "workshop-talk",
+		"url": "https://www.uio.no/ritmo/english/news-and-events/events/workshops/2022/embodied-ai/p/teresa-pelinski.html"
+	},
+	{
+		"id": "2022-organologia",
+		"authors": "Pelinski, T.",
+		"date": "2022",
+		"title": "Some considerations on the design of digital musical instruments",
+		"venue": "Jornada de Organología (Organology Seminar) at Universidad Complutense de Madrid, Spain.",
+		"type": "invited-talk",
+		"url": "https://youtu.be/kZxsD32a7T0?t=1739"
+	}
+]
