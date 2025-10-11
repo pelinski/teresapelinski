@@ -1,6 +1,8 @@
-@use "../variables";
+@use '../variables';
 
 nav {
+	--anim-scale: 0.1;
+	overflow: visible;
 	height: 100vh;
 	padding: 5vh variables.$margin-top;
 	padding-bottom: 0;

@@ -19,7 +19,7 @@ interface Item {
 	tags?: string[]
 }
 
-export const Research: React.FC<{ frozenState: { isFrozen: boolean; setIsFrozen: (frozen: boolean) => void } }> = ({ frozenState }) => {
+export const Research: React.FC<{ isFrozen: boolean }> = ({ isFrozen }) => {
 	const [outputs, setOutputs] = useState<{
 		publications: Item[]
 		workshops: Item[]
@@ -54,8 +54,9 @@ export const Research: React.FC<{ frozenState: { isFrozen: boolean; setIsFrozen:
 			fetch('/content/items/academic-service.json').then((res) => res.json()),
 			fetch('/content/items/dissemination.json').then((res) => res.json()),
 			fetch('/content/items/teaching.json').then((res) => res.json()),
+			fetch('/content/items/grants.json').then((res) => res.json()),
 		])
-			.then(([pubs, works, talks, service, dissemination, teaching]) => {
+			.then(([pubs, works, talks, service, dissemination, teaching, grants]) => {
 				if (isMounted) {
 					setOutputs({
 						publications: pubs,
@@ -64,6 +65,7 @@ export const Research: React.FC<{ frozenState: { isFrozen: boolean; setIsFrozen:
 						academicService: service,
 						dissemination: dissemination,
 						teaching: teaching,
+						grants: grants,
 					})
 				}
 			})
@@ -73,31 +75,46 @@ export const Research: React.FC<{ frozenState: { isFrozen: boolean; setIsFrozen:
 		}
 	}, [])
 
-	const { isFrozen, setIsFrozen } = frozenState ? frozenState : { isFrozen: false, setIsFrozen: (frozen: boolean) => {} }
-
 	return (
 		<>
 			<span className='screen-title'>📚 Research</span>
-			<div>
-				<br />
-				My research area could be described as <span className='h-red'>"critical music technology studies"</span>. In the first half of my PhD, I worked on technical topics of design and
-				implementation of new musical instruments and interfaces. My thesis then took a critical turn, incorporating a science and technology studies angle as well as artistic research methods
-				to better understand the mutual mediations between humans and technology in creative-technical processes—in particular when designing technologies for making sound.
-				<br />
-				<br />
-				During my thesis I have developed the <span className='h-yellow'>Technical Practice Research</span> framework, which aims to bridge the gap between technical development and artistic
-				practice in the context of building new musical instruments. I have also developed technical artefacts like{' '}
-				<a className='h-yellow' href='https://github.com/BelaPlatform/pybela'>
+			<div className='research-text'>
+				<br /> I am currently writing up my PhD thesis, which I have done at the <a href='https://instrumentslab.org/'>Augmented Instruments Lab</a> and the{' '}
+				<a href='https://c4dm.eecs.qmul.ac.uk/'>Centre for Digital Music (C4DM)</a> at <a href='https://www.qmul.ac.uk/'>Queen Mary University of London</a>. My research area could be
+				described as <a className={'h-red bounce' + (isFrozen ? ' frozen' : '')}>"critical music technology studies"</a>. In the first half of my PhD, I worked on technical topics of design
+				and implementation of new musical instruments and interfaces, in particular with embedded systems and light AI models. In this context, I developed{' '}
+				<a className={'h-yellow bounce' + (isFrozen ? ' frozen' : '')} href='https://github.com/BelaPlatform/pybela'>
 					pybela
 				</a>
-				, a Python library for interfacing physical and scientific computing, which I partly developed as an internship at Bela. I also did an Enrichment Scheme placement at the Alan Turing
-				Institute.
+				, a Python library for interfacing physical and scientific computing, which I developed as part of an internship at{' '}
+				<a className={'h-yellow bounce' + (isFrozen ? ' frozen' : '')} href='https://bela.io/'>
+					Bela
+				</a>{' '}
+				(the industrial sponsor of my PhD!).
+				<br />
+				<br /> My thesis then took a critical turn, incorporating a science and technology studies angle as well as artistic research methods to better understand the mutual mediations between
+				humans and technology in creative-technical processes; in particular, when designing technologies for making sound. I developed the{' '}
+				<a className={'h-yellow bounce' + (isFrozen ? ' frozen' : '')} href='https://doi.org/10.1080/09298215.2024.2442348'>
+					Technical Practice Research
+				</a>{' '}
+				framework which has been incorporated by fellow PhD students at institutions such as MIT Media Lab, Northumbria University as well as colleagues at the Augmented Instruments Lab and
+				the Creative Computing Institute.
 				<br />
 				<br />
-				Before my PhD I also did graduate research in generative AI for music, using Transformer Neural Networks for drum beat generation (link 1 link 2), this was done at the Music Technology
-				Group in Barcelona. Before that, I also spent a year in Aachen as part of an undergradaute exchange where I wrote my bachelor thesis on head-torso geometry binaural geometries for
-				lighter computational acoustical simulations.
-				<br />
+				Before my PhD, I also did graduate research as part of my Master's thesis in{' '}
+				<a className={'h-yellow bounce' + (isFrozen ? ' frozen' : '')} href='/documents/2023-nime-cr-infilling.pdf'>
+					generative AI for music
+				</a>{' '}
+				using Transformers for drum beat generation; this work was done at the{' '}
+				<a className={'h-yellow bounce' + (isFrozen ? ' frozen' : '')} href='https://www.upf.edu/web/mtg'>
+					Music Technology Group{' '}
+				</a>{' '}
+				(Universitat Pompeu Fabra, Barcelona). I also spent a year at the <a href='https://www.rwth-aachen.de/go/id/a/?lidx=1'>RWTH Aachen</a> as part of an undergraduate exchange, where I
+				wrote my Bachelor's thesis at the{' '}
+				<a className={'h-yellow bounce' + (isFrozen ? ' frozen' : '')} href='https://www.akustik.rwth-aachen.de/go/id/dwma/?lidx=1'>
+					Institute for Hearing Technology and Acoustics
+				</a>{' '}
+				on binaural computational acoustical simulations.
 				{/* <br />
 				In September 2021, I started my PhD in Artificial Intelligence and Music (<a href='https://www.aim.qmul.ac.uk/'>AIM</a> CDT) at the Centre for Digital Music (
 				<a href='http://c4dm.eecs.qmul.ac.uk/'>C4DM</a>) at Queen Mary University of London (<a href='https://www.qmul.ac.uk/'>QMUL</a>), where I am also part of the{' '}
@@ -109,7 +126,7 @@ export const Research: React.FC<{ frozenState: { isFrozen: boolean; setIsFrozen:
 				<br />
 				Before that I did research in SMC, and undergraduate work in HRTFs */}
 			</div>
-
+			<br />
 			<br />
 
 			<div className='outputs'>
@@ -135,19 +152,6 @@ export const Research: React.FC<{ frozenState: { isFrozen: boolean; setIsFrozen:
 						setShowOutputs({
 							...showOutputs,
 							talks: !showOutputs.talks,
-						})
-					}
-					isFrozen={isFrozen}
-				/>
-				<OutputClassRenderer
-					outputType='workshops'
-					label='🪢 Workshops'
-					outputs={outputs.workshops}
-					isShown={showOutputs.workshops}
-					onToggle={() =>
-						setShowOutputs({
-							...showOutputs,
-							workshops: !showOutputs.workshops,
 						})
 					}
 					isFrozen={isFrozen}
@@ -200,6 +204,20 @@ export const Research: React.FC<{ frozenState: { isFrozen: boolean; setIsFrozen:
 						setShowOutputs({
 							...showOutputs,
 							teaching: !showOutputs.teaching,
+						})
+					}
+					isFrozen={isFrozen}
+				/>
+
+				<OutputClassRenderer
+					outputType='grants'
+					label='💸 Grants'
+					outputs={outputs.grants}
+					isShown={showOutputs.grants}
+					onToggle={() =>
+						setShowOutputs({
+							...showOutputs,
+							grants: !showOutputs.grants,
 						})
 					}
 					isFrozen={isFrozen}

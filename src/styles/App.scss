@@ -15,9 +15,11 @@
 	font-size: 1.8vh;
 	line-height: 2.7vh;
 
-	a {
+	a,
+	.clickable {
 		text-decoration: underline;
 		cursor: pointer;
+		overflow-wrap: break-word;
 	}
 
 	@media (max-width: variables.$ipad) {
@@ -27,6 +29,10 @@
 
 	& {
 		overflow: hidden;
+	}
+
+	ul {
+		padding-left: 0;
 	}
 	body {
 		background: variables.$black;
@@ -49,11 +55,6 @@
 	::-webkit-scrollbar-thumb {
 		position: fixed;
 		border: 1px solid variables.$c0;
-	}
-
-	a,
-	.clickable {
-		cursor: pointer;
 	}
 
 	.videos {
@@ -138,6 +139,8 @@ main {
 }
 @include meta.load-css('components/Nav.scss');
 @include meta.load-css('components/Title.scss');
+@include meta.load-css('components/About.scss');
 @include meta.load-css('components/Now.scss');
-@include meta.load-css('components/Blog.scss');
 @include meta.load-css('components/Research.scss');
+@include meta.load-css('components/Projects.scss');
+@include meta.load-css('components/Blog.scss');

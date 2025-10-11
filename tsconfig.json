@@ -27,9 +27,10 @@
 		// Include typings from built-in lib declarations
 		"lib": ["ES2019", "dom", "dom.iterable"],
 		// Include module source maps for debugging
-		"sourceMap": true
+		"sourceMap": true,
 		// Output to single concatenated file
 		// "outFile": "dist/bundle.js"
+		"jsx": "react-jsx"
 	},
 	"include": ["src"]
 }

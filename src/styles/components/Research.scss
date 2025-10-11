@@ -1,6 +1,10 @@
 @use 'Animations.scss';
 
 #research {
+	.research-text {
+		--anim-scale: 0.1;
+		overflow: visible;
+	}
 	.outputs {
 		overflow: visible;
 		display: flex;
@@ -12,12 +16,14 @@
 		justify-content: center;
 		gap: 1.5vw;
 		.output-class {
+			--anim-scale: 0.8;
 			display: inline-block;
 			animation: float 6s ease-in-out infinite;
 
 			// Give each label a different animation delay so they move independently
 			&:nth-child(1) {
 				animation: float1 7s ease-in-out infinite;
+				animation-duration: 8s;
 			}
 			&:nth-child(2) {
 				animation: float2 8s ease-in-out infinite;
@@ -33,6 +39,9 @@
 			}
 			&:nth-child(6) {
 				animation: float6 6s ease-in-out infinite;
+			}
+			&:nth-child(7) {
+				animation: float7 7.5s ease-in-out infinite;
 			}
 
 			&.expanded {

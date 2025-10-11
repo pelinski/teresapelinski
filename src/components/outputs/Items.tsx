@@ -8,7 +8,7 @@ interface ItemProps {
 	description?: string
 	type?: string
 	authors?: string
-	titles?: string
+	title?: string
 	isNew?: boolean
 	// academic service
 	venue?: string
@@ -20,6 +20,7 @@ interface ItemProps {
 	institution: string
 	// gigs
 	links?: [{ url: string; link_name: string }]
+	// grants}
 }
 
 export const ResearchOutputItem: React.FC<ItemProps> = ({ id, authors, date, title, venue, url, isNew = false }) => (
@@ -56,6 +57,50 @@ export const GigItem: React.FC<ItemProps> = ({ id, date, description, url }) => 
 	</li>
 )
 
+export const GrantItem: React.FC<ItemProps> = ({ id, date, title, institution, description }) => (
+	<li key={id}>
+		{'>>'} <strong>{title}</strong> ({date}): {institution}
+		{institution && '.'} {description}.
+	</li>
+)
+
+export const ProjectItem: React.FC<ItemProps> = ({ id, date, description, title, type, url, links, shownAt, videos }) => (
+	<>
+		<a href={url}>{title}</a> ({date}): {description}
+		{shownAt && shownAt.length > 0 && (
+			<>
+				<br />
+				<span className='h-blue'>Shown at:</span>
+				<ul>
+					{shownAt.map((event, index) => (
+						<li key={index}>
+							{'--'} {event.venue} ({event.date}): <a href={event.url}>{event.url}</a>
+						</li>
+					))}
+				</ul>
+			</>
+		)}
+		{links && links.length > 0 && (
+			<>
+				<span className='h-blue'>Links:</span>
+				{links.map((link, index) => (
+					<span key={index}>
+						<a href={link.url}>{link.linkName}</a>{' '}
+					</span>
+				))}
+			</>
+		)}
+		{videos && videos.length > 0 && (
+			<>
+				<span className='h-blue'>Videos:</span>
+				{videos.map((video, index) => (
+					<iframe src={video} allow='autoplay; fullscreen; picture-in-picture' allowFullScreen key={index} />
+				))}
+			</>
+		)}
+	</>
+)
+
 export const ArbitraryItem: React.FC<ItemProps> = ({ id, date, description, venue, links }) => (
 	<li key={id}>
 		{'>>'} {description} - {venue && <span>{venue}</span>} ({date})
@@ -64,7 +109,7 @@ export const ArbitraryItem: React.FC<ItemProps> = ({ id, date, description, venu
 				{' '}
 				{links.map((link, index) => (
 					<span key={index}>
-						<a href={link.url}>{link.link_name}</a>{' '}
+						<a href={link.url}>{link.linkName}</a>{' '}
 					</span>
 				))}
 			</>

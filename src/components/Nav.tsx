@@ -37,24 +37,21 @@ export const Nav: React.FC<{ className: string; frozenState: { isFrozen: boolean
 					<NavTree id={'teaching'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} /> */}
 				</NavTree>
 				<NavTree id={''} prompt={'|'} />
-				<NavTree id={<a onClick={() => scrollHandler('projects')}>👩🏻‍💻projects</a>} prompt={'+'} />
+				<NavTree id={<a onClick={() => scrollHandler('projects')}>🔊projects</a>} prompt={'+'} />
 				<NavTree id={''} prompt={'|'} />
 
 				<NavTree id={<a onClick={() => scrollHandler('blog')}>📝blog</a>} prompt={'*'} />
 
-				<NavTree id={''} prompt={'|'} />
-				<NavTree id={<a onClick={() => scrollHandler('sound')}>🔊music stuff </a>} prompt={'+'}>
-					{/* <NavTree id={'radio residency'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
+				{/* <NavTree id={'radio residency'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
 					<NavTree id={'phonos residency'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
 					<NavTree id={'record label'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
 
 					<NavTree id={'gigs'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} /> */}
-				</NavTree>
 				<NavTree id={''} prompt={'|'} />
 				<NavTree id={''} prompt={'v'} />
 			</NavTree>
 			<span className={`bottom ${showNav ? '' : ' hide'}`}>
-				<a className='clickable' onClick={() => setIsFrozen(!isFrozen)}>
+				<a className={'clickable bounce' + (isFrozen ? ' frozen' : '')} onClick={() => setIsFrozen(!isFrozen)}>
 					{isFrozen ? 'unfreeze🔥' : 'freeze❄️🥶'}
 				</a>
 				<br />

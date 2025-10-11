@@ -1,0 +1,46 @@
+$item-max-width: 15vw;
+
+#projects {
+	.project-repo {
+		text-align: center;
+		.filters {
+			display: flex;
+			justify-content: center;
+			gap: 2vw;
+			.filter {
+				text-align: center;
+				cursor: pointer;
+				&.active {
+					text-decoration: underline;
+				}
+				&.selected {
+					background-color: green;
+				}
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+		.projects-list {
+			overflow: visible;
+			display: flex;
+			// flex-direction: column;
+			align-items: center;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	}
+	.output-class {
+		.project-item {
+			width: $item-max-width;
+			display: flex;
+			flex-direction: column;
+		}
+	}
+	img,
+	iframe {
+		width: $item-max-width;
+	}
+}

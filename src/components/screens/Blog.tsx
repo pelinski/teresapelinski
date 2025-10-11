@@ -29,6 +29,8 @@ export const Blog: React.FC<{ scrollHandler: (scrollTo: string) => () => void }>
 
 	return (
 		<div>
+			{' '}
+			ADD RSS FEED!!
 			<span className='screen-title'>📝 Blog</span>
 			{currentPost == null &&
 				posts.map((post) => (
@@ -43,7 +45,6 @@ export const Blog: React.FC<{ scrollHandler: (scrollTo: string) => () => void }>
 						<div className='blog-tags'>Tags: {post.tags.join(', ')}</div>
 					</div>
 				))}
-
 			{currentPost != null && (
 				<div className='blog-post'>
 					<a className={'blog-readmore h-yellow'} onClick={() => setCurrentPost(null)}>
