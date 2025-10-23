@@ -67,11 +67,13 @@ export const Projects: React.FC = () => {
 
 	return (
 		<>
-			<span className='screen-title'> 🔊 Project repository</span>
-			<br />
-			<br />
-			<span>🚧under construction👷🏻‍♀️</span>
-			<div className='project-repo'>
+			<span className='screen-title-container'>
+				<span className='screen-title'> 🔊 Project repository 🚧 </span>{' '}
+				<header>
+					<div className='horizontal-gif'>
+						<img src='/gifs/under-construction/banner.gif' alt='under construction 90s gif' />
+					</div>
+				</header>
 				<div className='filters'>
 					{availableFilters.map((filter) => (
 						<span
@@ -83,6 +85,8 @@ export const Projects: React.FC = () => {
 						</span>
 					))}
 				</div>
+			</span>
+			<div className='project-repo'>
 				<div className='projects-list'>
 					{outputs.projects.length > 0 &&
 						outputs.projects.map(
@@ -107,37 +111,45 @@ export const Projects: React.FC = () => {
 								)
 						)}
 				</div>
-			</div>
 
-			<OutputClassRenderer
-				outputType='gigs'
-				label='Performances archive'
-				outputs={outputs.gigs}
-				isShown={showOutputs.gigs}
-				onToggle={() =>
-					setShowOutputs((prev) => ({
-						...prev,
-						gigs: !prev.gigs,
-					}))
-				}
-			/>
-
-			{(showOutputs.gigs || Object.values(showOutputs.projects).some(Boolean)) && (
-				<span
-					className='h-red clickable collapse-all'
-					onClick={() =>
+				<OutputClassRenderer
+					outputType='gigs'
+					label='Performances archive'
+					outputs={outputs.gigs}
+					isShown={showOutputs.gigs}
+					onToggle={() =>
 						setShowOutputs((prev) => ({
-							gigs: false,
-							projects: Object.keys(prev.projects).reduce((acc, key) => {
-								acc[key] = false
-								return acc
-							}, {} as Record<string, boolean>),
+							...prev,
+							gigs: !prev.gigs,
 						}))
 					}
-				>
-					[-] collapse all [-]
-				</span>
-			)}
+				/>
+
+				{(showOutputs.gigs || Object.values(showOutputs.projects).some(Boolean)) && (
+					<span
+						className='h-red clickable collapse-all'
+						onClick={() =>
+							setShowOutputs((prev) => ({
+								gigs: false,
+								projects: Object.keys(prev.projects).reduce((acc, key) => {
+									acc[key] = false
+									return acc
+								}, {} as Record<string, boolean>),
+							}))
+						}
+					>
+						[-] collapse all [-]
+					</span>
+				)}
+			</div>
+			<footer>
+				<img src='/gifs/under-construction/writing.gif' alt='under construction writing gif' />
+				{/* <img src='/gifs/under-construction/pikachu.gif' alt='under construction pikachu gif' /> */}
+				{/* <img src='/gifs/under-construction/person.gif' alt='under construction person gif' />
+				<img src='/gifs/under-construction/en-construction.gif' alt='under construction "en construction" gif' />
+				<img src='/gifs/under-construction/fire.gif' alt='under construction "fire" gif' />
+				<img src='/gifs/under-construction/spin.gif' alt='under construction spin gif' /> */}
+			</footer>
 		</>
 	)
 }

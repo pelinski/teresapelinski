@@ -103,7 +103,7 @@ export const ProjectItem: React.FC<ItemProps> = ({ id, date, description, title,
 
 export const ArbitraryItem: React.FC<ItemProps> = ({ id, date, description, venue, links }) => (
 	<li key={id}>
-		{'>>'} {description} - {venue && <span>{venue}</span>} ({date})
+		{description} - {venue && <span>{venue}</span>} ({date})
 		{links && links.length > 0 && (
 			<>
 				{' '}

@@ -35,7 +35,12 @@ export const OutputClassRenderer: React.FC<OutputClassRendererProps> = ({ output
 			<>
 				{' '}
 				<div className='project-item' key={outputs[0]?.id}>
-					{outputs[0].image && <img src={(outputs[0] as any).image} alt={(outputs[0] as any).title} />}
+					{outputs[0].image && (
+						<div className='project-image-container'>
+							<img src={(outputs[0] as any).image} alt={(outputs[0] as any).title} />
+							<div className='sparkle-overlay' />
+						</div>
+					)}
 					<span className='h-yellow clickable' onClick={onToggle}>
 						{label} {outputs[0].shortDescription && '--' + outputs[0].shortDescription} {isShown ? '[-]' : '[+]'} <br />
 					</span>

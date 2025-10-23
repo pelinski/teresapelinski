@@ -3,24 +3,24 @@ $phone: 430px;
 $rot: 480px;
 $screen-num: 6;
 $margin-top: 5vh;
-$nav-width: 25vw;
+$nav-width: 20vw;
 
 // colours
-$black: #282a36;
-$c0: #f8f8f2;
-$c1: #50fa7b;
-$c2: #6272a4;
-$c3: #ff5555;
-$c4: #f1fa8c;
+// $black: #282a36;
+// $c0: #f8f8f2;
+// $c1: #50fa7b;
+// $c2: #6272a4;
+// $c3: #ff5555;
+// $c4: #f1fa8c;
+$black: black;
+$c0: white;
+$c1: rgb(0, 255, 0);
+$c2: blue;
+$c3: red;
+$c4: yellow;
 
 $border: 2px solid $c0;
 $screen-title-font-size: 2.2vh;
-// $black: black;
-// $c0: white;
-// $c1: rgb(0, 255, 0);
-// $c2: blue;
-// $c3: red;
-// $c4: yellow;
 @mixin green-title {
 	background-color: $c1;
 	text-align: center;
