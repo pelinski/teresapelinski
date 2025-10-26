@@ -1,5 +1,6 @@
 @use 'sass:meta';
 @use 'variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
 
 // font
 // @import url('https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&family=Inconsolata:wght@200..900&display=swap');
@@ -10,11 +11,12 @@
 * {
 	color: variables.$c0;
 	scroll-behavior: smooth;
-	font-family: 'Comic Sans MS', serif;
+	font-family: 'Comic Neue', system-ui;
 	// font-family: 'Fragment Mono', monospace;
 	// font-family: 'IBM Plex Mono', monospace;
-	font-size: 1.8vh;
-	line-height: 2.7vh;
+	font-size: 1rem;
+	line-height: 1rem;
+	cursor: none;
 
 	a,
 	.clickable {
@@ -24,8 +26,8 @@
 	}
 
 	@media (max-width: variables.$ipad) {
-		font-size: 2.5vh;
-		line-height: 3vh;
+		font-size: 4vh;
+		line-height: 1rem;
 	}
 
 	& {
@@ -37,9 +39,10 @@
 	}
 	#root {
 		background-image: url('../../public/gifs/textures/comp020.gif');
+		background-size: 3rem;
 	}
 	main {
-		background: hsla(0, 0%, 4%, 0.5);
+		background: hsla(0, 0%, 2%, 0.4);
 		display: flex;
 		flex-wrap: wrap;
 		width: variables.$screen-num * 100vw;
@@ -74,19 +77,28 @@
 }
 
 .h-red {
+	padding: 0 0.2rem;
 	background: variables.$c3;
 	color: variables.$black;
 }
+.h-orange {
+	padding: 0 0.2rem;
+	background: variables.$c5;
+	color: variables.$black;
+}
 .h-green {
+	padding: 0 0.2rem;
 	background: variables.$c1;
 	color: variables.$black;
 }
 .h-yellow {
+	padding: 0 0.2rem;
 	background: variables.$c4;
 	color: variables.$black;
 	text-decoration: underline;
 }
 .h-blue {
+	padding: 0 0.2rem;
 	background: variables.$c2;
 	text-decoration: underline;
 }
@@ -128,6 +140,7 @@
 		.content {
 			padding: 0 4vw;
 			padding-top: 4vh;
+			margin-bottom: 8vh;
 		}
 		.videos {
 			flex-wrap: wrap;
@@ -135,7 +148,6 @@
 	}
 
 	.screen-title {
-		font-size: variables.$screen-title-font-size;
 		background-color: variables.$c2;
 		padding: 0.2vw 1vw;
 		margin-bottom: 70px;

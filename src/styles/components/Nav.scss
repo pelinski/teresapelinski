@@ -3,19 +3,23 @@
 nav {
 	--anim-scale: 0.1;
 	overflow: visible;
-	height: 100vh;
 	padding: 5vh variables.$margin-top;
 	padding-bottom: 0;
 	// border-right: 2px solid white;
 	// background: variables.$black;
-	overflow-x: hidden;
-
+	overflow: hidden;
+	.bottom {
+		a {
+			padding: 0 0.5rem;
+		}
+	}
 	@media (max-width: variables.$ipad) {
 		width: 100vw;
 		left: 0;
 		text-align: center;
 	}
 	@media (min-width: variables.$ipad) {
+		height: 100vh;
 		position: absolute;
 		display: inline-block;
 		z-index: 100;
@@ -31,6 +35,10 @@ nav {
 		text-decoration: underline;
 	}
 
+	span {
+		overflow: visible;
+	}
+
 	.title {
 		@include variables.green-title();
 	}
@@ -40,14 +48,18 @@ nav {
 	.nav-desktop {
 		display: none;
 	}
-}
-@media (min-width: variables.$ipad) {
-	// in mobile nav is part of screen title
 	.nav-mobile {
-		display: none;
+		display: flex;
+		flex-direction: column;
+		gap: 2vh;
+		padding: 0;
+		.bounce {
+			display: none;
+		}
+		// .bottom {
+		// 	font-size: 0.8rem;
+		// }
 	}
-}
-@media (max-width: variables.$ipad) {
 	.go-home {
 		text-align: center;
 		position: relative;
@@ -56,12 +68,17 @@ nav {
 		@include variables.green-title();
 		z-index: 1000;
 		display: inline-block;
-		height: 3vh;
-		margin-bottom: 3vh;
-		z-index: 10000;
+		margin-bottom: 8vh;
+		span {
+			color: variables.$black;
+		}
+		padding: 0;
 	}
 }
 @media (min-width: variables.$ipad) {
+	.nav-mobile {
+		display: none;
+	}
 	.go-home {
 		display: none;
 	}

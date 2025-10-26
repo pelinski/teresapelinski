@@ -1,5 +1,4 @@
-import * as React from 'react'
-import { useState } from 'react'
+import React, { JSX, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 export const Nav: React.FC<{ className: string; frozenState: { isFrozen: boolean; setIsFrozen: (frozen: boolean) => void } }> = ({ className, frozenState }) => {
@@ -15,62 +14,67 @@ export const Nav: React.FC<{ className: string; frozenState: { isFrozen: boolean
 	}
 	return (
 		<nav className={className}>
-			<NavTree
-				className={`${showNav ? '' : ' hide'}`}
-				id={
-					<a className={'title'} onClick={() => scrollHandler('title')}>
-						{!isMobile ? 'teresa-pelinski' : 'index'}
-					</a>
-				}
-			>
-				{/* <NavTree id={''} prompt={'|'} />
+			<div className='nav-tree-container'>
+				<NavTree
+					className={`${showNav ? '' : ' hide'}`}
+					id={
+						<a className={'title'} onClick={() => scrollHandler('title')}>
+							{!isMobile ? 'teresa-pelinski' : 'index'}
+						</a>
+					}
+				>
+					{/* <NavTree id={''} prompt={'|'} />
 <NavTree id={<a onClick={()=>scrollHandler('title')}>home </a>} prompt={'o'} /> */}
-				<NavTree id={''} prompt={'|'} />
-				<NavTree id={<a onClick={() => scrollHandler('about')}>🙋🏻‍♀️about</a>} prompt={'o'} />
-				<NavTree id={''} prompt={'|'} />
-				<NavTree id={<a onClick={() => scrollHandler('now')}>🗞️now/news</a>} prompt={'*'} />
-				<NavTree id={''} prompt={'|'} />
-				<NavTree id={<a onClick={() => scrollHandler('research')}>📚research</a>} prompt={'+'}>
-					{/* <NavTree id={'topic'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
+					<NavTree id={''} prompt={'|'} />
+					<NavTree id={<a onClick={() => scrollHandler('about')}>🙋🏻‍♀️about</a>} prompt={'o'} />
+					<NavTree id={''} prompt={'|'} />
+					<NavTree id={<a onClick={() => scrollHandler('now')}>🗞️now/news</a>} prompt={'*'} />
+					<NavTree id={''} prompt={'|'} />
+					<NavTree id={<a onClick={() => scrollHandler('research')}>📚research</a>} prompt={'+'}>
+						{/* <NavTree id={'topic'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
 					<NavTree id={'research outputs'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
 					<NavTree id={'grants'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
 					<NavTree id={'teaching'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} /> */}
-				</NavTree>
-				<NavTree id={''} prompt={'|'} />
-				<NavTree id={<a onClick={() => scrollHandler('projects')}>🔊projects</a>} prompt={'+'} />
-				<NavTree id={''} prompt={'|'} />
+					</NavTree>
+					<NavTree id={''} prompt={'|'} />
+					<NavTree id={<a onClick={() => scrollHandler('projects')}>🔊projects</a>} prompt={'+'} />
+					<NavTree id={''} prompt={'|'} />
 
-				<NavTree id={<a onClick={() => scrollHandler('blog')}>📝blog</a>} prompt={'*'} />
+					<NavTree id={<a onClick={() => scrollHandler('blog')}>📝blog</a>} prompt={'*'} />
 
-				{/* <NavTree id={'radio residency'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
+					{/* <NavTree id={'radio residency'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
 					<NavTree id={'phonos residency'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
 					<NavTree id={'record label'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
 
 					<NavTree id={'gigs'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} /> */}
-				<NavTree id={''} prompt={'|'} />
-				<NavTree id={''} prompt={'v'} />
-			</NavTree>
+					<NavTree id={''} prompt={'|'} />
+					<NavTree id={''} prompt={'v'} />
+				</NavTree>
+			</div>
 			<span className={`bottom ${showNav ? '' : ' hide'}`}>
 				<a className={'clickable bounce' + (isFrozen ? ' frozen' : '')} onClick={() => setIsFrozen(!isFrozen)}>
 					{isFrozen ? 'unfreeze🔥' : 'freeze❄️🥶'}
 				</a>
 				<br />
-				<a
-					className='h-blue'
-					onClick={() => {
-						scrollHandler('art')
-						setTimeout(() => scrollHandler('title'), 1000)
-					}}
-				>
-					my website
-				</a>
-				<a className='h-blue' href='https://github.com/pelinski'>
-					github
-				</a>
-				<a className='h-blue' href='https://bsky.app/profile/tpelinski.bsky.social'>
-					bluesky
-				</a>{' '}
-				<br />
+				<div className='links'>
+					<a
+						className='h-blue'
+						onClick={() => {
+							scrollHandler('art')
+							setTimeout(() => scrollHandler('title'), 1000)
+						}}
+					>
+						my website
+					</a>
+
+					<a className='h-blue' href='https://github.com/pelinski'>
+						github
+					</a>
+
+					<a className='h-blue' href='https://bsky.app/profile/tpelinski.bsky.social'>
+						bluesky
+					</a>
+				</div>
 				<span>teresapelinski@gmail.com</span>
 				<br />
 				<span>last updated: 2025-10</span>

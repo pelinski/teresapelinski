@@ -12,7 +12,7 @@ interface Item {
 	shownAt?: [{ venue: string; date: string; url?: string }]
 	videos?: string[]
 }
-export const Projects: React.FC = () => {
+export const Projects: React.FC<{ isFrozen: boolean }> = ({ isFrozen }) => {
 	const [outputs, setOutputs] = useState<{
 		gigs: Item[]
 		projects: Item[]
@@ -68,12 +68,7 @@ export const Projects: React.FC = () => {
 	return (
 		<>
 			<span className='screen-title-container'>
-				<span className='screen-title'> 🔊 Project repository 🚧 </span>{' '}
-				<header>
-					<div className='horizontal-gif'>
-						<img src='/gifs/under-construction/banner.gif' alt='under construction 90s gif' />
-					</div>
-				</header>
+				<span className='screen-title'> 🔊 Project repository 🚧 </span>
 				<div className='filters'>
 					{availableFilters.map((filter) => (
 						<span
@@ -107,10 +102,14 @@ export const Projects: React.FC = () => {
 												},
 											}))
 										}
+										isFrozen={isFrozen}
+										className={'bounce'}
 									/>
 								)
 						)}
 				</div>
+
+				<div className='selected-project-info'></div>
 
 				<OutputClassRenderer
 					outputType='gigs'
@@ -123,8 +122,10 @@ export const Projects: React.FC = () => {
 							gigs: !prev.gigs,
 						}))
 					}
+					className={'bounce'}
+					isFrozen={isFrozen}
 				/>
-
+				<br />
 				{(showOutputs.gigs || Object.values(showOutputs.projects).some(Boolean)) && (
 					<span
 						className='h-red clickable collapse-all'
@@ -143,6 +144,7 @@ export const Projects: React.FC = () => {
 				)}
 			</div>
 			<footer>
+				<img src='/gifs/under-construction/banner.gif' alt='under construction 90s gif' />
 				<img src='/gifs/under-construction/writing.gif' alt='under construction writing gif' />
 				{/* <img src='/gifs/under-construction/pikachu.gif' alt='under construction pikachu gif' /> */}
 				{/* <img src='/gifs/under-construction/person.gif' alt='under construction person gif' />

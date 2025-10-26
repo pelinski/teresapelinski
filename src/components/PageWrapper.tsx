@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Title } from './Title'
+import { Title } from './screens/Title'
 import { Nav } from './Nav'
 import { Screen } from './Screen'
 import { Research } from './screens/Research'
@@ -44,7 +44,7 @@ export const PageWrapper: React.FC<{ screen: string }> = ({ screen }): JSX.Eleme
 					<Research scrollHandler={scrollHandler} isFrozen={isFrozen} />
 				</Screen>
 				<Screen id={'projects'} scrollHandler={scrollHandler}>
-					<Projects scrollHandler={scrollHandler} />
+					<Projects scrollHandler={scrollHandler} isFrozen={isFrozen} />
 				</Screen>
 				<Screen id={'blog'} scrollHandler={scrollHandler}>
 					<Blog scrollHandler={scrollHandler} />

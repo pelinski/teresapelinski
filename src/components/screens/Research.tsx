@@ -81,7 +81,7 @@ export const Research: React.FC<{ isFrozen: boolean }> = ({ isFrozen }) => {
 			<div className='research-text'>
 				<br /> I am currently writing up my PhD thesis, which I have done at the <a href='https://instrumentslab.org/'>Augmented Instruments Lab</a> and the{' '}
 				<a href='https://c4dm.eecs.qmul.ac.uk/'>Centre for Digital Music (C4DM)</a> at <a href='https://www.qmul.ac.uk/'>Queen Mary University of London</a>. My research area could be
-				described as <a className={'h-red bounce' + (isFrozen ? ' frozen' : '')}>"critical music technology studies"</a>. In the first half of my PhD, I worked on technical topics of design
+				described as <a className={'h-orange bounce' + (isFrozen ? ' frozen' : '')}>"critical music technology studies"</a>. In the first half of my PhD, I worked on technical topics of design
 				and implementation of new musical instruments and interfaces, in particular with embedded systems and light AI models. In this context, I developed{' '}
 				<a className={'h-yellow bounce' + (isFrozen ? ' frozen' : '')} href='https://github.com/BelaPlatform/pybela'>
 					pybela

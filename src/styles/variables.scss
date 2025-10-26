@@ -18,11 +18,12 @@ $c1: rgb(0, 255, 0);
 $c2: blue;
 $c3: red;
 $c4: yellow;
+$c5: orange;
 
 $border: 2px solid $c0;
-$screen-title-font-size: 2.2vh;
 @mixin green-title {
 	background-color: $c1;
+	padding: 0 0.5rem;
 	text-align: center;
 	color: $black;
 }

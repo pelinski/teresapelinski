@@ -10,11 +10,11 @@ interface OutputClassRendererProps {
 	isFrozen?: boolean
 }
 
-export const OutputClassRenderer: React.FC<OutputClassRendererProps> = ({ outputType, label, outputs, isShown, onToggle, isFrozen }) => (
-	<div className={'output-class' + (isShown ? ' expanded' : '') + (isFrozen ? ' frozen' : '')}>
+export const OutputClassRenderer: React.FC<OutputClassRendererProps> = ({ outputType, label, outputs, isShown, onToggle, isFrozen, className = '' }) => (
+	<div className={'output-class' + (isShown ? ' expanded' : '') + (isFrozen ? ' frozen' : '') + ' ' + className}>
 		{outputType !== 'projects' ? (
 			<>
-				<span className={(outputType == 'gigs' ? 'h-red' : 'h-yellow') + ' clickable'} onClick={onToggle}>
+				<span className={(outputType == 'gigs' ? 'h-orange' : 'h-yellow') + ' clickable'} onClick={onToggle}>
 					{label} {isShown ? '[-]' : '[+]'}
 				</span>
 				<ul>
@@ -41,7 +41,7 @@ export const OutputClassRenderer: React.FC<OutputClassRendererProps> = ({ output
 							<div className='sparkle-overlay' />
 						</div>
 					)}
-					<span className='h-yellow clickable' onClick={onToggle}>
+					<span className='project-caption h-yellow clickable' onClick={onToggle}>
 						{label} {outputs[0].shortDescription && '--' + outputs[0].shortDescription} {isShown ? '[-]' : '[+]'} <br />
 					</span>
 					{isShown && outputType === 'projects' && outputs.map((out) => <ProjectItem key={out.id} {...out} />)}

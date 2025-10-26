@@ -11,10 +11,17 @@
 		<meta name="theme-color" content="#000000" />
 		<title>teresapelinski 👩🏻‍💻</title>
 		<base href="./" />
-		<link rel="icon" type="image/x-icon" href="/public/favicon.ico" />
+		<link rel="icon" type="image/x-icon" href="/public/gifs/textures/016C.png" />
 		<link rel="manifest" href="public/manifest.json" />
 		<link rel="canonical" href="https://teresapelinski.com" />
 		<script type="module" src="src/index.tsx"></script>
+		<script src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script>
+		<script>
+			// Initialize when page loads
+			window.addEventListener('load', () => {
+				new cursoreffects.fairyDustCursor()
+			})
+		</script>
 	</head>
 
 	<body>

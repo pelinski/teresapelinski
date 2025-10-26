@@ -124,7 +124,8 @@
 				"linkName": "Code"
 			},
 			{ "url": "https://github.com/pelinski/crnn_multitask_adt/blob/main/report.pdf", "linkName": "Report" }
-		]
+		],
+		"image": "/content/items/images/adt.png"
 	},
 	{
 		"id": "la-ermita-records",

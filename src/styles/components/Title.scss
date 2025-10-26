@@ -1,6 +1,11 @@
-@use "../variables";
+@use '../variables';
 
 #title {
+	overflow: hidden;
+	.h-red {
+		padding: 0;
+		z-index: -1000;
+	}
 	.home-title {
 		height: 80vh;
 		display: flex;
@@ -14,12 +19,15 @@
 	}
 
 	@media (max-width: variables.$ipad) {
+		.content {
+			padding: 0;
+		}
+
 		.home-title {
 			display: none;
 		}
 		.content {
-			height: 80vh;
-			margin-top: 15vh;
+			margin-top: 7vh;
 			span {
 				color: variables.$c0;
 				width: 100vw;

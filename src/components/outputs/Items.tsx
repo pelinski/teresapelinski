@@ -65,7 +65,7 @@ export const GrantItem: React.FC<ItemProps> = ({ id, date, title, institution, d
 )
 
 export const ProjectItem: React.FC<ItemProps> = ({ id, date, description, title, type, url, links, shownAt, videos }) => (
-	<>
+	<div className='project-item-content' key={id}>
 		<a href={url}>{title}</a> ({date}): {description}
 		{shownAt && shownAt.length > 0 && (
 			<>
@@ -98,7 +98,7 @@ export const ProjectItem: React.FC<ItemProps> = ({ id, date, description, title,
 				))}
 			</>
 		)}
-	</>
+	</div>
 )
 
 export const ArbitraryItem: React.FC<ItemProps> = ({ id, date, description, venue, links }) => (

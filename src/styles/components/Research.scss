@@ -1,5 +1,5 @@
 @use 'Animations.scss';
-
+@use '../variables';
 #research {
 	.research-text {
 		--anim-scale: 0.1;
@@ -17,8 +17,17 @@
 		gap: 1.5vw;
 		.output-class {
 			--anim-scale: 0.8;
+
 			display: inline-block;
 			animation: float 6s ease-in-out infinite;
+			li {
+				padding: 1vh 0;
+				background: variables.$c5;
+				color: variables.$black;
+				a {
+					color: variables.$black;
+				}
+			}
 
 			// Give each label a different animation delay so they move independently
 			&:nth-child(1) {
