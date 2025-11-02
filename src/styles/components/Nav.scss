@@ -8,6 +8,10 @@ nav {
 	// border-right: 2px solid white;
 	// background: variables.$black;
 	overflow: hidden;
+	div {
+		// emojis overflow
+		overflow: visible;
+	}
 	.bottom {
 		a {
 			padding: 0 0.5rem;
@@ -19,7 +23,9 @@ nav {
 		text-align: center;
 	}
 	@media (min-width: variables.$ipad) {
-		height: 100vh;
+		margin-left: 10vw;
+		margin-top: 10vh;
+		height: 75vh;
 		position: absolute;
 		display: inline-block;
 		z-index: 100;
@@ -31,12 +37,8 @@ nav {
 	}
 
 	a {
-		cursor: pointer;
+		cursor: url('../../public/cursors/macos-classic/hand.cur'), auto;
 		text-decoration: underline;
-	}
-
-	span {
-		overflow: visible;
 	}
 
 	.title {

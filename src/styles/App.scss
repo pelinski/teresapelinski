@@ -1,27 +1,41 @@
 @use 'sass:meta';
 @use 'variables.scss';
-@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
 
 // font
+// @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
 // @import url('https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&family=Inconsolata:wght@200..900&display=swap');
 // @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
 // @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+// @font-face {
+// 	font-family: 'Rainy Hearts';
+// 	src: url('../../public/fonts/RainyHearts.ttf') format('truetype'); /* IE9 Compat Modes */
+// }
+// @font-face {
+// 	font-family: 'Pixel Arial';
+// 	src: url('../../public/fonts/PIXEARG_.ttf') format('truetype'); /* IE9 Compat Modes */
+// }
 
+@font-face {
+	font-family: 'Times New Pixel';
+	src: url('../../public/fonts/TimesNewPixel.ttf') format('truetype'); /* IE9 Compat Modes */
+}
 // styles
 * {
 	color: variables.$c0;
 	scroll-behavior: smooth;
-	font-family: 'Comic Neue', system-ui;
+	font-family: 'Times New Pixel', monospace;
+	font-weight: lighter;
+	// font-family: 'Comic Neue', system-ui;
 	// font-family: 'Fragment Mono', monospace;
 	// font-family: 'IBM Plex Mono', monospace;
-	font-size: 1rem;
-	line-height: 1rem;
-	cursor: none;
+	font-size: 2vh;
+	line-height: 2vh;
+	cursor: url('../../public/cursors/macos-classic/arrow.cur'), auto;
 
 	a,
 	.clickable {
 		text-decoration: underline;
-		cursor: pointer;
+		cursor: url('../../public/cursors/macos-classic/hand.cur'), auto;
 		overflow-wrap: break-word;
 	}
 
@@ -38,8 +52,8 @@
 		padding-left: 0;
 	}
 	#root {
-		background-image: url('../../public/gifs/textures/comp020.gif');
-		background-size: 3rem;
+		background-image: url('../../public/gifs/stars/stars-bg.gif');
+		background-size: 12rem;
 	}
 	main {
 		background: hsla(0, 0%, 2%, 0.4);
@@ -128,12 +142,43 @@
 		border: 1px solid white;
 	}
 
+	.screen-title {
+		background-color: variables.$c2;
+		padding: 0.2vw 1vw;
+		margin-bottom: 70px;
+		// text-decoration: underline;
+	}
 	@media (min-width: variables.$ipad) {
+		overflow: hidden;
+		padding: 10vh 10vw;
+		width: 80vw;
+		height: 80vh;
 		.content {
-			margin: variables.$margin-top 0;
-			padding-left: 30vw;
-			padding-right: 10vw;
+			background: hsla(0, 0%, 4%, 0.5);
+			border: 1px solid variables.$c0;
+			padding: variables.$margin-top 0;
+			height: 70vh;
+			// padding-top: 5vh;
+			// padding-bottom: 5vh;
+			padding-left: 28vw;
+			padding-right: 8vw;
 			// height: 90vh;
+			overflow-y: visible;
+			/* Chrome, safari */
+			::-webkit-scrollbar {
+				width: 8px;
+			}
+			::-webkit-scrollbar-thumb {
+				background-color: variables.$black;
+				border: 1px solid white;
+			}
+
+			/* Firefox */
+			.selector {
+				scrollbar-color: black !important;
+				background-color: variables.$black;
+				border: 1px solid white;
+			}
 		}
 	}
 	@media (max-width: variables.$ipad) {
@@ -145,13 +190,6 @@
 		.videos {
 			flex-wrap: wrap;
 		}
-	}
-
-	.screen-title {
-		background-color: variables.$c2;
-		padding: 0.2vw 1vw;
-		margin-bottom: 70px;
-		// text-decoration: underline;
 	}
 }
 @include meta.load-css('components/Nav.scss');

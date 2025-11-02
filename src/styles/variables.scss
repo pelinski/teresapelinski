@@ -12,13 +12,22 @@ $nav-width: 20vw;
 // $c2: #6272a4;
 // $c3: #ff5555;
 // $c4: #f1fa8c;
-$black: black;
-$c0: white;
-$c1: rgb(0, 255, 0);
-$c2: blue;
-$c3: red;
-$c4: yellow;
-$c5: orange;
+// $black: black;
+// $c0: white;
+// $c1: rgb(0, 255, 0);
+// $c2: blue;
+// $c3: red;
+// $c4: yellow;
+// $c5: orange;
+
+// binik24 palette https://lospec.com/palette-list/vinik24
+$black: #211e20;
+$c0: #e9efec;
+$c1: #6eaa78;
+$c2: #416aa3;
+$c3: #9a4f50;
+$c4: #be955c;
+$c5: #68aca9;
 
 $border: 2px solid $c0;
 @mixin green-title {

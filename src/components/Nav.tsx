@@ -1,5 +1,5 @@
 import React, { JSX, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 
 export const Nav: React.FC<{ className: string; frozenState: { isFrozen: boolean; setIsFrozen: (frozen: boolean) => void } }> = ({ className, frozenState }) => {
 	const [showNav, setShowNav] = useState(true) // only used in mobile
@@ -15,40 +15,19 @@ export const Nav: React.FC<{ className: string; frozenState: { isFrozen: boolean
 	return (
 		<nav className={className}>
 			<div className='nav-tree-container'>
-				<NavTree
-					className={`${showNav ? '' : ' hide'}`}
-					id={
-						<a className={'title'} onClick={() => scrollHandler('title')}>
-							{!isMobile ? 'teresa-pelinski' : 'index'}
-						</a>
-					}
-				>
-					{/* <NavTree id={''} prompt={'|'} />
-<NavTree id={<a onClick={()=>scrollHandler('title')}>home </a>} prompt={'o'} /> */}
-					<NavTree id={''} prompt={'|'} />
-					<NavTree id={<a onClick={() => scrollHandler('about')}>🙋🏻‍♀️about</a>} prompt={'o'} />
-					<NavTree id={''} prompt={'|'} />
-					<NavTree id={<a onClick={() => scrollHandler('now')}>🗞️now/news</a>} prompt={'*'} />
-					<NavTree id={''} prompt={'|'} />
-					<NavTree id={<a onClick={() => scrollHandler('research')}>📚research</a>} prompt={'+'}>
-						{/* <NavTree id={'topic'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
-					<NavTree id={'research outputs'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
-					<NavTree id={'grants'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
-					<NavTree id={'teaching'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} /> */}
-					</NavTree>
-					<NavTree id={''} prompt={'|'} />
-					<NavTree id={<a onClick={() => scrollHandler('projects')}>🔊projects</a>} prompt={'+'} />
-					<NavTree id={''} prompt={'|'} />
-
-					<NavTree id={<a onClick={() => scrollHandler('blog')}>📝blog</a>} prompt={'*'} />
-
-					{/* <NavTree id={'radio residency'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
-					<NavTree id={'phonos residency'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
-					<NavTree id={'record label'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} />
-
-					<NavTree id={'gigs'} prompt={!isMobile ? <>|&nbsp;&nbsp;{'|-->'}</> : <>{'>'}</>} /> */}
-					<NavTree id={''} prompt={'|'} />
-					<NavTree id={''} prompt={'v'} />
+				<NavTree className={`${showNav ? '' : ' hide'}`} txt={!isMobile ? <span className='title'>teresa-pelinski</span> : 'index'} to={''}>
+					<NavTree prompt={'|'} />
+					<NavTree txt={'🙋🏻‍♀️about'} to={'about'} prompt={'+'} />
+					<NavTree prompt={'|'} />
+					<NavTree txt={'🗞️now/news'} to={'now'} prompt={'+'} />
+					<NavTree prompt={'|'} />
+					<NavTree txt={'📚research'} to={'research'} prompt={'+'}></NavTree>
+					<NavTree prompt={'|'} />
+					<NavTree txt={'🔊projects'} to={'projects'} prompt={'+'} />
+					<NavTree prompt={'|'} />
+					<NavTree txt={'📝blog'} to={'blog'} prompt={'+'} />
+					<NavTree prompt={'|'} />
+					<NavTree prompt={'v'} />
 				</NavTree>
 			</div>
 			<span className={`bottom ${showNav ? '' : ' hide'}`}>
@@ -88,31 +67,46 @@ export const Nav: React.FC<{ className: string; frozenState: { isFrozen: boolean
 	)
 }
 
-const NavTree: React.FC<{ id: string | JSX.Element; children?: JSX.Element[] | JSX.Element; prompt?: string | JSX.Element; className?: string }> = ({
-	id,
+const NavTree: React.FC<{ txt: string | JSX.Element; children?: JSX.Element[] | JSX.Element; prompt?: string | JSX.Element; className?: string; to?: string }> = ({
+	txt = '',
+	to = '',
 	children,
 	prompt,
 	className,
-}): JSX.Element => (
-	<>
-		<span>
-			{prompt}
-			{prompt && <>&nbsp;</>}
-			{id}
-		</span>
-		{children &&
-			React.Children.map(
-				children,
-				(
-					leave,
-					index // works for both one children and an array of children
-				) => (
-					<>
-						<div className={`leave ${className}`} key={index}>
-							{leave}
-						</div>
-					</>
-				)
-			)}
-	</>
-)
+}): JSX.Element => {
+	const [showNav, setShowNav] = useState(true) // only used in mobile
+	const navigate = useNavigate()
+	const location = useLocation()
+
+	const scrollHandler = (scrollTo: string): void => {
+		setShowNav(!showNav)
+		navigate(`/${scrollTo === 'title' ? '' : scrollTo}`, { replace: true })
+		document.getElementById(scrollTo)?.scrollIntoView({ behavior: 'smooth', block: 'end' })
+	}
+
+	prompt = location.pathname !== '/' && location.pathname === `/${to}` ? 'o' : prompt
+
+	return (
+		<>
+			<span>
+				{prompt}
+				{prompt && <>&nbsp;</>}
+				{txt && <a onClick={() => scrollHandler(to)}>{txt}</a>}
+			</span>
+			{children &&
+				React.Children.map(
+					children,
+					(
+						leave,
+						index // works for both one children and an array of children
+					) => (
+						<>
+							<div className={`leave ${className}`} key={index}>
+								{leave}
+							</div>
+						</>
+					)
+				)}
+		</>
+	)
+}

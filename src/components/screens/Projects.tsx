@@ -69,6 +69,7 @@ export const Projects: React.FC<{ isFrozen: boolean }> = ({ isFrozen }) => {
 		<>
 			<span className='screen-title-container'>
 				<span className='screen-title'> 🔊 Project repository 🚧 </span>
+
 				<div className='filters'>
 					{availableFilters.map((filter) => (
 						<span
@@ -144,7 +145,7 @@ export const Projects: React.FC<{ isFrozen: boolean }> = ({ isFrozen }) => {
 				)}
 			</div>
 			<footer>
-				<img src='/gifs/under-construction/banner.gif' alt='under construction 90s gif' />
+				{/* <img src='/gifs/under-construction/banner.gif' alt='under construction 90s gif' /> */}
 				<img src='/gifs/under-construction/writing.gif' alt='under construction writing gif' />
 				{/* <img src='/gifs/under-construction/pikachu.gif' alt='under construction pikachu gif' /> */}
 				{/* <img src='/gifs/under-construction/person.gif' alt='under construction person gif' />

@@ -1,6 +1,7 @@
 @use '../variables.scss';
 
 #projects {
+	header,
 	footer {
 		padding: 2vh 0;
 		display: flex;
@@ -40,7 +41,7 @@
 			justify-content: center;
 			.filter {
 				text-align: center;
-				cursor: pointer;
+				cursor: url('../../public/cursors/macos-classic/hand.cur'), auto;
 				&.active {
 					text-decoration: underline;
 				}
@@ -106,7 +107,7 @@
 
 	@media (min-width: variables.$ipad) {
 		.project-item {
-			width: 15vw;
+			width: 10vw;
 		}
 	}
 
