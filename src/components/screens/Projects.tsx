@@ -12,6 +12,11 @@ interface Item {
 	shownAt?: [{ venue: string; date: string; url?: string }]
 	videos?: string[]
 }
+
+interface DragPositions {
+	[key: string]: { x: number; y: number }
+}
+
 export const Projects: React.FC<{ isFrozen: boolean }> = ({ isFrozen }) => {
 	const [outputs, setOutputs] = useState<{
 		gigs: Item[]
@@ -21,16 +26,10 @@ export const Projects: React.FC<{ isFrozen: boolean }> = ({ isFrozen }) => {
 		projects: [],
 	})
 
-	const [showOutputs, setShowOutputs] = useState<{
-		gigs: boolean
-		projects: Record<string, boolean>
-	}>({
-		gigs: false,
-		projects: {},
-	})
-
+	const [showGigs, setShowGigs] = useState<boolean>(false)
 	const [selectedFilters, setSelectedFilters] = useState<string[]>([])
 	const [availableFilters, setAvailableFilters] = useState<string[]>([])
+	const [dragPositions, setDragPositions] = useState<DragPositions>({})
 
 	useEffect(() => {
 		let isMounted = true
@@ -41,17 +40,6 @@ export const Projects: React.FC<{ isFrozen: boolean }> = ({ isFrozen }) => {
 						gigs: gigs,
 						projects: projects,
 					})
-
-					// Initialize all projects as hidden
-					const projectsState = projects.reduce((acc: Record<string, boolean>, project: Item) => {
-						acc[project.id] = false
-						return acc
-					}, {})
-
-					setShowOutputs((prev) => ({
-						...prev,
-						projects: projectsState,
-					}))
 
 					// Get available filters
 					const filters = Array.from(new Set(projects.flatMap((proj: Item) => proj.filters))).sort()
@@ -64,6 +52,17 @@ export const Projects: React.FC<{ isFrozen: boolean }> = ({ isFrozen }) => {
 			isMounted = false
 		}
 	}, [])
+
+	const handleDragPositionChange = (id: string, position: { x: number; y: number }) => {
+		setDragPositions((prev) => ({
+			...prev,
+			[id]: position,
+		}))
+	}
+
+	const handleResetPositions = () => {
+		setDragPositions({})
+	}
 
 	return (
 		<>
@@ -80,9 +79,25 @@ export const Projects: React.FC<{ isFrozen: boolean }> = ({ isFrozen }) => {
 							{filter}
 						</span>
 					))}
+					{Object.keys(dragPositions).length > 0 && (
+						<span className='filter-chip clickable h-red' onClick={handleResetPositions} style={{ marginLeft: '1rem' }}>
+							Reset positions
+						</span>
+					)}
 				</div>
 			</span>
 			<div className='project-repo'>
+				{/* <div className={'selected-project-info' + (showProject ? ' show' : '')}>
+					<span onClick={() => setShowProject('')}>x</span>
+					{outputs.projects.find((project) => project.id === showProject) ? (
+						<>
+							<h3>{outputs.projects.find((project) => project.id === showProject)?.title}</h3>
+							<p>{outputs.projects.find((project) => project.id === showProject)?.description}</p>
+						</>
+					) : (
+						<p>No project selected</p>
+					)}
+				</div> */}
 				<div className='projects-list'>
 					{outputs.projects.length > 0 &&
 						outputs.projects.map(
@@ -93,65 +108,29 @@ export const Projects: React.FC<{ isFrozen: boolean }> = ({ isFrozen }) => {
 										outputType='projects'
 										label={project.title}
 										outputs={[project]}
-										isShown={showOutputs.projects[project.id] || false}
-										onToggle={() =>
-											setShowOutputs((prev) => ({
-												...prev,
-												projects: {
-													...prev.projects,
-													[project.id]: !prev.projects[project.id],
-												},
-											}))
-										}
+										isShown={false}
 										isFrozen={isFrozen}
-										className={'bounce'}
+										// className={'bounce'}
+										dragPosition={dragPositions[project.id] || { x: 0, y: 0 }}
+										onDragPositionChange={(pos) => handleDragPositionChange(project.id, pos)}
 									/>
 								)
 						)}
 				</div>
 
-				<div className='selected-project-info'></div>
-
 				<OutputClassRenderer
 					outputType='gigs'
 					label='Performances archive'
 					outputs={outputs.gigs}
-					isShown={showOutputs.gigs}
-					onToggle={() =>
-						setShowOutputs((prev) => ({
-							...prev,
-							gigs: !prev.gigs,
-						}))
-					}
-					className={'bounce'}
+					isShown={showGigs}
+					onToggle={() => setShowGigs(!showGigs)}
+					// className={'bounce'}
 					isFrozen={isFrozen}
 				/>
 				<br />
-				{(showOutputs.gigs || Object.values(showOutputs.projects).some(Boolean)) && (
-					<span
-						className='h-red clickable collapse-all'
-						onClick={() =>
-							setShowOutputs((prev) => ({
-								gigs: false,
-								projects: Object.keys(prev.projects).reduce((acc, key) => {
-									acc[key] = false
-									return acc
-								}, {} as Record<string, boolean>),
-							}))
-						}
-					>
-						[-] collapse all [-]
-					</span>
-				)}
 			</div>
 			<footer>
-				{/* <img src='/gifs/under-construction/banner.gif' alt='under construction 90s gif' /> */}
 				<img src='/gifs/under-construction/writing.gif' alt='under construction writing gif' />
-				{/* <img src='/gifs/under-construction/pikachu.gif' alt='under construction pikachu gif' /> */}
-				{/* <img src='/gifs/under-construction/person.gif' alt='under construction person gif' />
-				<img src='/gifs/under-construction/en-construction.gif' alt='under construction "en construction" gif' />
-				<img src='/gifs/under-construction/fire.gif' alt='under construction "fire" gif' />
-				<img src='/gifs/under-construction/spin.gif' alt='under construction spin gif' /> */}
 			</footer>
 		</>
 	)

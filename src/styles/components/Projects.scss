@@ -53,10 +53,15 @@
 				}
 			}
 		}
+		.selected-project-info {
+			display: none;
+			&.show {
+				display: block;
+			}
+		}
 		.projects-list {
 			overflow: visible;
 			display: flex;
-			// flex-direction: column;
 			align-items: baseline;
 			flex-direction: row;
 			flex-wrap: wrap;
@@ -66,39 +71,48 @@
 
 			.output-class {
 				--anim-scale: 0.5;
+
 				.project-item {
 					align-items: center;
 					display: flex;
-					flex-direction: column;
 
-					.project-item-content {
-						background: variables.$c2;
-						border: variables.$border;
+					.project-details {
+						background: variables.$c4;
 					}
-				}
 
-				.project-image-container {
-					position: relative;
-					display: inline-block;
+					.project-image-container {
+						position: relative;
+						display: inline-block;
 
-					img {
-						display: block;
-						width: 100%;
+						img {
+							display: block;
+							width: 100%;
+						}
+						.sparkle-overlay {
+							background: hsla(0, 0%, 4%, 0.2);
+							position: absolute;
+							top: 0;
+							left: 0;
+							width: 100%;
+							height: 100%;
+							pointer-events: none;
+							background-image: url('../../public/gifs/stars/stars.gif');
+							background-repeat: repeat;
+							background-size: 20px 20px;
+							opacity: 0.8;
+							z-index: 2;
+							will-change: background-position;
+						}
 					}
-					.sparkle-overlay {
-						background: hsla(0, 0%, 4%, 0.2);
-						position: absolute;
-						top: 0;
-						left: 0;
-						width: 100%;
-						height: 100%;
-						pointer-events: none; // Allow clicks to pass through
-						background-image: url('../../public/gifs/stars/stars.gif');
-						background-repeat: repeat;
-						background-size: 20px 20px; // Adjust size as needed
-						opacity: 0.8; // Slight transparency for authenticity
-						z-index: 2;
-						will-change: background-position; // Hint to browser to keep animating
+
+					.project-caption {
+						cursor: pointer;
+						position: relative;
+						z-index: 10;
+
+						&:hover {
+							text-decoration: underline;
+						}
 					}
 				}
 			}
@@ -106,20 +120,69 @@
 	}
 
 	@media (min-width: variables.$ipad) {
-		.project-item {
-			width: 10vw;
+		.output-class {
+			--anim-scale: 0.5;
+
+			.project-item {
+				flex-direction: row;
+				width: 10vw;
+				img {
+					user-drag: none;
+					-webkit-user-drag: none;
+					user-select: none;
+					-webkit-user-select: none;
+					pointer-events: none;
+				}
+				.project-details-wrapper {
+					width: 30vw;
+					.project-details {
+						width: 30vw;
+						display: block;
+					}
+				}
+			}
+			&.project-draggable {
+				position: relative;
+				cursor: grab;
+				user-select: none;
+				touch-action: none; // Prevent default touch behaviors
+				transition: none; // Remove transitions while dragging
+
+				&.dragging {
+					cursor: grabbing;
+					opacity: 0.9;
+					transition: opacity 0.2s;
+					z-index: 1000 !important;
+				}
+
+				&.frozen {
+					cursor: default;
+				}
+			}
 		}
 	}
 
 	@media (max-width: variables.$ipad) {
-		.project-caption {
-			width: 80vw;
-		}
-		.project-image-container {
-			width: 80vw;
-		}
-		img {
-			width: 80vw;
+		.output-class {
+			&.project-draggable {
+				transform: none !important;
+			}
+			.project-card {
+				display: flex;
+				flex-direction: column;
+			}
+			.project-caption {
+				width: 80vw;
+			}
+			.project-image-container {
+				width: 80vw;
+			}
+			.project-item {
+				flex-direction: column;
+			}
+			img {
+				width: 80vw;
+			}
 		}
 	}
 }
