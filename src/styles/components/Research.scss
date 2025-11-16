@@ -52,6 +52,15 @@
 			&:nth-child(7) {
 				animation: float7 7.5s ease-in-out infinite;
 			}
+			&:nth-child(8) {
+				animation: float1 8.5s ease-in-out infinite;
+			}
+			&:nth-child(9) {
+				animation: float2 6.5s ease-in-out infinite;
+			}
+			&:nth-child(10) {
+				animation: float3 7s ease-in-out infinite;
+			}
 
 			&.expanded {
 				z-index: 100;

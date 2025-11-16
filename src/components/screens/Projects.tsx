@@ -13,38 +13,39 @@ interface Item {
 	videos?: string[]
 }
 
-interface DragPositions {
-	[key: string]: { x: number; y: number }
+interface zIndexDic {
+	[key: string]: number
 }
 
 export const Projects: React.FC<{ isFrozen: boolean }> = ({ isFrozen }) => {
-	const [outputs, setOutputs] = useState<{
-		gigs: Item[]
-		projects: Item[]
-	}>({
-		gigs: [],
-		projects: [],
-	})
+	// data
+	const [projects, setProjects] = useState<Item[]>([])
+	const [gigs, setGigs] = useState<Item[]>([])
 
+	// dynamics
 	const [showGigs, setShowGigs] = useState<boolean>(false)
 	const [selectedFilters, setSelectedFilters] = useState<string[]>([])
 	const [availableFilters, setAvailableFilters] = useState<string[]>([])
-	const [dragPositions, setDragPositions] = useState<DragPositions>({})
+	const [resetPositions, setResetPositions] = useState<boolean>(false)
+	const [zIndexDic, setZIndexDic] = useState<zIndexDic>({})
 
 	useEffect(() => {
 		let isMounted = true
 		Promise.all([fetch('/content/items/gigs.json').then((res) => res.json()), fetch('/content/items/projects.json').then((res) => res.json())])
 			.then(([gigs, projects]) => {
 				if (isMounted) {
-					setOutputs({
-						gigs: gigs,
-						projects: projects,
-					})
-
+					setGigs(gigs)
+					setProjects(projects)
 					// Get available filters
 					const filters = Array.from(new Set(projects.flatMap((proj: Item) => proj.filters))).sort()
 					setAvailableFilters(filters)
 					setSelectedFilters(filters) // Select all on first load
+					// Initialize zIndexDic
+					const initialZIndexDic: zIndexDic = {}
+					projects.forEach((project: Item) => {
+						initialZIndexDic[project.id] = 1
+					})
+					setZIndexDic(initialZIndexDic)
 				}
 			})
 			.catch((err) => console.error('Error loading outputs:', err))
@@ -52,17 +53,6 @@ export const Projects: React.FC<{ isFrozen: boolean }> = ({ isFrozen }) => {
 			isMounted = false
 		}
 	}, [])
-
-	const handleDragPositionChange = (id: string, position: { x: number; y: number }) => {
-		setDragPositions((prev) => ({
-			...prev,
-			[id]: position,
-		}))
-	}
-
-	const handleResetPositions = () => {
-		setDragPositions({})
-	}
 
 	return (
 		<>
@@ -79,28 +69,16 @@ export const Projects: React.FC<{ isFrozen: boolean }> = ({ isFrozen }) => {
 							{filter}
 						</span>
 					))}
-					{Object.keys(dragPositions).length > 0 && (
-						<span className='filter-chip clickable h-red' onClick={handleResetPositions} style={{ marginLeft: '1rem' }}>
-							Reset positions
-						</span>
-					)}
+
+					<span className='filter-chip clickable h-red reset-pos' onClick={() => setResetPositions(!resetPositions)} style={{ marginLeft: '1rem' }}>
+						Reset positions
+					</span>
 				</div>
 			</span>
 			<div className='project-repo'>
-				{/* <div className={'selected-project-info' + (showProject ? ' show' : '')}>
-					<span onClick={() => setShowProject('')}>x</span>
-					{outputs.projects.find((project) => project.id === showProject) ? (
-						<>
-							<h3>{outputs.projects.find((project) => project.id === showProject)?.title}</h3>
-							<p>{outputs.projects.find((project) => project.id === showProject)?.description}</p>
-						</>
-					) : (
-						<p>No project selected</p>
-					)}
-				</div> */}
 				<div className='projects-list'>
-					{outputs.projects.length > 0 &&
-						outputs.projects.map(
+					{projects.length > 0 &&
+						projects.map(
 							(project) =>
 								selectedFilters.some((filter) => project.filters.includes(filter)) && (
 									<OutputClassRenderer
@@ -110,23 +88,14 @@ export const Projects: React.FC<{ isFrozen: boolean }> = ({ isFrozen }) => {
 										outputs={[project]}
 										isShown={false}
 										isFrozen={isFrozen}
-										// className={'bounce'}
-										dragPosition={dragPositions[project.id] || { x: 0, y: 0 }}
-										onDragPositionChange={(pos) => handleDragPositionChange(project.id, pos)}
+										resetPositions={resetPositions}
+										zIndexProps={[zIndexDic, setZIndexDic]}
 									/>
 								)
 						)}
 				</div>
 
-				<OutputClassRenderer
-					outputType='gigs'
-					label='Performances archive'
-					outputs={outputs.gigs}
-					isShown={showGigs}
-					onToggle={() => setShowGigs(!showGigs)}
-					// className={'bounce'}
-					isFrozen={isFrozen}
-				/>
+				<OutputClassRenderer outputType='gigs' label='Performances archive' outputs={gigs} isShown={showGigs} onToggle={() => setShowGigs(!showGigs)} å isFrozen={isFrozen} />
 				<br />
 			</div>
 			<footer>

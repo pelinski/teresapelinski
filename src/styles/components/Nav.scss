@@ -7,9 +7,12 @@ nav {
 	padding-bottom: 0;
 	// border-right: 2px solid white;
 	// background: variables.$black;
-	overflow: hidden;
+
 	div {
 		// emojis overflow
+		overflow: visible;
+	}
+	* {
 		overflow: visible;
 	}
 	.bottom {

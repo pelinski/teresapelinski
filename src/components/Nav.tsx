@@ -54,7 +54,7 @@ export const Nav: React.FC<{ className: string; frozenState: { isFrozen: boolean
 						bluesky
 					</a>
 				</div>
-				<span>teresapelinski@gmail.com</span>
+				<span>hi@teresapelinski.com</span>
 				<br />
 				<span>last updated: 2025-10</span>
 				<br />
