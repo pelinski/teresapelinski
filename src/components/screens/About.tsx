@@ -4,16 +4,19 @@ export const About: React.FC<{ scrollHandler: (scrollTo: string) => () => void; 
 		<span className='screen-title'>🙋🏻‍♀️ About me</span>
 		<div>
 			<br />
-			Hi! Welcome to my personal website. My name is Teresa Pelinski and I'm currently writing up my <span className={'h-yellow' + (isFrozen ? ' frozen' : '')}>PhD thesis</span> in music
+			Hi! Welcome to my personal website. My name is Teresa Pelinski and I'm currently writing up my <span className={'h-yellow bounce' + (isFrozen ? ' frozen' : '')}>PhD thesis</span> in music
 			technology at the{' '}
 			<a className={'h-yellow bounce' + (isFrozen ? ' frozen' : '')} href='https://instrumentslab.org/'>
 				Augmented Instruments Lab
 			</a>
 			, based between the <a href='https://www.c4dm.eecs.qmul.ac.uk/'>Centre for Digital Music</a> (Queen Mary University of London) and the{' '}
-			<a href='https://www.imperial.ac.uk/design-engineering/'>Dyson School of Design Engineering</a> (Imperial College London). I also occasionally{' '}
-			<span className={'h-yellow bounce' + (isFrozen ? ' frozen' : '')}>teach</span> at the <a href='https://www.arts.ac.uk/creative-computing-institute'>Creative Computing Institute</a>{' '}
-			(University of the Arts London). I have been lucky to have been supervised by <a href='https://andrewmcpherson.org/bio'>Prof Andrew McPherson</a> (Imperial College London) and{' '}
-			<a href='https://researchers.arts.ac.uk/1594-rebecca-fiebrink'>Prof Rebecca Fiebrink</a> (University of the Arts London).
+			<a href='https://www.imperial.ac.uk/design-engineering/'>Dyson School of Design Engineering</a> (Imperial College London). I'm also a part-time{' '}
+			<span className={'h-yellow bounce' + (isFrozen ? ' frozen' : '')}>Research Fellow</span> at the{' '}
+			<a href='https://musicairesearch.wordpress.com/'>Music & Artificial Intelligence: Building Critical Interdisciplinary Studies</a> (MusAI) ERC project, led by{' '}
+			<a href='https://profiles.ucl.ac.uk/15934-georgina-born'>Prof Georgina Born</a>. I also occasionally <span className={'h-yellow bounce' + (isFrozen ? ' frozen' : '')}>teach</span> at the{' '}
+			<a href='https://www.arts.ac.uk/creative-computing-institute'>Creative Computing Institute</a> (University of the Arts London). During my PhD I have been lucky to have been supervised by{' '}
+			<a href='https://andrewmcpherson.org/bio'>Prof Andrew McPherson</a> (Imperial College London) and <a href='https://researchers.arts.ac.uk/1594-rebecca-fiebrink'>Prof Rebecca Fiebrink</a>{' '}
+			(University of the Arts London).
 			<br /> <br />
 			My <span className={'h-yellow bounce' + (isFrozen ? ' frozen' : '')}>research interests</span> are in critical technology studies, new interfaces for musical expression and practice-based
 			research. (Is that a good summary? I would call it "critical music technology studies mixed with practice research" but I'm not sure anyone else would be calling it that!) In my thesis

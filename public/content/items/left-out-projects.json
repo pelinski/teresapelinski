@@ -1,0 +1,35 @@
+[
+	{
+		"id": "turkish-makam-intonation",
+		"title": "Turkish Makam Intonation",
+		"date": "2021",
+		"description": "Computational Musicology project on the analysis of intonation in Turkish Makam music",
+		"filters": ["smc"],
+		"links": [
+			{
+				"url": "https://github.com/marter0/intonation_in_turkish_makam_music",
+				"linkName": "Code"
+			},
+			{
+				"url": "https://github.com/marter0/intonation_in_turkish_makam_music/blob/main/Characterizing-Intonation-TMM_Nieto-Pelinski.pdf",
+				"linkName": "Report"
+			}
+		],
+		"image": "/content/items/images/makam.png"
+	},
+	{
+		"id": "audio-drum-transcription",
+		"title": "Audio Drum Transcription",
+		"date": "2021",
+		"description": "Music Information Retrieval final project on comparing the performance of a single-task and a multi-task CRNN for audio drum transcription",
+		"filters": ["smc"],
+		"links": [
+			{
+				"url": "https://github.com/pelinski/crnn_multitask_adt",
+				"linkName": "Code"
+			},
+			{ "url": "https://github.com/pelinski/crnn_multitask_adt/blob/main/report.pdf", "linkName": "Report" }
+		],
+		"image": "/content/items/images/adt.png"
+	}
+]

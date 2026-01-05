@@ -1,12 +1,14 @@
 [
 	{
 		"id": "faab-hyperparams",
-		"title": "faab-hyperparams",
+		"title": "Surfing Hyperparameters",
 		"date": "2024-2025",
 		"filters": ["phd"],
-		"shortDescription": "TODO",
-		"description": "TODO -- project in collaboration with Adam Pultz Melbye",
-		"links": [{ "url": "https://github.com/pelinski/faab-hyperparams", "linkName": "Code" }],
+		"description": "A collaboration with <a href='https://www.adampultz.com/about.html'>Adam Pultz Melbye</a> and their Feedback-Actuated Augmented Bass (FAAB). We created a system that switched between different deep learning models for sound processing based on what Adam played on the FAAB. What started as an exploration of the materiality of deep learning models in performance became a reflection on how technology shapes our aesthetic expectations in music-making. This was my first major project using <a href='https://www.tandfonline.com/doi/full/10.1080/09298215.2024.2442348'>Technical Practice Research</a> as a methodology. A paper is currently under review (expected late 2026).",
+		"links": [
+			{ "url": "https://github.com/pelinski/faab-hyperparams", "linkName": "Code" },
+			{ "url": "https://www.dropbox.com/scl/fi/iu1bzrrxogfcnauv1i48a/faab-hyperparams.mp4?rlkey=fxoth2w7hp3cotawcpibby3nm&st=yufr2djb&dl=0", "linkName": "Performance Video" }
+		],
 		"shownAt": [
 			{
 				"venue": "Embedding Algorithms Workshop",
@@ -21,8 +23,14 @@
 		"title": "pybela",
 		"date": "2023-2025",
 		"filters": ["phd"],
-		"description": "Python library for Bela",
-		"links": [{ "url": "https://github.com/pelinski/pybela", "linkName": "Code" }],
+		"description": "pybela is a Python library for connecting <a href='https://bela.io/'>Bela</a> (an embedded audio platform) to a host computer. pybela enables real-time, high-bandwidth, bidirectional data streaming between physical computing environments and data-driven workflows. It supports multiple modes including streaming, logging, monitoring, and control. The two main use cases are: (1) recording high-bandwidth datasets from audio and sensor signals, and (2) live performance scenarios where sensor data is streamed to a laptop for processing–for example, running a deep learning model on the host computer during a performance. The library's development started as part of a 6-month internship at Bela in 2023 and I continued to develop it during my PhD.",
+		"links": [
+			{ "url": "https://github.com/pelinski/pybela", "linkName": "Code" },
+			{
+				"url": "/documents/2025-nime-pybela.pdf",
+				"linkName": "Paper"
+			}
+		],
 		"image": "/content/items/images/pybela.jpg"
 	},
 	{
@@ -31,17 +39,17 @@
 		"shortDescription": "Noods Radio Residency",
 		"date": "2023",
 		"filters": ["music"],
-		"description": "Adam Barkley and Teresa Pelinski's Saturday morning service on Noods Radio, Officium, spans an all-encompassing range of sacred and devotional musics to ease those aching souls. Expect twelfth-century chants, transcendental minimalism and a deep dive into contemporary and classical choral goodness.",
-		"links": [{ "url": "https://www.noodsradio.com/residents/officium", "linkName": "Noods Radio" }],
+		"description": "'Officium' was a monthly radio show I co-hosted with Adam Barkley at <a href='https://www.noodsradio.com/'>Noods Radio</a> (Bristol, UK). It always aired on a Sunday morning and we  played religious choral music of various eras and traditions. Having had some experience making electronic music DJ mixes, it was really fun to mix choral songs.<br/>This was our show description: 'Adam Barkley and Teresa Pelinski's Saturday morning service on Noods Radio, Officium, spans an all-encompassing range of sacred and devotional musics to ease those aching souls. Expect twelfth-century chants, transcendental minimalism and a deep dive into contemporary and classical choral goodness.'",
+		"links": [{ "url": "https://www.noodsradio.com/residents/officium", "linkName": "Episodes at Noods Radio" }],
 		"image": "/content/items/images/officium.jpeg"
 	},
 	{
 		"id": "noshell",
-		"title": "No Shell, Just a Ghost",
+		"title": "no shell, just a voice",
 		"date": "2021-2022",
 		"filters": ["music"],
 		"shortDescription": "Phonos Foundation Residency",
-		"description": " 'No Shell, Just a Voice' is a project that reflects on artificially generated voices that appear to have a ghost but have no shell, no body. The sound pieces were released at the Phonos netlabel (now called la membrana) and on a webzine.",
+		"description": "An audio piece and webzine exploring artificially generated voices that have a 'ghost' but no shell, no body. Using deep learning (Wavenet), I trained a voice on digitized tape recordings from ethnomusicological interviews my father conducted in the 1990s in La Todolella, a small village in Castellón. The piece reflects on the voice in its direct, unseen, artificial, and recorded forms—voices that are never 'just voices,' but carry the weight of memory, place, and the people who spoke them. Most of those interviewed have since passed away, making this both a technical exploration and an act of listening to recordings that may never be heard again. Released on <a href='https://lamembrana.bandcamp.com/'>la membrana</a> netlabel with an accompanying <a href='https://noshell.teresapelinski.com/'>webzine</a>. Developed from coursework in Computational Creativity and expanded during a Phonos Foundation residency (2021-2022).",
 		"shownAt": [
 			{
 				"venue": "Visiones Sonoras 17: Festival Internacional de Música y Nuevas Tecnologías (México)",
@@ -60,16 +68,17 @@
 			}
 		],
 		"links": [
-			{ "url": "https://lamembrana.bandcamp.com/album/no-shell-just-a-voice", "linkName": "Bandcamp" },
-			{ "url": "https://noshell.teresapelinski.com/", "linkName": "Webzine" }
+			{ "url": "https://noshell.teresapelinski.com/", "linkName": "Webzine + essay" },
+			{ "url": "https://lamembrana.bandcamp.com/album/no-shell-just-a-voice", "linkName": "Bandcamp" }
 		],
 		"videos": ["https://player.vimeo.com/video/663434042?h=439613d804&title=0&portrait=0", "https://www.youtube.com/embed/BDWi4_JKinU"],
 		"image": "/content/items/images/noshell.png"
 	},
 	{
 		"id": "infilling",
-		"title": "Completing Audio Drum Loops Using Transformer Neural Networks",
-		"description": "Master Thesis",
+		"title": "Generating Drum Loops",
+		"shortDescription": "Master Thesis",
+		"description": "This project explored AI-assisted drum composition through pattern completion. Along with my supervisors <a href='https://behzadhaki.com/'>Dr Behzad Haki</a> and <a href='https://www.upf.edu/web/sergi-jorda'>Prof Sergi Jordà</a> I developed Transformer Groove Infilling, a neural network that suggests additional drum events to complement incomplete drum patterns—imagine sketching a few hits of a beat and having the system propose stylistically consistent fills. Unlike previous RNN-based approaches that process patterns sequentially (emphasizing temporal proximity), the Transformer architecture uses self-attention mechanisms to capture relationships across the entire pattern, enabling faster parallel training. A key contribution of the approach is a direct audio representation that allows the model to work with audio loops directly, bypassing the need for symbolic transcription and tokenization. I trained several model variants for different infilling tasks: adding closed hi-hats, completing kick and snare patterns, and free-form loop completion. This was my Master's thesis for the Sound and Music Computing program at UPF Barcelona.",
 		"date": "2021",
 		"filters": ["smc"],
 		"links": [
@@ -82,7 +91,7 @@
 		"id": "wekitunenator",
 		"title": "Wekitunenator",
 		"date": "2021",
-		"description": "Advanced Interface Design final project on exploring the use of ML as a discovery tool for mappings in digital musical interfaces",
+		"description": "A real-time voice effects instrument controlled by hand gestures and a MIDI controller. The twist: machine learning isn't used for precise control but as a discovery tool for unexpected sonic possibilities. Select effects with MIDI buttons, train mappings between hand positions and effect parameters on the fly, then explore—when the model encounters unseen gesture combinations, the results become unpredictable and surprising. This approach was inspired by Laetitia Sonami and Rebecca Fiebrink's <a href='https://www.nime.org/proc/nime2020_45/'>work</a> on ML as creative exploration rather than deterministic control. Built using Wekinator for mapping, lightweight hand tracking via video, and Reaper for audio processing. The entire workflow—recording, training, and running—can be controlled without touching a keyboard, making the training process itself part of the performance. Final project for Advanced Interface Design in the Sound and Music Computing Master's program at UPF Barcelona, developed with <a href='https://github.com/gonznm'>Gonzalo Nieto Montero</a>.",
 		"filters": ["smc"],
 		"videos": ["https://www.youtube.com/embed/M6bAb42s-lo"],
 		"links": [
@@ -95,45 +104,12 @@
 		"image": "/content/items/images/wekitunenator.jpeg"
 	},
 	{
-		"id": "turkish-makam-intonation",
-		"title": "Turkish Makam Intonation",
-		"date": "2021",
-		"description": "Computational Musicology project on the analysis of intonation in Turkish Makam music",
-		"filters": ["smc"],
-		"links": [
-			{
-				"url": "https://github.com/marter0/intonation_in_turkish_makam_music",
-				"linkName": "Code"
-			},
-			{
-				"url": "https://github.com/marter0/intonation_in_turkish_makam_music/blob/main/Characterizing-Intonation-TMM_Nieto-Pelinski.pdf",
-				"linkName": "Report"
-			}
-		],
-		"image": "/content/items/images/makam.png"
-	},
-	{
-		"id": "audio-drum-transcription",
-		"title": "Audio Drum Transcription",
-		"date": "2021",
-		"description": "Music Information Retrieval final project on comparing the performance of a single-task and a multi-task CRNN for audio drum transcription",
-		"filters": ["smc"],
-		"links": [
-			{
-				"url": "https://github.com/pelinski/crnn_multitask_adt",
-				"linkName": "Code"
-			},
-			{ "url": "https://github.com/pelinski/crnn_multitask_adt/blob/main/report.pdf", "linkName": "Report" }
-		],
-		"image": "/content/items/images/adt.png"
-	},
-	{
 		"id": "la-ermita-records",
 		"title": "La Ermita Records",
 		"shortDescription": "Record Label",
 		"date": "est. 2019",
 		"filters": ["music"],
-		"description": "Record label and distro where I have co-edited a couple of vinyl releases. It's mainly post hxc and screamo music.",
+		"description": "Record label and distro I started back in 2019, where I have co-edited a couple of vinyl releases, mostly post-hxc and screamo music. ",
 		"links": [{ "url": "https://laermitarecords.bandcamp.com/", "linkName": "Bandcamp" }],
 		"image": "/content/items/images/ermita.jpg"
 	}

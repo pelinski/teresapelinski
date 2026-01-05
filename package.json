@@ -39,15 +39,18 @@
 	},
 	"scripts": {
 		"parse-posts": "node src/scripts/parsePosts.mjs",
+		"generate-rss": "node src/scripts/generateRss.js",
 		"dev": "npm run parse-posts && parcel index.html",
-		"prebuild": "npm run parse-posts",
+		"prebuild": "rm -r dist/ .parcel-cache/ && npm run parse-posts && npm run generate-rss",
 		"build": "parcel build index.html --public-url .",
 		"start": "serve"
 	},
 	"devDependencies": {
 		"@parcel/packager-raw-url": "^2.13.3",
+		"@parcel/packager-xml": "2.16.0",
 		"@parcel/transformer-sass": "^2.13.3",
 		"@parcel/transformer-webmanifest": "^2.13.3",
+		"@parcel/transformer-xml": "2.16.0",
 		"@types/react": "^19.0.10",
 		"@types/react-dom": "^19.0.4",
 		"buffer": "^5.5.0||^6.0.0",

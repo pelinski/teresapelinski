@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react'
-
 interface ItemProps {
 	id: string
 	date: string
@@ -28,6 +27,8 @@ interface ItemProps {
 	videos?: string[]
 	zIndexProps?: [Record<string, number>, React.Dispatch<React.SetStateAction<Record<string, number>>>]
 }
+
+const isMobileEasy = () => window.innerWidth <= 812
 
 export const ResearchOutputItem: React.FC<ItemProps> = ({ id, authors, date, title, venue, url, isNew = false }) => (
 	<li key={id}>
@@ -165,87 +166,136 @@ export const ProjectItem: React.FC<ItemProps> = ({ id, image, title, shortDescri
 		})
 	}
 
+	const isMobile = isMobileEasy()
 	return (
-		<div
-			ref={elementRef}
-			className={`project-draggable ${isDragging ? 'dragging' : ''} `}
-			style={{
-				transform: `translate(${dragPosition.x}px, ${dragPosition.y}px)`,
-				zIndex: zIndexDic[id],
-			}}
-			onMouseDown={handleMouseDown}
-			onTouchStart={handleTouchStart}
-			onTouchMove={handleTouchMove}
-			onTouchEnd={() => setIsDragging(false)}
-			key={id}
-		>
-			<div className='project-card'>
-				{image && (
-					<div className='project-image-container'>
-						<img src={image} alt={title} draggable='false' />
-						<div className='sparkle-overlay' />
-					</div>
-				)}
-				<span className={'project-caption h-yellow clickable' + (showDescription ? ' selected' : '')} onClick={handleProjectToggle}>
-					{title} {shortDescription && '--' + shortDescription} {showDescription ? '[-]' : '[+]'}
-				</span>{' '}
-				{showDescription && (
-					<div className='project-description-wrapper'>
-						{' '}
+		<>
+			<div
+				ref={elementRef}
+				className={`project-draggable ${isDragging ? 'dragging' : ''} `}
+				style={{
+					transform: `translate(${dragPosition.x}px, ${dragPosition.y}px)`,
+					zIndex: zIndexDic[id],
+				}}
+				onMouseDown={handleMouseDown}
+				onTouchStart={handleTouchStart}
+				onTouchMove={handleTouchMove}
+				onTouchEnd={() => setIsDragging(false)}
+				key={id}
+			>
+				<div className='project-card'>
+					{image && (isMobile || !showDescription) && (
+						<div className='project-image-container'>
+							<img src={image} alt={title} draggable='false' />
+							<div className='sparkle-overlay' />
+						</div>
+					)}
+					<span className={'project-caption h-yellow clickable' + (showDescription ? ' selected' : '')} onClick={handleProjectToggle}>
+						{title} {shortDescription && `(${shortDescription})`}
+					</span>
+					{showDescription && isMobile && (
+						<div className='project-description-wrapper'>
+							<div className='project-content' key={id}>
+								<ProjectDetails date={date} description={description} shownAt={shownAt} links={links} videos={videos} isMobile={isMobile} />
+							</div>
+						</div>
+					)}
+				</div>
+			</div>
+			{showDescription && !isMobile && (
+				<div className='project-overlay' onClick={handleProjectToggle}>
+					<div className='project-overlay-content' onClick={(e) => e.stopPropagation()}>
+						<button className='close-button' onClick={handleProjectToggle}>
+							×
+						</button>
 						<div className='project-content' key={id}>
-							<span>({date})</span>
-							<span>{description}</span>
-							{shownAt && shownAt.length > 0 && (
-								<>
-									<br />
-									<span className='h-blue'>Shown at:</span>
-									<ul>
-										{shownAt.map((event, index) => (
-											<li key={index}>
-												{'--'} {event.venue} ({event.date}): <a href={event.url}>{event.url}</a>
-											</li>
-										))}
-									</ul>
-								</>
-							)}
-							{links && links.length > 0 && (
-								<>
-									<span className='h-blue'>Links:</span>
-									{links.map((link, index) => (
-										<span key={index}>
-											<a href={link.url}>{link.linkName}</a>{' '}
-										</span>
-									))}
-								</>
-							)}
-							{videos && videos.length > 0 && (
-								<>
-									<span className='h-blue'>Videos:</span>
-									{videos.map((video, index) => (
-										<iframe src={video} allow='autoplay; fullscreen; picture-in-picture' allowFullScreen key={index} />
-									))}
-								</>
-							)}
+							{image && <img src={image} alt={title} draggable='false' />}
+							<div className='project-text'>
+								<h3>
+									{title} ({date})
+								</h3>
+								<ProjectDetails date={date} description={description} shownAt={shownAt} links={links} videos={videos} isMobile={isMobile} />
+							</div>
 						</div>
 					</div>
-				)}
-			</div>
-		</div>
+				</div>
+			)}
+		</>
 	)
 }
 
-export const ArbitraryItem: React.FC<ItemProps> = ({ id, date, description, venue, links }) => (
-	<li key={id}>
-		{description} - {venue && <span>{venue}</span>} ({date})
+const ProjectDetails: React.FC<{
+	date: string
+	description?: string
+	shownAt?: [{ venue: string; date: string; url?: string }]
+	links?: [{ url: string; link_name: string }]
+	videos?: string[]
+	isMobile?: boolean
+}> = ({ date, description, shownAt, links, videos, isMobile }) => (
+	<>
+		{isMobile && <span>({date})</span>}
+		{description && <div dangerouslySetInnerHTML={{ __html: description }} />}
+		{shownAt && shownAt.length > 0 && (
+			<>
+				<br />
+
+				<span className='h-blue'>Shown at:</span>
+				<div className='shown-at'>
+					<ul>
+						{shownAt.map((event, index) => (
+							<li key={index}>
+								<a href={event.url}>{event.venue}</a> ({event.date})
+							</li>
+						))}
+					</ul>
+				</div>
+			</>
+		)}
 		{links && links.length > 0 && (
 			<>
-				{' '}
-				{links.map((link, index) => (
-					<span key={index}>
-						<a href={link.url}>{link.link_name}</a>{' '}
-					</span>
+				<br />
+				<span className='h-blue'>Links:</span>
+				<ul>
+					{links.map((link, index) => (
+						<li key={index}>
+							<a href={link.url} key={index}>
+								{link.linkName}
+							</a>{' '}
+						</li>
+					))}
+				</ul>
+			</>
+		)}
+		{videos && videos.length > 0 && (
+			<>
+				<br />
+				<span className='h-blue'>Videos:</span>
+				<br />
+				{videos.map((video, index) => (
+					<>
+						<iframe src={video} allow='autoplay; fullscreen; picture-in-picture' allowFullScreen key={index} />
+						<br />
+					</>
 				))}
 			</>
 		)}
-	</li>
+	</>
+)
+
+export const ArbitraryItem: React.FC<ItemProps> = ({ id, date, description, venue, links }) => (
+	<>
+		<li key={id}>
+			{description} - {venue && <span>{venue}</span>} ({date})
+			{links && links.length > 0 && (
+				<>
+					{' '}
+					{links.map((link, index) => (
+						<span key={index}>
+							<a href={link.url}>{link.link_name}</a>{' '}
+						</span>
+					))}
+				</>
+			)}
+		</li>
+		<br />
+	</>
 )

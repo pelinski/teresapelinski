@@ -1,5 +1,5 @@
 import React, { useState, useEffect, JSX } from 'react'
-import ReactHtmlParser from 'react-html-parser'
+import { Link } from 'react-router-dom'
 
 interface Post {
 	slug: string
@@ -30,38 +30,48 @@ export const Blog: React.FC<{ scrollHandler: (scrollTo: string) => () => void }>
 	return (
 		<div>
 			{' '}
-			ADD RSS FEED!!
 			<span className='screen-title'>📝 Blog</span>
+			<div>
+				<br />
+				(a space created specifically for writing outside of the academic yoke) Subscribe to the{' '}
+				<a href='/rss.xml' className='h-green' target='_blank' rel='noopener noreferrer'>
+					📡 RSS Feed (beta)
+				</a>{' '}
+				to get notified of new posts!{' '}
+			</div>
 			{currentPost == null &&
 				posts.map((post) => (
 					<div className='blog-post' key={post.slug}>
-						<h1 className='blog-title h-red'>{post.title}</h1>
+						<h1 className='blog-title h-red'>{post.title} </h1>
 						<h2 className='blog-date'>{new Date(post.date).toLocaleDateString()}</h2>
 						<div className='blog-content'>{post.excerpt}</div>
-						<a className='blog-readmore h-yellow' onClick={() => setCurrentPost(post)}>
+						<span className='blog-tags h-green'>Tags: {post.tags.join(', ')}</span>
+						<br />
+						<Link to={`/blog/${post.slug}`} className='blog-readmore h-yellow'>
 							{' '}
 							Read more...
-						</a>
-						<div className='blog-tags'>Tags: {post.tags.join(', ')}</div>
+						</Link>
 					</div>
 				))}
-			{currentPost != null && (
-				<div className='blog-post'>
+			{/* {currentPost != null && (
+				<>
 					<a className={'blog-readmore h-yellow'} onClick={() => setCurrentPost(null)}>
 						{' '}
 						{'<-- '}Back to all posts
 					</a>
-					<h1 className='blog-title h-red'>{currentPost.title}</h1>
-					<h2 className='blog-date'>{new Date(currentPost.date).toLocaleDateString()}</h2>
-					<div className='blog-content'>{ReactHtmlParser(currentPost.content)}</div>
-					<div className='blog-tags'>Tags: {currentPost.tags.join(', ')}</div>
-					<br />
+					<div className='blog-post'>
+						<h1 className='blog-title h-red'>{currentPost.title}</h1>
+						<h2 className='blog-date'>{new Date(currentPost.date).toLocaleDateString()}</h2>
+						<div className='blog-content'>{ReactHtmlParser(currentPost.content)}</div>
+						<span className='blog-tags h-green'>Tags: {currentPost.tags.join(', ')}</span>
+						<br />
+					</div>
 					<a className='blog-readmore h-yellow' onClick={() => setCurrentPost(null)}>
 						{' '}
 						{'<-- '}Back to all posts
 					</a>
-				</div>
-			)}
+				</>
+			)} */}
 		</div>
 	)
 }

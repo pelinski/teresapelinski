@@ -18,7 +18,8 @@
 		}
 	}
 
-	@media (max-width: variables.$ipad) {
+	@media (max-width: #{variables.$ipad - 1px}) {
+		overflow-y: auto !important;
 		.content {
 			padding: 0;
 		}

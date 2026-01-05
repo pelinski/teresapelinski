@@ -28,8 +28,8 @@
 	// font-family: 'Comic Neue', system-ui;
 	// font-family: 'Fragment Mono', monospace;
 	// font-family: 'IBM Plex Mono', monospace;
-	font-size: 2vh;
-	line-height: 2vh;
+	font-size: 1em;
+	line-height: 1em;
 	cursor: url('../../public/cursors/macos-classic/arrow.cur'), auto;
 
 	a,
@@ -39,7 +39,7 @@
 		overflow-wrap: break-word;
 	}
 
-	@media (max-width: variables.$ipad) {
+	@media (max-width: #{variables.$ipad - 1px}) {
 		font-size: 4vh;
 		line-height: 1rem;
 	}
@@ -181,7 +181,7 @@
 			}
 		}
 	}
-	@media (max-width: variables.$ipad) {
+	@media (max-width: #{variables.$ipad - 1px}) {
 		.content {
 			padding: 0 4vw;
 			padding-top: 4vh;
@@ -190,6 +190,12 @@
 		.videos {
 			flex-wrap: wrap;
 		}
+	}
+}
+
+@media (min-width: variables.$desktop) {
+	* {
+		font-size: 1.02em;
 	}
 }
 @include meta.load-css('components/Nav.scss');

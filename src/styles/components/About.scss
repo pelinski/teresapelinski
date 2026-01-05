@@ -3,7 +3,6 @@
 
 #about {
 	--anim-scale: 0.1;
-	div {
-		overflow: visible;
-	}
+
+	overflow-y: auto;
 }

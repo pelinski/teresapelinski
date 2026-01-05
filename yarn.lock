@@ -439,6 +439,16 @@
   dependencies:
     "@parcel/plugin" "2.16.0"
 
+"@parcel/packager-xml@2.16.0":
+  version "2.16.0"
+  resolved "https://registry.yarnpkg.com/@parcel/packager-xml/-/packager-xml-2.16.0.tgz#5bf2b56e59ceca913e765799c047f629f09b79ea"
+  integrity sha512-cxHvYPRfqMRsR7h7oLIl4Q6dCHb7BFVKyMD1Na/GSicS0wsyQQXxi2udApDaazi3r/3aGIUc0aaRow+w/mAbTQ==
+  dependencies:
+    "@parcel/plugin" "2.16.0"
+    "@parcel/types" "2.16.0"
+    "@parcel/utils" "2.16.0"
+    "@xmldom/xmldom" "^0.9.8"
+
 "@parcel/plugin@2.16.0", "@parcel/plugin@^2.0.0-beta.1":
   version "2.16.0"
   resolved "https://registry.yarnpkg.com/@parcel/plugin/-/plugin-2.16.0.tgz#7e80d2c5d562daf7a938f1006d4f2d34498bc0c8"
@@ -738,6 +748,14 @@
     "@parcel/plugin" "2.16.0"
     "@parcel/utils" "2.16.0"
 
+"@parcel/transformer-xml@2.16.0":
+  version "2.16.0"
+  resolved "https://registry.yarnpkg.com/@parcel/transformer-xml/-/transformer-xml-2.16.0.tgz#9fc0bec5045170adc59ee368975be9216173f0cb"
+  integrity sha512-6ywS9Bx4VSYqLHM6EYqNiik0c9HBZuD7b+hVpkZjqxddqRAjesFGlwdry3vXlo3narg0DYdPXZsmNseH2z7NLQ==
+  dependencies:
+    "@parcel/plugin" "2.16.0"
+    "@xmldom/xmldom" "^0.9.8"
+
 "@parcel/types-internal@2.16.0":
   version "2.16.0"
   resolved "https://registry.yarnpkg.com/@parcel/types-internal/-/types-internal-2.16.0.tgz#0476cfdcc80ab53bae0ab660ba1932e0c6943d0a"
@@ -980,6 +998,11 @@
   integrity sha512-1LOH8xovvsKsCBq1wnT4ntDUdCJKmnEakhsuoUSy6ExlHCkGP2hqnatagYTgFk6oeL0VU31u7SNjunPN+GchtA==
   dependencies:
     csstype "^3.0.2"
+
+"@xmldom/xmldom@^0.9.8":
+  version "0.9.8"
+  resolved "https://registry.yarnpkg.com/@xmldom/xmldom/-/xmldom-0.9.8.tgz#1471e82bdff9e8f20ee8bbe60d4ffa8a516e78d8"
+  integrity sha512-p96FSY54r+WJ50FIOsCOjyj/wavs8921hG5+kVMmZgKcvIKxMXHTrjNJvRgWa/zuX3B6t2lijLNFaOyuxUH+2A==
 
 "@zeit/schemas@2.6.0":
   version "2.6.0"

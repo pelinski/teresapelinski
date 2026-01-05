@@ -12,6 +12,7 @@ export const App: React.FC = (): JSX.Element => (
 			<Route path='/research' element={<PageWrapper screen={'research'} />} />
 			<Route path='/projects' element={<PageWrapper screen={'projects'} />} />
 			<Route path='/blog' element={<PageWrapper screen={'blog'} />} />
+			<Route path='/blog/:slug' element={<PageWrapper screen='blog-post' />} />
 			<Route path='/sound' element={<PageWrapper screen={'sound'} />} />
 			<Route path='*' element={<Navigate to='/' replace />} />
 		</Routes>

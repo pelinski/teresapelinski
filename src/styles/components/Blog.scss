@@ -2,7 +2,10 @@
 
 #blog {
 	.blog-post {
-		border-bottom: 1px solid variables.$c0;
-		padding: 2vw;
+		border: variables.$border;
+		padding: 1vh 1vw;
+		margin: 2vh 0;
+		// border-bottom: 1px solid variables.$c0;
+		// padding: 2vw;
 	}
 }
