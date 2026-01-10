@@ -125,7 +125,7 @@
 	width: 100vw;
 	overflow-x: hidden;
 	// scrollbar
-	overflow-y: hidden;
+	overflow-y: scroll;
 	/* Chrome, safari */
 	::-webkit-scrollbar {
 		width: 8px;
@@ -148,6 +148,7 @@
 		margin-bottom: 70px;
 		// text-decoration: underline;
 	}
+
 	@media (min-width: variables.$ipad) {
 		overflow: hidden;
 		padding: 10vh 10vw;
