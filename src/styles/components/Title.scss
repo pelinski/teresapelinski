@@ -1,25 +1,34 @@
 @use '../variables';
 
 #title {
-	overflow: hidden;
+	overflow: hidden !important;
 	.h-red {
 		padding: 0;
 		z-index: -1000;
 	}
-	.home-title {
-		height: 80vh;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-direction: column;
-		div,
-		span {
-			line-height: 2.2vh;
+
+	@media (min-width: #{variables.$ipad}) {
+		.home-title {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			div,
+			span {
+				line-height: 2.2vh;
+			}
+		}
+		.title-screen {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			height: 100%;
 		}
 	}
 
 	@media (max-width: #{variables.$ipad - 1px}) {
-		overflow-y: auto !important;
+		// overflow-y: auto !important;
 		.content {
 			padding: 0;
 		}

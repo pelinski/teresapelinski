@@ -28,7 +28,7 @@
 	// font-family: 'Comic Neue', system-ui;
 	// font-family: 'Fragment Mono', monospace;
 	// font-family: 'IBM Plex Mono', monospace;
-	font-size: 1em;
+	font-size: clamp(1rem, 3vw, 1.25rem);
 	line-height: 1em;
 	cursor: url('../../public/cursors/macos-classic/arrow.cur'), auto;
 
@@ -125,7 +125,7 @@
 	width: 100vw;
 	overflow-x: hidden;
 	// scrollbar
-	overflow-y: visible;
+	overflow-y: hidden;
 	/* Chrome, safari */
 	::-webkit-scrollbar {
 		width: 8px;
