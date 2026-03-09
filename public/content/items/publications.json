@@ -1,5 +1,15 @@
 [
 	{
+		"id": "2026-os",
+		"authors": "Pelinski, T., Melbye, A. P. & McPherson, A.",
+		"date": "forthcoming 2026",
+		"title": "When AI doesn't sound like AI: negotiating aesthetic expectations in technology-mediated musical practice",
+		"venue": "Organised Sound",
+		"type": "journal-paper",
+		"url": "-",
+		"isNew": true
+	},
+	{
 		"id": "2025-nime-pybela",
 		"authors": "Pelinski, T., Moro, G. & McPherson, A.",
 		"date": "2025",
@@ -7,7 +17,7 @@
 		"venue": "Proceedings of the International Conference on New Interfaces for Musical Expression. Canberra, Australia.",
 		"type": "conference-paper",
 		"url": "/documents/2025-nime-pybela.pdf",
-		"isNew": true
+		"isNew": false
 	},
 	{
 		"id": "2024-jnmr",
@@ -17,7 +27,7 @@
 		"venue": "Journal of New Music Research,  53(1–2), 79–92",
 		"type": "journal-paper",
 		"url": "https://doi.org/10.1080/09298215.2024.2442348",
-		"isNew": true
+		"isNew": false
 	},
 	{
 		"id": "2023-nime",

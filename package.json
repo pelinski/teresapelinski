@@ -41,7 +41,7 @@
 		"parse-posts": "node src/scripts/parsePosts.mjs",
 		"generate-rss": "node src/scripts/generateRss.js",
 		"dev": "npm run parse-posts && parcel index.html",
-		"prebuild": "rm -r dist/ .parcel-cache/ && npm run parse-posts && npm run generate-rss",
+		"prebuild": "rm -rf dist/ .parcel-cache/ && npm run parse-posts && npm run generate-rss",
 		"build": "parcel build index.html --public-url .",
 		"start": "serve"
 	},
@@ -53,6 +53,7 @@
 		"@parcel/transformer-xml": "2.16.0",
 		"@types/react": "^19.0.10",
 		"@types/react-dom": "^19.0.4",
+		"baseline-browser-mapping": "^2.10.0",
 		"buffer": "^5.5.0||^6.0.0",
 		"cfonts": "^2.10.0",
 		"events": "^3.3.0",
