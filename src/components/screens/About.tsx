@@ -27,10 +27,9 @@ export const About: React.FC<{ scrollHandler: (scrollTo: string) => () => void; 
 			<a className={'h-yellow bounce' + (isFrozen ? ' frozen' : '')} href='/research'>
 				research interests
 			</a>{' '}
-			are in critical technology studies, new interfaces for musical expression and practice-based research. (Is that a good summary? I would call it "critical music technology studies mixed
-			with practice research" but I'm not sure anyone else would be calling it that!) In my thesis I've done some technical work in the area of embedded AI for musical performance and instrument
-			design, but also a lot of writing on how we can approach technology development (particularly in creative contexts, e.g. new instrument making) from a more critical and reflective
-			perspective. You can check out my research <a onClick={scrollHandler('research')}>here</a>.
+			are in critical technology studies, critical AI studies, critical music technology studies. In my thesis I've done some technical work in the area of embedded AI for musical performance
+			and instrument design, but also a lot of writing on how we can approach technology development (particularly in creative contexts, e.g. new instrument making) from a critical and
+			reflective perspective. You can check out my research <a onClick={scrollHandler('research')}>here</a>.
 			<br />
 			<br /> Before joining my PhD programme (CDT in AI and Music), I got a Bachelor degree in{' '}
 			<a className={'h-yellow bounce' + (isFrozen ? ' frozen' : '')} href='https://www.uam.es/uam/en/fisica'>
@@ -43,6 +42,20 @@ export const About: React.FC<{ scrollHandler: (scrollTo: string) => () => void; 
 			(Music Technology Group, Universitat Pompeu Fabra). In my spare time I mostly work on my Raspberry Pi self-hosted servers, and I also make candles and play football.
 			<br />
 			<br />
+			If you want to get in touch, you can email me at <a className={'h-red bounce' + (isFrozen ? ' frozen' : '')}> hi@teresapelinski.com</a> or find me on{' '}
+			<a className={'h-red bounce' + (isFrozen ? ' frozen' : '')} href='https://bsky.app/profile/tpelinski.bsky.social'>
+				bluesky
+			</a>
+			.
+			<br />
+			<br />
+			--{'>'} check out my latest{' '}
+			<a className={'h-blue bounce' + (isFrozen ? ' frozen' : '')} onClick={scrollHandler('now')}>
+				news and updates
+			</a>{' '}
+			{'<'}--
+			<br />
+			<br />
 			my{' '}
 			<a className={'h-red bounce' + (isFrozen ? ' frozen' : '')} href='/documents/pelinski-cv.pdf'>
 				cv
@@ -51,6 +64,7 @@ export const About: React.FC<{ scrollHandler: (scrollTo: string) => () => void; 
 			<a className={'h-red bounce' + (isFrozen ? ' frozen' : '')} href='/documents/pelinski-cv.pdf'>
 				here
 			</a>
+			.
 		</div>
 	</>
 )

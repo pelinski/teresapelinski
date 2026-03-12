@@ -51,17 +51,17 @@ export const Nav: React.FC<{ className: string; frozenState: { isFrozen: boolean
 						my website
 					</a>
 
-					<a className='h-blue' href='https://github.com/pelinski'>
-						github
-					</a>
-
 					<a className='h-blue' href='https://bsky.app/profile/tpelinski.bsky.social'>
 						bluesky
+					</a>
+
+					<a className='h-blue' href='https://github.com/pelinski'>
+						github
 					</a>
 				</div>
 				<span>hi@teresapelinski.com</span>
 				<br />
-				<span>last updated: 2026-01-10</span>
+				<span>last updated: 2026-03-12</span>
 				<br />
 				<span>
 					coded and self-hosted by me and my raspberry pi (
