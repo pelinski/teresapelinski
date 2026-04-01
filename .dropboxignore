@@ -1,0 +1,12 @@
+# ----
+# Automatically Generated .dropboxignore file at Wed 25 Mar 2026 12:37:15 GMT
+# ----
+node_modules/
+.parcel-cache/
+dist/
+yarn-error.log
+.vscode/
+.DS_Store
+notes.md
+*.mp3
+# ----
