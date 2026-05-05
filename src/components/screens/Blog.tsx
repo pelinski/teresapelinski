@@ -1,4 +1,4 @@
-import React, { useState, useEffect, JSX } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 interface Post {
@@ -10,9 +10,9 @@ interface Post {
 	content: string
 }
 
-export const Blog: React.FC<{ scrollHandler: (scrollTo: string) => () => void }> = ({ scrollHandler }): JSX.Element => {
+export const Blog: React.FC = () => {
 	const [posts, setPosts] = useState<Post[]>([])
-	const [currentPost, setCurrentPost] = useState<Post | null>(null)
+	const [currentPost, _] = useState<Post | null>(null)
 	useEffect(() => {
 		let isMounted = true
 		fetch('content/parsed/blog/parsed-blogposts.json')

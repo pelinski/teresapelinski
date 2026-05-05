@@ -21,13 +21,14 @@
 		"useUnknownInCatchVariables": true,
 		// modules
 		"module": "esnext",
-		"moduleResolution": "node",
-		// Target ES2019 for more modern browsers
-		"target": "ES2019",
+		"moduleResolution": "bundler",
+		// Target ES2023 for more modern browsers
+		"target": "ES2023",
 		// Include typings from built-in lib declarations
-		"lib": ["ES2019", "dom", "dom.iterable"],
+		"lib": ["ES2023", "dom", "dom.iterable"],
 		// Include module source maps for debugging
-		"sourceMap": true,
+		"noEmit": true,
+		"sourceMap": false,
 		// Output to single concatenated file
 		// "outFile": "dist/bundle.js"
 		"jsx": "react-jsx"

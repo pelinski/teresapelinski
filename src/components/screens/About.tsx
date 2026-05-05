@@ -1,4 +1,4 @@
-import React, { JSX } from 'react'
+import { type JSX } from 'react'
 export const About: React.FC<{ scrollHandler: (scrollTo: string) => () => void; isFrozen: boolean }> = ({ scrollHandler, isFrozen }): JSX.Element => (
 	<>
 		<span className='screen-title'>🙋🏻‍♀️ About me</span>

@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useEffect, useState, type JSX } from 'react'
+import { useParams } from 'react-router-dom'
 import { Title } from './screens/Title'
 import { Nav } from './Nav'
 import { Screen } from './Screen'
@@ -9,16 +9,13 @@ import { About } from './screens/About'
 import { Now } from './screens/Now'
 import { Blog } from './screens/Blog'
 import { BlogPost } from './screens/BlogPost'
+import { useScrollHandler } from '../Hooks'
 
 export const PageWrapper: React.FC<{ screen: string }> = ({ screen }): JSX.Element => {
-	const navigate = useNavigate()
 	const { slug } = useParams()
 	const isBlogPost = screen === 'blog-post' && slug
+	const scrollHandler = useScrollHandler()
 
-	const scrollHandler = (scrollTo: string) => (): void => {
-		navigate(`/${scrollTo === 'title' ? '' : scrollTo}`, { replace: true })
-		return document.getElementById(scrollTo)?.scrollIntoView({ behavior: 'smooth', block: 'end' })
-	}
 	// smooth scroll to screen when loading component
 	useEffect(() => {
 		if (screen != 'title' && screen !== 'blog-post') {
@@ -42,16 +39,16 @@ export const PageWrapper: React.FC<{ screen: string }> = ({ screen }): JSX.Eleme
 					<About scrollHandler={scrollHandler} isFrozen={isFrozen} />
 				</Screen>
 				<Screen id={'now'} scrollHandler={scrollHandler}>
-					<Now scrollHandler={scrollHandler} />
+					<Now />
 				</Screen>
 				<Screen id={'research'} scrollHandler={scrollHandler}>
-					<Research scrollHandler={scrollHandler} isFrozen={isFrozen} />
+					<Research isFrozen={isFrozen} />
 				</Screen>
 				<Screen id={'projects'} scrollHandler={scrollHandler}>
-					<Projects scrollHandler={scrollHandler} isFrozen={isFrozen} />
+					<Projects isFrozen={isFrozen} />
 				</Screen>
 				<Screen id='blog' scrollHandler={scrollHandler}>
-					{isBlogPost ? <BlogPost slug={slug!} /> : <Blog scrollHandler={scrollHandler} />}
+					{isBlogPost ? <BlogPost slug={slug!} /> : <Blog />}
 				</Screen>
 			</main>
 		</>

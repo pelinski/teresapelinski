@@ -76,7 +76,7 @@ export const Nav: React.FC<{ className: string; frozenState: { isFrozen: boolean
 }
 
 const NavTree: React.FC<{
-	txt: string | JSX.Element
+	txt?: string | JSX.Element
 	children?: JSX.Element[] | JSX.Element
 	prompt?: string | JSX.Element
 	className?: string

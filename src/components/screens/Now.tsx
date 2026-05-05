@@ -1,4 +1,4 @@
-import React, { useState, useEffect, JSX } from 'react'
+import { useState, useEffect, JSX } from 'react'
 import { useLocation } from 'react-router-dom'
 import ReactHtmlParser from 'react-html-parser'
 
@@ -9,7 +9,7 @@ interface Post {
 	content: string
 }
 
-export const Now: React.FC<{ scrollHandler: (scrollTo: string) => () => void }> = ({ scrollHandler }): JSX.Element => {
+export const Now: React.FC = (): JSX.Element => {
 	const [posts, setPosts] = useState<Post[]>([])
 	useEffect(() => {
 		let isMounted = true

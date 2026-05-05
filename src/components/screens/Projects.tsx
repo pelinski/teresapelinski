@@ -1,17 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { OutputClassRenderer } from '../outputs/OutputClassRenderer'
-
-interface Item {
-	id: string
-	date: string
-	description: string
-	title: string
-	shortDescription: string
-	// filters: string[]
-	links?: [{ url: string; linkName: string }]
-	shownAt?: [{ venue: string; date: string; url?: string }]
-	videos?: string[]
-}
+import { ProjectItemProps } from '../../types/items'
 
 interface zIndexDic {
 	[key: string]: number
@@ -19,8 +8,8 @@ interface zIndexDic {
 
 export const Projects: React.FC<{ isFrozen: boolean }> = ({ isFrozen }) => {
 	// data
-	const [projects, setProjects] = useState<Item[]>([])
-	const [gigs, setGigs] = useState<Item[]>([])
+	const [projects, setProjects] = useState<ProjectItemProps[]>([])
+	const [gigs, setGigs] = useState<ProjectItemProps[]>([])
 
 	// dynamics
 	const [showGigs, setShowGigs] = useState<boolean>(false)
@@ -42,7 +31,7 @@ export const Projects: React.FC<{ isFrozen: boolean }> = ({ isFrozen }) => {
 					// setSelectedFilters(filters) // Select all on first load
 					// Initialize zIndexDic
 					const initialZIndexDic: zIndexDic = {}
-					projects.forEach((project: Item) => {
+					projects.forEach((project: ProjectItemProps) => {
 						initialZIndexDic[project.id] = 1
 					})
 					setZIndexDic(initialZIndexDic)

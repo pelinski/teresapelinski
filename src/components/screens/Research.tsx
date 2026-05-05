@@ -1,32 +1,16 @@
-import React, { useState, useEffect, JSX } from 'react'
+import { useState, useEffect } from 'react'
 import { OutputClassRenderer } from '../outputs/OutputClassRenderer'
-
-interface Item {
-	id: string
-	authors: string
-	date: string | number
-	title: string
-	venue: string
-	type: string
-	url: string
-	module?: string
-	program?: string
-	institution?: string
-	role?: string
-	track?: string
-	description?: string
-	isNew?: boolean
-	tags?: string[]
-}
+import { AnyItemProps } from '../../types/items'
 
 export const Research: React.FC<{ isFrozen: boolean }> = ({ isFrozen }) => {
 	const [outputs, setOutputs] = useState<{
-		publications: Item[]
-		workshops: Item[]
-		talks: Item[]
-		academicService: Item[]
-		dissemination: Item[]
-		teaching: Item[]
+		publications: AnyItemProps[]
+		workshops: AnyItemProps[]
+		talks: AnyItemProps[]
+		academicService: AnyItemProps[]
+		dissemination: AnyItemProps[]
+		teaching: AnyItemProps[]
+		grants: AnyItemProps[]
 	}>({
 		publications: [],
 		workshops: [],
@@ -34,16 +18,20 @@ export const Research: React.FC<{ isFrozen: boolean }> = ({ isFrozen }) => {
 		academicService: [],
 		dissemination: [],
 		teaching: [],
+		grants: [],
 	})
 
-	const [showOutputs, setShowOutputs] = useState<{ publications: boolean; workshops: boolean; talks: boolean; academicService: boolean; dissemination: boolean; teaching: boolean }>({
-		publications: false,
-		workshops: false,
-		talks: false,
-		academicService: false,
-		dissemination: false,
-		teaching: false,
-	})
+	const [showOutputs, setShowOutputs] = useState<{ publications: boolean; workshops: boolean; talks: boolean; academicService: boolean; dissemination: boolean; teaching: boolean; grants: boolean }>(
+		{
+			publications: false,
+			workshops: false,
+			talks: false,
+			academicService: false,
+			dissemination: false,
+			teaching: false,
+			grants: false,
+		}
+	)
 
 	useEffect(() => {
 		let isMounted = true
@@ -226,7 +214,7 @@ export const Research: React.FC<{ isFrozen: boolean }> = ({ isFrozen }) => {
 			{Object.values(showOutputs).some(Boolean) && (
 				<span
 					className='h-red clickable collapse-all'
-					onClick={() => setShowOutputs({ publications: false, talks: false, workshops: false, academicService: false, dissemination: false, teaching: false })}
+					onClick={() => setShowOutputs({ publications: false, talks: false, workshops: false, academicService: false, dissemination: false, teaching: false, grants: false })}
 				>
 					[-] collapse all [-]
 				</span>
