@@ -1,0 +1,14 @@
+#!/bin/sh
+
+BRANCH=$(git symbolic-ref --short HEAD)
+
+if [ "$BRANCH" = "main" ]; then
+    echo "🚫 You are on the 'main' branch. Please switch to 'dev' to push changes."
+    exit 1
+fi
+
+if [ "$BRANCH" = "dev" ]; then
+  echo "🔨 Testing build before push..."
+  yarn test || { echo "❌ Build failed, push blocked."; exit 1; }
+  echo "✅ Ready to push. Use 'yarn release' to create a new release after pushing."
+fi
