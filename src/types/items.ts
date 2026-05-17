@@ -55,7 +55,7 @@ export interface ProjectItemProps extends BaseItem {
 	shownAt: { venue: string; date: string; url: string }[]
 	links: { url: string; linkName: string }[]
 	videos: string[]
-	resetPositions?: boolean
+	resetPositions: boolean
 	zIndexProps?: ZIndexProps
 }
 

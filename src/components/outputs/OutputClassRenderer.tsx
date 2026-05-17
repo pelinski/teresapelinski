@@ -20,7 +20,7 @@ export const OutputClassRenderer: React.FC<OutputClassRendererProps> = ({ output
 				</ul>
 			</>
 		) : outputs[0] ? (
-			<ProjectItem key={outputs[0].id} {...(outputs[0] as ProjectItemProps)} resetPositions={resetPositions} zIndexProps={zIndexProps} />
+			<ProjectItem key={outputs[0].id} {...(outputs[0] as ProjectItemProps)} resetPositions={resetPositions ?? false} zIndexProps={zIndexProps!} />
 		) : null}
 	</div>
 )
