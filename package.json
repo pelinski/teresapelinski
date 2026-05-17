@@ -40,7 +40,7 @@
 		"generate-rss": "node src/scripts/generateRss.js",
 		"prebuild": "rm -rf dist/ && yarn run parse-posts && yarn run generate-rss",
 		"dev": "vite",
-		"build": "tsc -b && vite build",
+		"build": "tsc -b && yarn prebuild && vite build",
 		"test": "yarn build",
 		"release": "./scripts/release.sh",
 		"preview": "vite preview --host",
