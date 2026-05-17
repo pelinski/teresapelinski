@@ -1,3 +1,4 @@
+import { type JSX } from 'react'
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import './styles/App.scss'
 

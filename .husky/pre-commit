@@ -1,0 +1,13 @@
+#!/bin/sh
+BRANCH=$(git symbolic-ref --short HEAD)
+
+if [ "$BRANCH" = "main" ]; then
+    echo "🚫 You are on the 'main' branch. Please switch to 'dev' to commit changes."
+    exit 1
+fi
+
+if [ "$BRANCH" = "dev" ]; then
+  echo "🔨 Type checking..."
+  yarn tsc --noEmit || { echo "❌ Type check failed, commit blocked."; exit 1; }
+  echo "✅ Ready to commit."
+fi

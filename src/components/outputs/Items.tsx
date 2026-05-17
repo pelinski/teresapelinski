@@ -1,42 +1,15 @@
-import React, { useState, useEffect, useRef } from 'react'
-interface ItemProps {
-	id: string
-	date: string
-	url: string
-	// publications, workshops, talks
-	description?: string
-	type?: string
-	authors?: string
-	title?: string
-	isNew?: boolean
-	// academic service
-	venue?: string
-	track?: string
-	// teaching
-	role?: string
-	module?: string
-	program?: string
-	institution: string
-	// gigs
-	links?: [{ url: string; link_name: string }]
-	// projects
-	resetPositions?: boolean
-	image?: string
-	shortDescription?: string
-	shownAt?: [{ venue: string; date: string; url?: string }]
-	videos?: string[]
-	zIndexProps?: [Record<string, number>, React.Dispatch<React.SetStateAction<Record<string, number>>>]
-}
+import { useState, useEffect, useRef } from 'react'
+import { type ResearchOutputItemProps, AcademicServiceItemProps, TeachingItemProps, GigItemProps, GrantItemProps, ProjectItemProps, ArbitraryItemProps, ProjectDetailsProps } from '../../types/items'
 
 const isMobileEasy = () => window.innerWidth <= 812
 
-export const ResearchOutputItem: React.FC<ItemProps> = ({ id, authors, date, title, venue, url, isNew = false }) => (
+export const ResearchOutputItem: React.FC<ResearchOutputItemProps> = ({ id, authors, date, title, venue, url, isNew = false }) => (
 	<li key={id}>
 		{'>>'} {isNew && <span className='h-green'>****NEW****</span>} {authors} ({date}). <a href={url}>{title}</a>. {venue}
 	</li>
 )
 
-export const AcademicServiceItem: React.FC<ItemProps> = ({ id, date, description, venue, url, track, type }) => (
+export const AcademicServiceItem: React.FC<AcademicServiceItemProps> = ({ id, date, description, venue, url, track, type }) => (
 	<>
 		{(type === 'conference-peer-review' || type === 'conference-chair') && (
 			<li key={id}>
@@ -52,31 +25,31 @@ export const AcademicServiceItem: React.FC<ItemProps> = ({ id, date, description
 	</>
 )
 
-export const TeachingItem: React.FC<ItemProps> = ({ id, date, role, module, program, institution }) => (
+export const TeachingItem: React.FC<TeachingItemProps> = ({ id, date, role, module, program, institution }) => (
 	<li key={id}>
 		{'>>'} {role} at the {module} module, {program}, {institution} ({date})
 	</li>
 )
 
-export const GigItem: React.FC<ItemProps> = ({ id, date, description, url }) => (
+export const GigItem: React.FC<GigItemProps> = ({ id, date, description, url }) => (
 	<li key={id}>
 		{'>>'} <a href={url}>{description}</a> ({date})
 	</li>
 )
 
-export const GrantItem: React.FC<ItemProps> = ({ id, date, title, institution, description }) => (
+export const GrantItem: React.FC<GrantItemProps> = ({ id, date, title, institution, description }) => (
 	<li key={id}>
 		{'>>'} <strong>{title}</strong> ({date}): {institution}
 		{institution && '.'} {description}.
 	</li>
 )
-export const ProjectItem: React.FC<ItemProps> = ({ id, image, title, shortDescription, description, url, date, shownAt, links, videos, resetPositions, zIndexProps }) => {
+export const ProjectItem: React.FC<ProjectItemProps> = ({ id, image, title, shortDescription, description, date, shownAt, links, videos, resetPositions, zIndexProps }) => {
 	const [showDescription, setShowDescription] = useState<boolean>(false)
 	const [isDragging, setIsDragging] = useState<boolean>(false)
 	const [dragStart, setDragStart] = useState<{ x: number; y: number }>({ x: 0, y: 0 })
 	const [dragPosition, setDragPosition] = useState<{ x: number; y: number }>({ x: 0, y: 0 })
 	const elementRef = useRef<HTMLDivElement>(null)
-	const [zIndexDic, setZIndexDic] = zIndexProps
+	const [zIndexDic, setZIndexDic] = zIndexProps ?? [{}, () => {}]
 
 	useEffect(() => {
 		setDragPosition({ x: 0, y: 0 })
@@ -120,6 +93,7 @@ export const ProjectItem: React.FC<ItemProps> = ({ id, image, title, shortDescri
 	const handleTouchStart = (e: React.TouchEvent) => {
 		if ((e.target as HTMLElement).closest('.project-caption')) return
 		const touch = e.touches[0]
+		if (!touch) return
 		startDrag(touch.clientX, touch.clientY)
 	}
 
@@ -154,6 +128,7 @@ export const ProjectItem: React.FC<ItemProps> = ({ id, image, title, shortDescri
 
 	const handleTouchMove = (e: React.TouchEvent) => {
 		const touch = e.touches[0]
+		if (!touch) return
 		updatePosition(touch.clientX, touch.clientY)
 		// e.preventDefault()
 	}
@@ -223,14 +198,7 @@ export const ProjectItem: React.FC<ItemProps> = ({ id, image, title, shortDescri
 	)
 }
 
-const ProjectDetails: React.FC<{
-	date: string
-	description?: string
-	shownAt?: [{ venue: string; date: string; url?: string }]
-	links?: [{ url: string; link_name: string }]
-	videos?: string[]
-	isMobile?: boolean
-}> = ({ date, description, shownAt, links, videos, isMobile }) => (
+const ProjectDetails: React.FC<ProjectDetailsProps> = ({ date, description, shownAt, links, videos, isMobile }) => (
 	<>
 		{isMobile && <span>({date})</span>}
 		{description && <div dangerouslySetInnerHTML={{ __html: description }} />}
@@ -281,7 +249,7 @@ const ProjectDetails: React.FC<{
 	</>
 )
 
-export const ArbitraryItem: React.FC<ItemProps> = ({ id, date, description, venue, links }) => (
+export const ArbitraryItem: React.FC<ArbitraryItemProps> = ({ id, date, description, venue, links }) => (
 	<>
 		<li key={id}>
 			{description} - {venue && <span>{venue}</span>} ({date})
@@ -290,7 +258,7 @@ export const ArbitraryItem: React.FC<ItemProps> = ({ id, date, description, venu
 					{' '}
 					{links.map((link, index) => (
 						<span key={index}>
-							<a href={link.url}>{link.link_name}</a>{' '}
+							<a href={link.url}>{link.linkName}</a>{' '}
 						</span>
 					))}
 				</>
