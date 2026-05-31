@@ -17,7 +17,7 @@
 
 @font-face {
 	font-family: 'Times New Pixel';
-	src: url('../../public/fonts/TimesNewPixel.ttf') format('truetype'); /* IE9 Compat Modes */
+	src: url('./fonts/TimesNewPixel.ttf') format('truetype'); /* IE9 Compat Modes */
 }
 // styles
 * {
@@ -30,12 +30,12 @@
 	// font-family: 'IBM Plex Mono', monospace;
 	font-size: clamp(1rem, 3vw, 1.25rem);
 	line-height: 1em;
-	cursor: url('../../public/cursors/macos-classic/arrow.cur'), auto;
+	cursor: url('/cursors/macos-classic/arrow.cur'), auto;
 
 	a,
 	.clickable {
 		text-decoration: underline;
-		cursor: url('../../public/cursors/macos-classic/hand.cur'), auto;
+		cursor: url('/cursors/macos-classic/hand.cur'), pointer;
 		overflow-wrap: break-word;
 	}
 
