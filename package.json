@@ -1,6 +1,6 @@
 {
 	"name": "teresapelinski",
-	"version": "1.1.6",
+	"version": "1.1.7",
 	"description": "teresapelinski's personal website",
 	"repository": "git@github.com:pelinski/teresapelinski.git",
 	"author": "Teresa Pelinski <teresapelinski@gmail.com>",
@@ -65,6 +65,7 @@
 		"process": "^0.11.10",
 		"sass": "^1.99.0",
 		"sass-migrator": "^2.4.2",
+		"surge": "^0.27.4",
 		"vite": "^8.0.10",
 		"vite-plugin-node-polyfills": "^0.26.0"
 	}
