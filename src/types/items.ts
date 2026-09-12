@@ -46,6 +46,8 @@ export interface ProjectItemProps extends BaseItem {
 }
 
 export interface ProjectDetailsProps {
+	description: string
+	date: string
 	shownAt: { venue: string; date: string; url: string }[]
 	links: { url: string; linkName: string }[]
 	videos: string[]

@@ -37,9 +37,9 @@ export const GigItem: React.FC<GigItemProps> = ({ id, date, description, url }) 
 	</li>
 )
 
-export const AwardItem: React.FC<AwardItemProps> = ({ id, date, title, description }) => (
+export const AwardItem: React.FC<AwardItemProps> = ({ id, date, description }) => (
 	<li key={id}>
-		{'>>'} <strong>{title}</strong> {date}: {description}.
+		{'>>'} {date}: {description}.
 	</li>
 )
 export const ProjectItem: React.FC<ProjectItemProps> = ({ id, image, title, shortDescription, description, date, shownAt, links, videos, resetPositions, zIndexProps }) => {
