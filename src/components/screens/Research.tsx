@@ -10,7 +10,7 @@ export const Research: React.FC<{ isFrozen: boolean }> = ({ isFrozen }) => {
 		academicService: AnyItemProps[]
 		dissemination: AnyItemProps[]
 		teaching: AnyItemProps[]
-		grants: AnyItemProps[]
+		awards: AnyItemProps[]
 	}>({
 		publications: [],
 		workshops: [],
@@ -18,10 +18,10 @@ export const Research: React.FC<{ isFrozen: boolean }> = ({ isFrozen }) => {
 		academicService: [],
 		dissemination: [],
 		teaching: [],
-		grants: [],
+		awards: [],
 	})
 
-	const [showOutputs, setShowOutputs] = useState<{ publications: boolean; workshops: boolean; talks: boolean; academicService: boolean; dissemination: boolean; teaching: boolean; grants: boolean }>(
+	const [showOutputs, setShowOutputs] = useState<{ publications: boolean; workshops: boolean; talks: boolean; academicService: boolean; dissemination: boolean; teaching: boolean; awards: boolean }>(
 		{
 			publications: false,
 			workshops: false,
@@ -29,7 +29,7 @@ export const Research: React.FC<{ isFrozen: boolean }> = ({ isFrozen }) => {
 			academicService: false,
 			dissemination: false,
 			teaching: false,
-			grants: false,
+			awards: false,
 		}
 	)
 
@@ -42,9 +42,9 @@ export const Research: React.FC<{ isFrozen: boolean }> = ({ isFrozen }) => {
 			fetch('/content/items/academic-service.json').then((res) => res.json()),
 			fetch('/content/items/dissemination.json').then((res) => res.json()),
 			fetch('/content/items/teaching.json').then((res) => res.json()),
-			fetch('/content/items/grants.json').then((res) => res.json()),
+			fetch('/content/items/awards.json').then((res) => res.json()),
 		])
-			.then(([pubs, works, talks, service, dissemination, teaching, grants]) => {
+			.then(([pubs, works, talks, service, dissemination, teaching, awards]) => {
 				if (isMounted) {
 					setOutputs({
 						publications: pubs,
@@ -53,7 +53,7 @@ export const Research: React.FC<{ isFrozen: boolean }> = ({ isFrozen }) => {
 						academicService: service,
 						dissemination: dissemination,
 						teaching: teaching,
-						grants: grants,
+						awards: awards,
 					})
 				}
 			})
@@ -66,8 +66,17 @@ export const Research: React.FC<{ isFrozen: boolean }> = ({ isFrozen }) => {
 	return (
 		<>
 			<span className='screen-title'>📚 Research</span>
+			<br/>
+			my{' '}
+			<a className={'h-red bounce' + (isFrozen ? ' frozen' : '')} href='/documents/pelinski-cv.pdf'>
+				cv
+			</a>{' '}
+			is
+			<a className={'h-red bounce' + (isFrozen ? ' frozen' : '')} href='/documents/pelinski-cv.pdf'>
+				here
+			</a>
 			<div className='research-text'>
-				<br /> I am currently writing up my PhD thesis, which I have done at the <a href='https://instrumentslab.org/'>Augmented Instruments Lab</a> and the{' '}
+				<br /> I am about to defend my PhD thesis (submitted 06 July 2026), which I have done at the <a href='https://instrumentslab.org/'>Augmented Instruments Lab</a> and the{' '}
 				<a href='https://c4dm.eecs.qmul.ac.uk/'>Centre for Digital Music (C4DM)</a> at <a href='https://www.qmul.ac.uk/'>Queen Mary University of London</a>. My research area could be
 				described as <a className={'h-orange bounce' + (isFrozen ? ' frozen' : '')}>"critical music technology studies"</a>. In the first half of my PhD, I worked on technical topics of design
 				and implementation of new musical instruments and interfaces, in particular with embedded systems and light AI models. In this context, I developed{' '}
@@ -116,7 +125,6 @@ export const Research: React.FC<{ isFrozen: boolean }> = ({ isFrozen }) => {
 			</div>
 			<br />
 			<br />
-
 			<div className='outputs'>
 				<OutputClassRenderer
 					outputType='publications'
@@ -198,14 +206,14 @@ export const Research: React.FC<{ isFrozen: boolean }> = ({ isFrozen }) => {
 				/>
 
 				<OutputClassRenderer
-					outputType='grants'
-					label='💸 Grants'
-					outputs={outputs.grants}
-					isShown={showOutputs.grants}
+					outputType='awards'
+					label='💸 Awards'
+					outputs={outputs.awards}
+					isShown={showOutputs.awards}
 					onToggle={() =>
 						setShowOutputs({
 							...showOutputs,
-							grants: !showOutputs.grants,
+							awards: !showOutputs.awards,
 						})
 					}
 					isFrozen={isFrozen}
@@ -214,7 +222,7 @@ export const Research: React.FC<{ isFrozen: boolean }> = ({ isFrozen }) => {
 			{Object.values(showOutputs).some(Boolean) && (
 				<span
 					className='h-red clickable collapse-all'
-					onClick={() => setShowOutputs({ publications: false, talks: false, workshops: false, academicService: false, dissemination: false, teaching: false, grants: false })}
+					onClick={() => setShowOutputs({ publications: false, talks: false, workshops: false, academicService: false, dissemination: false, teaching: false, awards: false })}
 				>
 					[-] collapse all [-]
 				</span>
