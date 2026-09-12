@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
-import { type ResearchOutputItemProps, AcademicServiceItemProps, TeachingItemProps, GigItemProps, GrantItemProps, ProjectItemProps, ArbitraryItemProps, ProjectDetailsProps } from '../../types/items'
+import { type ResearchOutputItemProps, AcademicServiceItemProps, TeachingItemProps, GigItemProps, AwardItemProps, ProjectItemProps, ArbitraryItemProps, ProjectDetailsProps } from '../../types/items'
 
 const isMobileEasy = () => window.innerWidth <= 812
 
@@ -37,10 +37,9 @@ export const GigItem: React.FC<GigItemProps> = ({ id, date, description, url }) 
 	</li>
 )
 
-export const GrantItem: React.FC<GrantItemProps> = ({ id, date, title, institution, description }) => (
+export const AwardItem: React.FC<AwardItemProps> = ({ id, date, description }) => (
 	<li key={id}>
-		{'>>'} <strong>{title}</strong> ({date}): {institution}
-		{institution && '.'} {description}.
+		{'>>'} {date}: {description}.
 	</li>
 )
 export const ProjectItem: React.FC<ProjectItemProps> = ({ id, image, title, shortDescription, description, date, shownAt, links, videos, resetPositions, zIndexProps }) => {
